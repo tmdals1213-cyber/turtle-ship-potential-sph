@@ -1,0 +1,11 @@
+capytaine==3.0.0
+numpy==2.5.5
+scipy==1.18.1
+matplotlib==3.11.2
+trimesh==5.2.1
+meshio==5.3.5
+networkx
+mapbox-earcut
+fast-simplification
+scikit-image==0.26.0
+shapely

@@ -1,0 +1,47 @@
+{
+  "study": "History-informed turtle-ship wave demonstration",
+  "hull": {
+    "type": "fitted_turtle_envelope",
+    "length_m": 2.6060000000000003,
+    "center_of_mass_m": [
+      0.013999261977276772,
+      0.0,
+      0.029802092880915232
+    ]
+  },
+  "environment": {
+    "rho_kg_m3": 1025.0,
+    "g_m_s2": 9.81,
+    "water_depth_m": 1.0
+  },
+  "motion": {
+    "initial_velocity_m_s": [
+      0.5,
+      0,
+      0
+    ],
+    "forward_speed_m_s": 0.5,
+    "wave_direction_rad": 3.141592653589793,
+    "free_dofs": [
+      "Surge",
+      "Sway",
+      "Heave",
+      "Roll",
+      "Pitch",
+      "Yaw"
+    ],
+    "prescribed_or_constrained_dofs": [],
+    "propulsion": "None; SPH has initial speed only. Potential is a linear response at reference mean speed, not free-coasting transient."
+  },
+  "waves": {
+    "baseline_wavelength_over_length": 1.151189562547966,
+    "baseline_height_m": 0.24
+  },
+  "full_scale_equivalent": {
+    "initial_speed_m_s": 1.5811388300841898,
+    "wave_height_m": 2.4,
+    "wavelength_m": 30,
+    "water_depth_m": 10
+  },
+  "accuracy_claim": "History-informed educational scenario, not a historically validated ship or performance prediction."
+}

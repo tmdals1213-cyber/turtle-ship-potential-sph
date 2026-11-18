@@ -1,0 +1,62 @@
+{
+  "status": "prepared_not_validated",
+  "frame": "laboratory",
+  "hull": "history_informed_turtle_envelope",
+  "visual_skin": "turtle_ship_local_render_only",
+  "dp_m": 0.04,
+  "duration_s": 16.0,
+  "domain_m": [
+    18,
+    2.4,
+    1.7
+  ],
+  "mass_kg": 154.4,
+  "center_of_mass_m": [
+    -2.986000738022723,
+    0.0,
+    0.029802092880915232
+  ],
+  "inertia_kg_m2": [
+    12.3232039781411,
+    65.53542740000002,
+    65.53542740000002
+  ],
+  "surge": "Initial speed only; all six rigid-body DOFs free",
+  "boundary": "DBC tank and piston; mDBC1 hull normals only",
+  "particle_mass_policy": "GenCase default fluid interaction mass; independent physical rigid-body mass",
+  "artificial_viscosity_alpha": 0.01,
+  "target_H_m": 0.24,
+  "wavelength_m": 3,
+  "limitations": [
+    "Coarse demonstration, not a validated seakeeping or resistance prediction.",
+    "Impulsive initial body velocity in initially still water creates a startup transient.",
+    "Finite tank, artificial viscosity, unresolved near-wall flow and no collisions/flooding model.",
+    "Head-on waves and symmetry can keep sway, roll and yaw small even though those DOFs are free."
+  ],
+  "coefh": 1.2,
+  "slip_mode": 1,
+  "closed_hull_volume_m3": 0.6500987103248662,
+  "hull_file": "${TURTLE_ASSET_DIR}/free6_history_40_hull.stl",
+  "rho_kg_m3": 1025.0,
+  "free_dofs": [
+    "Surge",
+    "Sway",
+    "Heave",
+    "Roll",
+    "Pitch",
+    "Yaw"
+  ],
+  "initial_velocity_m_s": [
+    0.5,
+    0,
+    0
+  ],
+  "initial_angular_velocity_rad_s": [
+    0,
+    0,
+    0
+  ],
+  "prescribed_body_velocity": false,
+  "scale_ratio": 10,
+  "source_model": "results/turtle_history_model.json"
+}

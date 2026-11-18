@@ -1,0 +1,36 @@
+V7: computed extreme-wave intro, followed by the accepted V6 portrait story.
+
+The first 3 video seconds show the SAME turtle hull in a SEPARATE SPH condition: initially at rest, free six-DOF motion, 24 x 4.8 m tank, 1.2 m water depth, 40 mm particles. A first-order JONSWAP/NewWave piston signal produces a nonlinear wave group. Empty-tank commissioning was completed before adding the ship. The linear target focus time/amplitude are forcing parameters, not measured breaking-wave properties.
+
+Intro data interval: 4.60 to 5.92 model seconds. Rigid motion comes from the computed body particles. Water follows the same fluid-particle IDs between outputs; a smoothed three-dimensional surface is reconstructed for rendering. No analytic crash surface or prescribed boat motion is added.
+
+Computed case: 10.000 model seconds, 2,885,421 particles, 0 excluded particles, approximately 25.9 minutes on RTX 5080. This is an extreme-wave visualization demonstration, not a structural survivability or peak-impact-pressure prediction. The closed upper hull interacts with water; air entrapment, internal flooding, damage and decorative appendage forces are excluded.
+
+Wave-generation reference:
+https://github.com/DualSPHysics/DualSPHysics/wiki/3.-SPH-formulation
+
+Main film and model credit:
+
+Can we predict a turtle ship in waves?
+
+Two independent calculations: a linear potential-flow model (Capytaine) and a water-only SPH model (DualSPHysics). This is an educational model demonstration, not validated historical ship performance or a controlled solver-accuracy benchmark.
+
+The potential solution uses the mean wetted hull and a fixed reference forward speed. Its movie is ship-fixed. The waterline display mask follows the visual pose, but the hydrodynamic panels are not regenerated every frame. The large pitch response makes this a qualitative result.
+
+The SPH ship starts at +0.5 m/s in the laboratory x direction, with all six rigid-body degrees of freedom free. There is no propulsion. Waves travel toward it in the opposite direction. The portrait result uses a lower fixed main camera, a fixed start marker, and a synchronized fixed side view. Both views use the identical measured rigid pose and reconstructed particle surface. The near-side waterline is drawn from the same SPH occupancy. Water is partly transparent in the side view for visibility. No artificial forward motion was added. All distances in that scene are model-scale.
+
+Water can contact the initially dry part of the closed simplified hull. The SPH explanation shows the complete floating boundary, including 7,412 particles above the initial waterline out of 10,222 floating particles. Air flow, wind loading, trapped air, flooding, and hydrodynamic forces on decorative oars/masts/rigging are excluded. Complete submergence or deck-impact accuracy has not been validated. The visible water volume is a fixed crop of the larger computational tank; the free surface is reconstructed and smoothed from saved SPH particles for display.
+
+Measured computation: potential response 153.85 s on Ryzen 9 9950X; SPH 688.30 s on RTX 5080 for 16 simulated model seconds. Different workloads and hardware; these are not speedup ratios.
+
+3D visual model: 예은이네 / 와이프잘모시기
+https://wifewell.tistory.com/entry/거북선-3D파일FBXOBJ-및-블렌더-무료-나눔
+The creator permits educational and commercial rendered use, including videos/blogs, and prohibits model-file redistribution and sale. No explicit requirement for on-screen attribution was found in the creator's post checked on 2026-11-18. Credit is retained here. Source and converted meshes remain local and are not included in a public or transfer archive.
+
+Colours/materials are plausible art direction. The fitted hull and history-informed loading are assumptions, not official historical CAD.
+
+Methods:
+https://capytaine.org/stable/theory_manual/theory.html
+https://github.com/DualSPHysics/DualSPHysics/wiki/3.-SPH-formulation
+
+V6 geometry explanation: blue shows the mean wetted BEM panels, gold shows the complete SPH hull boundary, and grey shows display geometry for context. The source objects used to construct the SPH envelope are omitted from the grey overlay on the SPH diagram to avoid obscuring the gold boundary. This distinction appears on the methods page; the side view is for observing motion. Whole-ship mass, centre of gravity and inertia remain separate declared rigid-body assumptions.

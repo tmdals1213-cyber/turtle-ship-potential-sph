@@ -1,0 +1,87 @@
+{
+  "case": "history_informed_turtle_envelope",
+  "last_saved_time_s": 15.90009546525895,
+  "initial_velocity_m_s": [
+    0.5,
+    0,
+    0
+  ],
+  "last_estimated_velocity_m_s": [
+    -0.13189970086151617,
+    0.0006753220332539181,
+    0.1347826925909829
+  ],
+  "displacement_ranges_m": [
+    {
+      "min": -4.440892098500626e-16,
+      "max": 1.4534576238930037
+    },
+    {
+      "min": -0.00024874371571112936,
+      "max": 0.0008234325480831507
+    },
+    {
+      "min": -0.006093757208534306,
+      "max": 0.07402207061258048
+    }
+  ],
+  "angle_ranges_deg": [
+    {
+      "min": -0.11240848402783407,
+      "max": 0.054235832834355
+    },
+    {
+      "min": -6.346068724526068,
+      "max": 7.324271953912897
+    },
+    {
+      "min": -3.296162309299653e-05,
+      "max": 0.4015610378275703
+    }
+  ],
+  "wave_gauges": [
+    {
+      "gauge": "GaugesSWL_swl_0p0",
+      "window_s": [
+        11.700135,
+        15.900095
+      ],
+      "fundamental_H_m": 0.18018615056062193,
+      "raw_crest_trough_m": 0.1862373,
+      "fit_rms_m": 0.004206890352104292
+    },
+    {
+      "gauge": "GaugesSWL_swl_3p0",
+      "window_s": [
+        11.700135,
+        15.900095
+      ],
+      "fundamental_H_m": 0.1759849427983524,
+      "raw_crest_trough_m": 0.182364,
+      "fit_rms_m": 0.004120666007971286
+    },
+    {
+      "gauge": "GaugesSWL_swl_4p5",
+      "window_s": [
+        11.700135,
+        15.900095
+      ],
+      "fundamental_H_m": 0.17921008733684382,
+      "raw_crest_trough_m": 0.1840514,
+      "fit_rms_m": 0.003970557724874556
+    },
+    {
+      "gauge": "GaugesSWL_swl_6p0",
+      "window_s": [
+        11.700135,
+        15.900095
+      ],
+      "fundamental_H_m": 0.1882779648973649,
+      "raw_crest_trough_m": 0.1933081,
+      "fit_rms_m": 0.0034660669505846954
+    }
+  ],
+  "wave_fit_limitation": "Short transient window. Total elevation includes body scattering and tank reflection; not incident/reflected-wave separation.",
+  "status": "completed_demonstration_not_validation",
+  "comparison_limitation": "BEM response is at fixed mean reference speed; SPH coasts. Differences are not a controlled method-accuracy comparison."
+}

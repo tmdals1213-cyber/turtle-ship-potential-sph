@@ -1,0 +1,22 @@
+{
+  "trigger": "The full-run maximum speed exceeded the value in the selected intro interval.",
+  "snapshot_part": 105,
+  "time_s": 8.400057225666515,
+  "maximum_speed_m_s": 11.408273696899414,
+  "position_m": [
+    -2.7565999,
+    -0.27193666,
+    0.4997951
+  ],
+  "density_at_peak_kg_m3": 1010.13720703125,
+  "particles_above_6_m_s": 2,
+  "particles_above_10_m_s": 1,
+  "interpretation": "An isolated late water parcel near the ship, not a bulk-flow speed. Its quantitative accuracy is unestablished at this spacing.",
+  "at_final_snapshot": "No water particles above 6 m/s; maximum about 3.53 m/s.",
+  "selected_intro_physical_interval_s": [
+    4.6,
+    5.92
+  ],
+  "bracketing_4p5_to_6_s_maximum_water_speed_m_s": 5.315958023071289,
+  "scope": "No peak-velocity, impact-pressure or structural-survival validation is claimed. The rendered intro uses the earlier impact."
+}

@@ -1,0 +1,19 @@
+{
+  "case": "focus_turtle_A065_near_40",
+  "total_particles": 2885421,
+  "interior_fluid_particles_excluding_one_dp_surface_band": 0,
+  "floating_particles": 10222,
+  "particle_volume_m3": 0.6542080000000001,
+  "closed_volume_m3": 0.6500987103248662,
+  "particle_volume_error_percent": 0.632102419197289,
+  "massbody_kg": 154.4,
+  "masspart_kg": 0.0656,
+  "initial_velocity_m_s": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "six_dofs_enabled": true,
+  "no_prescribed_velocity": true,
+  "meaning": "Occupancy, rigid-body input and discrete-volume audit only, not hydrodynamic validation."
+}

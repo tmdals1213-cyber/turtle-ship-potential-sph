@@ -1,0 +1,47 @@
+{
+  "case": "free6_history_40",
+  "status": "completed_free_6dof_demonstration_not_seakeeping_validation",
+  "physical_time_s": 16.000102,
+  "solver_time_s": 688.299622,
+  "total_time_s": 688.492981,
+  "steps": 50718,
+  "initial_particles": 943816,
+  "max_particles": 943816,
+  "excluded_particles": 0,
+  "density_exclusions": 0,
+  "velocity_exclusions": 0,
+  "gpu_reported_particle_and_aux_memory_MiB": 177.70280075073242,
+  "hardware": "Gpu_0=\"NVIDIA GeForce RTX 5080\"",
+  "fluid_speed_max_m_s": 0.7620990872383118,
+  "fluid_density_range_kg_m3": [
+    1015.0362548828125,
+    1034.7335205078125
+  ],
+  "wall_seconds_per_physical_second": 43.01845213236766,
+  "mean_dt_s": 0.00031547186403249334,
+  "final_vtk": "sph\\free6_history_40\\output\\vtks\\PartVtk_0106.vtk",
+  "last_saved_snapshot_time_s": 15.90009546525895,
+  "hull_final_cg_m": [
+    -1.7087448833864707,
+    0.0007182943417284534,
+    0.0971923982592517
+  ],
+  "hull_heave_m": 0.06739030537833647,
+  "hull_pitch_deg": -5.42208194732666,
+  "rigid_fit_rms_m": 4.1212824726244435e-05,
+  "hull_surge_displacement_m": 1.2772558546362525,
+  "hull_euler_xyz_deg": [
+    -0.11240885408936015,
+    -5.421308174612414,
+    0.40156145105997454
+  ],
+  "prescribed_body_velocity": false,
+  "free_dofs": [
+    "Surge",
+    "Sway",
+    "Heave",
+    "Roll",
+    "Pitch",
+    "Yaw"
+  ]
+}

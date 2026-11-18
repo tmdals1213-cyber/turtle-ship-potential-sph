@@ -1,0 +1,5 @@
+# Rendering versions used in the existing visualization environment.
+pyvista==0.45.2
+vtk==9.4.2
+Pillow==11.0.0
+# Install ffmpeg separately and put it on PATH.

@@ -1,0 +1,50 @@
+{
+  "status": "prepared_not_wave_calibrated",
+  "purpose": "Empty-tank focused-wave commissioning",
+  "dimension": 2,
+  "dp_m": 0.04,
+  "duration_s": 12.0,
+  "domain_m": [
+    24,
+    0.0,
+    2.8
+  ],
+  "water_depth_m": 1.2,
+  "wave_type": "First-order crest-focused NewWave using JONSWAP gamma=3.3; actual nonlinear wave measured from SPH",
+  "target_linear_crest_amplitude_m": 0.65,
+  "peak_period_s": 2.2,
+  "frequency_band_hz": [
+    0.3,
+    0.95
+  ],
+  "focus_x_m": 1.0,
+  "focus_time_s": 7.5,
+  "piston_x_m": 6.0,
+  "wave_direction": "negative world x",
+  "piston_displacement_range_m": [
+    -0.48083857236435273,
+    0.4639972376765177
+  ],
+  "piston_max_speed_m_s": 1.4256293451445003,
+  "boundary": "DBC",
+  "scale_ratio": 10,
+  "rho_kg_m3": 1025,
+  "initial_velocity_m_s": [
+    0,
+    0,
+    0
+  ],
+  "prescribed_body_velocity": false,
+  "free_dofs": [],
+  "sources": [
+    "https://github.com/DualSPHysics/DualSPHysics/wiki/3.-SPH-formulation",
+    "https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/green-water-loads-on-prismatic-obstacles/DF5D3EB421E38AEF11D70DFD967BEC12"
+  ],
+  "limitations": [
+    "Target linear crest amplitude is not measured wave height or significant wave height.",
+    "First-order piston forcing; nonlinear shift of focus/breaking must be measured in the empty tank.",
+    "Coarse demonstration: no validated peak impact pressures, air entrapment, structural damage or internal flooding.",
+    "Upper closed hull interacts with water; mast, oars and decorative appendages remain display-only.",
+    "Existing 40 mm hull hydrostatic bias is not removed by adjusting the physical mass."
+  ]
+}

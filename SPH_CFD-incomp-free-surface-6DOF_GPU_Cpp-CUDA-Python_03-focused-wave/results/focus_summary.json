@@ -1,0 +1,44 @@
+{
+  "case": "focus_turtle_A065_near_40",
+  "status": "completed",
+  "last_saved_time_s": 10.00023046780164,
+  "initial_particles": 2885421,
+  "particle_losses": 0,
+  "solver_wall_to_last_snapshot_s": 1552.132837,
+  "native_steps": 42028,
+  "sampled_density_range_kg_m3": [
+    972.490478515625,
+    1068.73388671875
+  ],
+  "sampled_max_speed_m_s": 11.408273696899414,
+  "max_rigid_fit_rms_m": 6.362888439263682e-05,
+  "heave_range_m": [
+    -0.18118797844166373,
+    0.38474619612591837
+  ],
+  "pitch_range_deg": [
+    -18.039263017997126,
+    21.29098597393677
+  ],
+  "surge_range_m": [
+    -5.453381004423484,
+    0.015143517452590002
+  ],
+  "max_water_above_central_roof_particles": 0,
+  "time_of_max_roof_indicator_s": 0.0,
+  "roof_indicator_definition": "Particle count in body coordinates x=(-0.8,0.4), |y|<0.2, z=(0.49,0.9) m. Indicates water above the central roof footprint, not validated wetting or impact pressure.",
+  "max_water_above_upper_hull_particles": 102,
+  "time_of_max_upper_hull_indicator_s": 7.760008227638718,
+  "upper_hull_indicator_definition": "Water particles 0..3dp above the highest closed-hull surface at their body-frame (x,y), where the roof height exceeds 0.2 m. Roof height is ray-intersected at 20 mm spacing; a geometrical indicator, not a wetting-pressure model.",
+  "hardware": "NVIDIA GeForce RTX 5080",
+  "limitations": [
+    "Target linear crest amplitude is not measured wave height or significant wave height.",
+    "First-order piston forcing; nonlinear shift of focus/breaking must be measured in the empty tank.",
+    "Coarse demonstration: no validated peak impact pressures, air entrapment, structural damage or internal flooding.",
+    "Upper closed hull interacts with water; mast, oars and decorative appendages remain display-only.",
+    "Existing 40 mm hull hydrostatic bias is not removed by adjusting the physical mass.",
+    "Finite-width tank with downstream damping; reflected waves are not separated, especially in later events.",
+    "Water above the roof is a geometrical diagnostic; no structural survival or peak-pressure validation."
+  ],
+  "native_reported_runtime_s": 1552.273926
+}

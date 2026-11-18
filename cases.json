@@ -1,0 +1,22 @@
+{
+  "potential": {
+    "folder": "BEM_CFD-incomp-free-surface-6DOF_CPU_Python_01-potential",
+    "method": "linear potential-flow BEM",
+    "original_case": "potential_turtle_history"
+  },
+  "coasting": {
+    "folder": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_02-coasting",
+    "method": "WCSPH",
+    "original_case": "free6_history_40"
+  },
+  "focused": {
+    "folder": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_03-focused-wave",
+    "method": "WCSPH",
+    "original_case": "focus_turtle_A065_near_40"
+  },
+  "empty": {
+    "folder": "SPH_CFD-incomp-free-surface_GPU_Cpp-CUDA-Python_04-empty-flume",
+    "method": "WCSPH 2-D commissioning",
+    "original_case": "focus_empty_A065_near_40"
+  }
+}

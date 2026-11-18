@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "panel_count": 6165,
+  "dofs": [
+    "Surge",
+    "Sway",
+    "Heave",
+    "Roll",
+    "Pitch",
+    "Yaw"
+  ],
+  "reference_mean_speed_m_s": 0.5,
+  "rows": [
+    {
+      "amplitude_m": {
+        "Surge": 0.02808302427740514,
+        "Sway": 7.134799767745747e-05,
+        "Heave": 0.1027613329093138
+      },
+      "amplitude_deg": {
+        "Roll": 0.060265566739948484,
+        "Pitch": 12.550175077685308,
+        "Yaw": 0.009290768453384037
+      },
+      "equation_residual": 2.2380387869498745e-16,
+      "solve_wall_s": 153.85093319998123
+    }
+  ],
+  "assumptions": [
+    "2026 reconstruction studies 1795 documents; it does not establish the exact 1592 vessel.",
+    "Published 35.27 m overall length includes a 9.21 m tail. The difference 26.06 m is only a derived scaling reference, not Lpp or Lwl.",
+    "Artistic visual mesh and fitted symmetric envelope are not the official reconstruction CAD.",
+    "Mass budget, CG and radii of gyration are declared plausible loading assumptions; exact historical mass distribution is unknown.",
+    "Model is watertight; openings, flooding, oars, sails, rudder forces and wind are excluded.",
+    "1:10 Froude scaling represents gravity-wave motions, not simultaneous full-scale Reynolds similarity.",
+    "Linear harmonic response about a fixed mean speed. This does not predict free-coasting deceleration, viscous resistance or startup; SPH is a separate initial-value problem.",
+    "Second-order incident shape plus linear scattered waves is a visualization approximation, not a full nonlinear solution.",
+    "The approximately 12.6 degree pitch amplitude at this large wave height exceeds a comfortable small-motion regime; use qualitatively, not as a quantitatively reliable large-wave prediction."
+  ],
+  "total_wall_s": 213.7861542000901,
+  "incident_bernoulli_identity_error": 1.7028447152542779e-15,
+  "max_unit_scattered_surface": 1.2441261978790001,
+  "mesh_volume_m3": 0.15028364168741992
+}

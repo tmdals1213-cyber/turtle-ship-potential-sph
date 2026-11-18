@@ -1,0 +1,49 @@
+{
+  "case": "focus_empty_A065_near_40",
+  "status": "empty_flume_completed",
+  "last_saved_time_s": 12.00000686902323,
+  "particle_losses": 0,
+  "gauges": {
+    "GaugesSWL_swl_0p0": {
+      "max_elevation_m": 0.51685,
+      "time_at_max_s": 9.810193,
+      "min_elevation_m": -0.244697
+    },
+    "GaugesSWL_swl_1p0": {
+      "max_elevation_m": 0.567629,
+      "time_at_max_s": 4.990101,
+      "min_elevation_m": -0.224554
+    },
+    "GaugesSWL_swl_2p0": {
+      "max_elevation_m": 0.649992,
+      "time_at_max_s": 4.720114,
+      "min_elevation_m": -0.241729
+    },
+    "GaugesSWL_swl_3p0": {
+      "max_elevation_m": 0.624699,
+      "time_at_max_s": 4.450105,
+      "min_elevation_m": -0.271784
+    },
+    "GaugesSWL_swl_4p0": {
+      "max_elevation_m": 0.637724,
+      "time_at_max_s": 4.170033,
+      "min_elevation_m": -0.307346
+    },
+    "GaugesSWL_swl_m1p0": {
+      "max_elevation_m": 0.491471,
+      "time_at_max_s": 10.13003,
+      "min_elevation_m": -0.19645
+    },
+    "GaugesSWL_swl_m2p0": {
+      "max_elevation_m": 0.442357,
+      "time_at_max_s": 10.470144,
+      "min_elevation_m": -0.173297
+    }
+  },
+  "sampled_density_range_kg_m3": [
+    1014.8943481445312,
+    1035.512451171875
+  ],
+  "sampled_max_speed_m_s": 5.4364848136901855,
+  "note": "Gauge elevation is not significant wave height. Inspect particle profiles for actual overturning; no automated breaking classification."
+}

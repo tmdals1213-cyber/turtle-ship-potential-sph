@@ -1,0 +1,75 @@
+{
+  "status": "completed_demonstration_not_experimentally_validated",
+  "purpose": "Turtle ship extreme-wave intro",
+  "dimension": 3,
+  "dp_m": 0.04,
+  "duration_s": 10.0,
+  "domain_m": [
+    24,
+    4.8,
+    2.8
+  ],
+  "water_depth_m": 1.2,
+  "wave_type": "First-order crest-focused NewWave using JONSWAP gamma=3.3; actual nonlinear wave measured from SPH",
+  "target_linear_crest_amplitude_m": 0.65,
+  "peak_period_s": 2.2,
+  "frequency_band_hz": [
+    0.3,
+    0.95
+  ],
+  "focus_x_m": 1.0,
+  "focus_time_s": 7.5,
+  "piston_x_m": 6.0,
+  "wave_direction": "negative world x",
+  "piston_displacement_range_m": [
+    -0.48083857236435273,
+    0.4639972376765177
+  ],
+  "piston_max_speed_m_s": 1.4256293451445003,
+  "boundary": "DBC tank and piston; mDBC1 hull normals only",
+  "scale_ratio": 10,
+  "rho_kg_m3": 1025,
+  "initial_velocity_m_s": [
+    0,
+    0,
+    0
+  ],
+  "prescribed_body_velocity": false,
+  "free_dofs": [
+    "Surge",
+    "Sway",
+    "Heave",
+    "Roll",
+    "Pitch",
+    "Yaw"
+  ],
+  "sources": [
+    "https://github.com/DualSPHysics/DualSPHysics/wiki/3.-SPH-formulation",
+    "https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/green-water-loads-on-prismatic-obstacles/DF5D3EB421E38AEF11D70DFD967BEC12"
+  ],
+  "limitations": [
+    "Target linear crest amplitude is not measured wave height or significant wave height.",
+    "First-order piston forcing; nonlinear shift of focus/breaking must be measured in the empty tank.",
+    "Coarse demonstration: no validated peak impact pressures, air entrapment, structural damage or internal flooding.",
+    "Upper closed hull interacts with water; mast, oars and decorative appendages remain display-only.",
+    "Existing 40 mm hull hydrostatic bias is not removed by adjusting the physical mass.",
+    "Finite-width tank with downstream damping; reflected waves are not separated, especially in later events."
+  ],
+  "mass_kg": 154.4,
+  "center_of_mass_m": [
+    0.013999261977276772,
+    0.0,
+    0.029802092880915232
+  ],
+  "inertia_kg_m2": [
+    12.3232039781411,
+    65.53542740000002,
+    65.53542740000002
+  ],
+  "closed_hull_volume_m3": 0.6500987103248662,
+  "hull_file": "${TURTLE_ASSET_DIR}/turtle_history_closed.stl",
+  "empty_flume_case": "focus_empty_A065_near_40",
+  "empty_flume_observation": "Actual forward-curling crest in particle plots near the intended bow location; nonlinear maximum occurred before the linear target focus time.",
+  "comparison_to_prior": "Same hull, physical mass and inertia. Initially at rest. Wider tank and new focused-wave input. Separate scenario from free6_history_40.",
+  "result_summary": "focus_summary.json"
+}

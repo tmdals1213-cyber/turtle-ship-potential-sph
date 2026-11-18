@@ -1,0 +1,90 @@
+{
+  "study": "Forward-speed ship in head waves: theory, linear potential flow, SPH",
+  "status": "preparation_and_pilot",
+  "hull": {
+    "type": "analytic_Wigley_with_vertical_sides_above_waterline",
+    "length_m": 3,
+    "beam_m": 1.0,
+    "draft_m": 0.28,
+    "freeboard_m": 0.35,
+    "center_of_mass_m": [
+      0,
+      0,
+      0.08
+    ],
+    "pitch_radius_of_gyration_over_length": 0.25,
+    "roll_radius_of_gyration_over_beam": 0.35,
+    "yaw_radius_of_gyration_over_length": 0.25,
+    "mass_policy": "rho times analytic displacement; inertia and CG are declared illustrative assumptions"
+  },
+  "environment": {
+    "rho_kg_m3": 1000.0,
+    "g_m_s2": 9.81,
+    "water_depth_m": 1.0,
+    "kinematic_viscosity_m2_s": 1e-06
+  },
+  "motion": {
+    "forward_speed_m_s": 0.5,
+    "wave_direction_rad": 3.141592653589793,
+    "free_dofs": [
+      "Heave",
+      "Pitch"
+    ],
+    "prescribed_or_constrained_dofs": [
+      "Surge",
+      "Sway",
+      "Roll",
+      "Yaw"
+    ],
+    "propulsion": "constant-speed towing equivalent; no propeller"
+  },
+  "waves": {
+    "baseline_wavelength_over_length": 1.0,
+    "baseline_height_m": 0.06,
+    "wavelength_over_length_sweep": [
+      0.6,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      2.0
+    ],
+    "height_sweep_m": [
+      0.06,
+      0.12,
+      0.18
+    ],
+    "ramp_encounter_periods": 3,
+    "target_encounter_periods": 15
+  },
+  "sph": {
+    "domain_m": {
+      "xmin": -6.0,
+      "xmax": 6.0,
+      "ymin": -0.75,
+      "ymax": 0.75,
+      "zmin": -1.0,
+      "zmax": 0.5
+    },
+    "pilot_particle_spacing_m": 0.06,
+    "comparison_particle_spacing_m": 0.015,
+    "refinement_particle_spacing_m": 0.01,
+    "pilot_duration_s": 0.05,
+    "sound_speed_m_s": 50.0,
+    "cfl": 0.2,
+    "boundary": "DBC pilot; boundary sensitivity required before quantitative loads",
+    "runtime_status": "GPU_startup_tests_completed_1s_not_wave_validated"
+  },
+  "comparison": {
+    "reference_frame": "ship frame, +x is forward, head waves propagate toward -x",
+    "metrics": [
+      "incident wave height and phase",
+      "heave amplitude and phase",
+      "pitch amplitude and phase",
+      "mean sinkage and trim",
+      "deck wetness in nonlinear SPH only"
+    ],
+    "accuracy_claim": "pilot demonstration, not validated ship performance or resistance prediction"
+  },
+  "description": "Illustrative broad Wigley proxy carrying a turtle-ship visual skin; not turtle-ship hydrodynamic prediction."
+}

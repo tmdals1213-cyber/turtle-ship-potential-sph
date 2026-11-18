@@ -1,0 +1,18 @@
+{
+  "video": "study/media/turtle_focused_intro.mp4",
+  "case": "focus_turtle_A065_near_40",
+  "physical_interval_s": [
+    4.6,
+    5.92
+  ],
+  "video_seconds": 3.0,
+  "fps": 30,
+  "frames": 90,
+  "width": 1080,
+  "height": 1920,
+  "water": "Same-ID SPH particle-position interpolation followed by a smoothed 3-D occupancy surface; no analytic replacement.",
+  "body": "Measured rigid-particle poses applied to the licensed local turtle visual skin.",
+  "spray": "Only dilute measured SPH water parcels omitted by the continuous surface; no random foam, no resolved droplet-size claim.",
+  "condition": "Initially at rest, fully free six-DOF; separate extreme-wave condition from the existing coasting film.",
+  "sha256": "1a9bf1fc77c6b25944d05da08f005eddf3a9ccbcb1f38e233a26d2283d2aba91"
+}
