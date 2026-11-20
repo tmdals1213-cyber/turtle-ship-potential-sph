@@ -1,0 +1,37 @@
+# Next industrial examples: research shortlist
+
+Research only, reviewed 2026-11-20. None of these cases has been implemented or benchmarked by this publication. The target workstation has an RTX 5080 with 16 GB VRAM and a Ryzen 9 9950X. Method selection is not restricted to SPH. Extra weekend compute is available; substantial new implementation still needs the user's approval.
+
+## Recommended directions
+
+| Priority / subject | Visual question and comparison | Candidate method | Readiness and compute |
+|---|---|---|---|
+| 1. Battery thermal-runaway propagation | One cell fails: do heat and vented gases ignite or heat its neighbours? Compare baseline, cell barriers, a cooling plate, and a directed vent path. Show cell temperatures, heat flux, and propagation times. | Calibrated cell heat-release/thermal network plus CFD. FDS for a first fire/smoke study; GPU reacting-flow work could use PeleLMeX. | Highest industrial relevance. Experimental source histories and solid/gas coupling need preparation. Standard FDS is a CPU MPI/OpenMP path; GPU PeleLMeX is not a ready-made battery-pack model. Detailed chemistry can dominate compute. |
+| 2. Drone ground effect and wake recirculation | A generic rotorcraft hovers over open ground, close to a wall, and above a landing deck. Show wake vortices, impingement and recirculation. | GPU LBM with prescribed rotor forcing; resolved rotating blades only in a later stage. | Strong GPU visual candidate. Begin with an actuator model and force/momentum checks. Several heights/clearances and a resolution comparison make useful weekend work. Dust would require a separate particle model; it is not automatic. |
+| 3. Semiconductor underfill and trapped voids | Resin advances between solder bumps, meets from different directions, and traps air. Compare dispense patterns, vent access and wetting. | Two-phase LBM or VOF with surface tension/contact angle. | Distinct from the previous CPU-cooling/boiling topics. Surface-tension, contact-angle and filling-time benchmarks precede a package-scale case. Thin gaps can impose severe space/time resolution even for a tiny physical part. |
+| 4. Gearbox splash lubrication | Is more oil always better? Compare oil level and a simple guide/baffle while showing oil delivery and churning torque. | GPU SPH or VOF with prescribed gear motion. | Good reuse of free-surface rendering, but high viscosity, tip speed and small clearances can make it expensive. First stage is oil distribution, not tooth-contact lubrication or elastohydrodynamic film prediction. |
+| 5. Marine flooding and floating cargo | Water enters a simplified compartment or sweeps floating containers across a deck; compare partitions/protective barriers. | DualSPHysics plus Chrono. | Highest reuse of the current working toolchain. Multi-million particles, several rigid bodies and a finer reference run can productively fill a weekend. Local impact stresses and structural failure are separate models. |
+| 6. Generic high-speed external flow | A simple blunt body creates a bow shock; show density gradients and surface heating as a basic aerospace demonstration. | Compressible FVM; GPU MFC is a candidate for shock/interface work. | Requires a different solver and benchmark. Wall heat transfer requires suitable viscous/thermal wall treatment and resolution; a shock-capturing demonstration alone is not a heating prediction. No specific missile design or performance model is proposed. |
+
+## Battery first-stage scope
+
+Use a small generic module and an experimentally grounded single-cell event. Resolve solid heat storage/conduction, thermal contact, radiation and gas-side heat transport to the level supported by the selected solver. Separate casing heat from energy carried by expelled material to avoid double counting. Select a cell dataset before assigning a release history or a neighbouring-cell trigger law.
+
+Compare temperature histories, absorbed energy and propagation timing under the same source and ambient conditions. A prescribed heat source tests the enclosure response; it does **not** independently predict electrochemical onset. A thermal network needs calibration before claiming that neighbouring cells actually run away. Visible flames, gas chemistry and pressurised vent jets add distinct models. FDS's low-speed formulation is not a resolved high-pressure vent-nozzle calculation.
+
+## Runtime and output policy
+
+No credible solver runtime is available before a pilot. Reserve roughly 12–36 hours of the weekend for production calculations and leave time for extraction/rendering; this is a scheduling allowance, not a speed prediction. Use a small pilot to measure steps/s, physical-time/s, peak memory and output rate. Keep VRAM headroom, then select domain, resolution and case count. Extra runtime is best spent on one refinement and controlled comparisons rather than only adding particles.
+
+The previous tanker runs took about 12 minutes per 8 physical seconds with 137,812 liquid particles. The larger marine case used about 10 million total particles. Neither is a reliable scaling law for reacting CFD, capillary flows or high-speed rotating equipment. Save integrated histories densely and full 3-D fields sparsely; agree on a storage budget before production.
+
+## Primary sources and implementation distinctions
+
+- [Battery Failure Databank paper, 2024](https://www.sciencedirect.com/science/article/am/pii/S0378775324000570): hundreds of cell tests, heat/mass ejection and variability. It supplies evidence for source calibration, not a universal cell reaction law.
+- [NIST FDS](https://pages.nist.gov/fds/): LES focused on low-speed fire, heat and smoke. [Official build configuration](https://github.com/firemodels/fds/blob/master/Build/makefile) uses CPU MPI/OpenMP; experimental GPU forks should not be mistaken for the verified default path.
+- [PeleLMeX](https://github.com/Pele-Suite/PeleLMeX): GPU-capable low-Mach reacting flow, AMR and embedded boundaries. It is a candidate infrastructure, not a completed thermal-runaway pack solver.
+- [waLBerla and its lbmpy code-generation workflow](https://walberla.net/): GPU LBM infrastructure, including a published rotating-rotor showcase. Actuator forcing, boundaries and diagnostics would be case work. [FluidX3D](https://github.com/ProjectPhysX/FluidX3D) also supports GPU flow/moving boundaries, but its non-commercial restriction must be reviewed before business-facing PR reuse; it is not treated as unrestricted open source here.
+- [Narrow-gap underfill using LBM, IMAPS 2023](https://imapsource.org/article/94481.pdf) and [experimentally evaluated capillary-underfill CFD](https://www.mdpi.com/2072-666X/14/10/1885) establish industrial relevance; they do not supply an already installed GPU implementation.
+- [GPU fluid-solid-thermal SPH for gearboxes, 2025 preprint](https://arxiv.org/abs/2512.09904): a research implementation demonstrating coupled splash, losses and heat transport. This is **not** a claim that the current stock DualSPHysics workflow already includes that thermal model.
+- [DualSPHysics-CHRONO flow/debris validation](https://www.mdpi.com/2076-3417/11/8/3618): floating-container trajectories/velocities compared with experiments. It supports method suitability, not validation of our future flooding case.
+- [MFC](https://github.com/MFlowCode/MFC): GPU compressible/multiphase infrastructure with shock-capturing methods. Local RTX 5080 build, memory use and suitability for the chosen wall physics are unverified.

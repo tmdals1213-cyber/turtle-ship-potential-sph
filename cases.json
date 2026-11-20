@@ -27,5 +27,19 @@
     "workflow": "gunnerus",
     "status": "completed_16_model_seconds",
     "notes": "Assumed world-fixed 30 N CG force; no actuator disk, RANS coupling or VRes."
+  },
+  "tanker_sloshing": {
+    "folder": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_06-tanker-sloshing",
+    "method": "WCSPH + native Chrono",
+    "workflow": "tanker",
+    "status": "four_complete_8s_runs",
+    "fluid_particles_per_case": 137812,
+    "source_cases": [
+      "A_unpartitioned_coupled_lat690_v8",
+      "C_separate_compartments_coupled_lat690_v8",
+      "B_perforated_baffles_coupled_lat690_v8",
+      "D_cross_baffles_coupled_lat690_v8"
+    ],
+    "notes": "Generic rigid fixed-wheel vehicle; no suspension or calibrated tires. Same water and dry mass, inertia, acceleration and contact."
   }
 }

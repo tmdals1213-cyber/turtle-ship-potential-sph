@@ -1,0 +1,47 @@
+{
+  "case": "B_perforated_baffles_coupled_lat690_v8",
+  "status": "Measured native two-way SPH/Chrono result",
+  "physical_time_s": 8.000031431676412,
+  "max_abs_roll_deg": 177.21580939094235,
+  "max_abs_pitch_deg": 0.7872572409692501,
+  "max_tilt_deg": 177.2155788846785,
+  "final_tilt_deg": 113.9872186361341,
+  "overturned": true,
+  "overturn_definition": "Body-up tilt >= 75 deg at 5 consecutive saved states (~0.2 s).",
+  "first_75deg_time_s": 3.900061413210277,
+  "first_side_lift_time_s": 2.400046554289483,
+  "max_center_horizontal_shift_m": 10.64425027885713,
+  "min_wheel_clearance_m": -8.881784197001252e-16,
+  "max_rigid_fit_error_m": 0.0005895309423147549,
+  "pre_brake_max_tilt_deg": 0.0008247550642890134,
+  "native_force_check": {
+    "mass_kg": 9000.0,
+    "max_balance_residual_N": 0.092529296875,
+    "balance_tolerance_N": 6.854722
+  },
+  "run": {
+    "case": "B_perforated_baffles_coupled_lat690_v8",
+    "status": "complete",
+    "returncode": 0,
+    "stop_reason": null,
+    "last_saved_time_s": 8.000031431676412,
+    "wall_s": 714.4861484998837,
+    "particle_losses": 0.0,
+    "dt_min_clamps": 0.0,
+    "min_dt_s": 1.925832082423812e-05,
+    "solver": "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+    "output": "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\B_perforated_baffles_coupled_lat690_v8\\output",
+    "command": [
+      "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+      "-gpu:0",
+      "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\B_perforated_baffles_coupled_lat690_v8\\generated\\Case",
+      "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\B_perforated_baffles_coupled_lat690_v8\\output",
+      "-dirdataout",
+      "data",
+      "-sv:binx,info",
+      "-svres",
+      "-toutx:0.01"
+    ]
+  },
+  "interpretation": "Rigid fixed-wheel truck on an accelerating support platform, with frictional contact. No suspension, tire slip curve, steering linkage or road-vehicle calibration."
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "counts_by_type": {
+    "0": 1,
+    "2": 101584,
+    "3": 137812
+  },
+  "fluid_mass_kg": 8819.968
+}

@@ -1,5 +1,13 @@
 # Sources, credits and redistribution boundaries
 
+## Tanker addition
+
+Case 06 uses the same pinned DualSPHysics source with **native Project Chrono enabled** in a separate GPU build. The previous ship build's `DISABLE_CHRONO` setting does not apply to it. Governing equations and numerical kernels remain unchanged. The public CMake recipe adapts upstream source lists; obtain all source and third-party Chrono libraries externally with their original notices. Project Chrono: <https://projectchrono.org/>; consult the exact bundled/upstream library license when distributing binaries. No such binaries are bundled here.
+
+`ComputeForces` 5.4.266.02 is an external official freeware postprocessor, not GPL repository code. [Official binary source](https://dual.sphysics.org/sphcourse/DualSPHysics-bin/dualsphysics/bin/ComputeForces_win64.exe). Its hash/provenance is retained in case 06. GenCase/PartVTK also retain their upstream utility terms; this package does not relicense them.
+
+Tank, baffles and the simplified truck/contact meshes are procedural geometry created for this demonstration. No manufacturer CAD was imported. The transverse-plus-longitudinal design family was informed by [Ground Force Worldwide](https://gfworldwide.com/water-solutions/); the example is not that manufacturer's product or a claim about its performance. See the case's commercial technology review for other sources.
+
 ## Repository code
 
 Python orchestration, case configurations and documentation are provided under GPL-3.0-or-later; the full text is in LICENSE. No third-party solver source or binary is bundled. The license of this repository does not grant rights to redistribute the external turtle mesh or relicense third-party artwork in the videos.

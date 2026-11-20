@@ -1,0 +1,58 @@
+{
+  "checked_date": "2026-11-20",
+  "scope": "Current commercial slosh-control examples and their relevance to a GPU SPH demonstration, not a market-wide newest/best ranking.",
+  "findings": [
+    {
+      "technology": "Transverse plus longitudinal baffles",
+      "commercial_example": "Ground Force Worldwide water trucks",
+      "source": "https://gfworldwide.com/water-solutions/",
+      "source_page_visible_update": "2026-09-25",
+      "evidence": "The current manufacturer page explicitly describes transverse and longitudinal baffles, alongside a semi-elliptical tank profile.",
+      "use_in_project": "Recommended final comparison: simplified fixed cross-baffle arrangement in the SAME outer tank as the other cases.",
+      "limits": "No detailed manufacturer CAD or opening dimensions were obtained. This is a commercial-design-inspired demonstrator, not a replica or validated product performance comparison. The principle predates the page update; do not call it an invention from 2026.",
+      "comparison_requirement": "Longitudinal plates chiefly address transverse motion, so include a separate prescribed lateral-acceleration diagnostic if explaining this advantage. Straight braking alone cannot establish all-direction superiority."
+    },
+    {
+      "technology": "Internal baffles with clean-in-place access",
+      "commercial_example": "Carrick 30,000 L general-purpose milk reload tanker",
+      "source": "https://carrick-engineering.com/carrick-general-purpose-reload-tanker/",
+      "evidence": "Manufacturer lists two internal baffles as standard and CIP compatibility.",
+      "use_in_project": "Evidence that conventional baffles remain part of current commercial designs and that cargo/cleaning requirements affect geometry.",
+      "limits": "Do not generalize an older regional handbook's unbaffled-milk-tanker description to every current food tanker. No food-hygiene compliance evaluation is proposed."
+    },
+    {
+      "technology": "Distributed hollow ball baffles",
+      "commercial_example": "Rapid Spray Ball Baffle System",
+      "source": "https://www.rapidspray.net/poly-cartage-tanks/ball-baffles",
+      "recent_catalogue": "https://www.rapidspray.net/wp-content/uploads/2025/03/2025-Full-Range-Catalogue-email.pdf",
+      "older_evidence": "https://www.rapidspray.net/wp-content/uploads/2017/07/Rapid-Spray-2018-Catalogue_TanksSection.pdf",
+      "evidence": "Current commercial hollow modules installed through the tank opening; also present in the manufacturer's 2018 catalogue, so not a new 2025 invention.",
+      "use_in_project": "Optional later example of distributed, multidirectional flow obstruction.",
+      "limits": "Do not repeat advertised braking-distance reductions as our result. A free packed assembly may move/contact or deform; a fixed porous approximation would need explicit qualification and would not reproduce the product exactly. Not included in the initial four-case simulation."
+    },
+    {
+      "technology": "Seamless mould-in baffles in composite chemical tanks",
+      "commercial_example": "Omni Tanker MIB",
+      "sources": [
+        "https://omnitanker.com/products/chemical-road-tanker/",
+        "https://omnitanker.com/technology/"
+      ],
+      "evidence": "Manufacturer specifies seamless Mould in Baffle technology for single-compartment acid tanks and thermoplastic/composite tank construction.",
+      "use_in_project": "A real commercial manufacturing/material advance for context.",
+      "limits": "Material, seams, corrosion and structural-life benefits are outside a rigid-wall liquid-only SPH model. Changing only a rendered tank material cannot demonstrate improved slosh damping. Not a separate CFD performance case."
+    }
+  ],
+  "research_context": {
+    "paper": "Liquid sloshing in a tank vehicle: A numerical and experimental investigation with baffle configurations",
+    "doi": "https://doi.org/10.1016/j.measurement.2024.114806",
+    "evidence_level": "Publisher search abstract; full page unavailable in this lookup.",
+    "interpretation": "Baffle configuration optimization is an active research topic. A recent paper does not establish production deployment or validate our case."
+  },
+  "recommended_story": [
+    "Baseline: unpartitioned liquid space",
+    "Principle 1: shorter free-surface spans using separate liquid compartments",
+    "Principle 2: through-flow plus dissipation using perforated transverse baffles",
+    "Current commercial-style layout: transverse and longitudinal baffles together"
+  ],
+  "claims_policy": "Use 'Current commercial design' in the video, not 'world's latest' or 'best'. Preserve measured simulation outcomes without assuming the last design must win."
+}

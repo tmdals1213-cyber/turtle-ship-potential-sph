@@ -1,0 +1,17 @@
+{
+  "case": "D_cross_baffles_coupled_lat690_v8",
+  "samples": 161,
+  "particle_count": 137812,
+  "max_abs_local_x_m": 2.994858003254982,
+  "max_local_radius_m": 1.0156779589660627,
+  "outer_escape": false,
+  "unique_particles_crossing_sealed_transverse_plates": 0,
+  "unique_particles_crossing_longitudinal_plate": 0,
+  "density_range_kg_m3": [
+    997.7125244140625,
+    1003.5367431640625
+  ],
+  "max_frame_speed_m_s": 6.719318866729736,
+  "passed": true,
+  "note": "Particle-ID isolation checked at every saved state in the actual instantaneous body frame. This is boundary integrity, not spatial convergence."
+}

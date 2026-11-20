@@ -1,0 +1,8 @@
+{
+  "status": "built",
+  "executable": "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+  "seconds": 482.8664131164551,
+  "numeric_source_changes": false,
+  "enabled_feature": "Native Chrono coupling",
+  "cuda_architecture": "sm_120"
+}

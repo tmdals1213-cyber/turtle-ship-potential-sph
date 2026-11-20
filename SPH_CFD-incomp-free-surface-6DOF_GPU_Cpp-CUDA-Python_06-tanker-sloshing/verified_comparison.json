@@ -1,0 +1,383 @@
+{
+  "input": {
+    "braking_g": 0.4,
+    "lateral_g": 0.69,
+    "lateral_start_s": 1.5,
+    "lateral_release_s": 4.4,
+    "lateral_end_s": 5.0
+  },
+  "sound_speed_m_s": 220,
+  "cfl_number": 0.2,
+  "duration_s": 8,
+  "cases": [
+    {
+      "case": "A_unpartitioned_coupled_lat690_v8",
+      "run": {
+        "case": "A_unpartitioned_coupled_lat690_v8",
+        "status": "complete",
+        "returncode": 0,
+        "stop_reason": null,
+        "last_saved_time_s": 8.000065087954692,
+        "wall_s": 717.5064024999738,
+        "particle_losses": 0.0,
+        "dt_min_clamps": 0.0,
+        "min_dt_s": 1.90639124386549e-05,
+        "solver": "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+        "output": "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\A_unpartitioned_coupled_lat690_v8\\output",
+        "command": [
+          "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+          "-gpu:0",
+          "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\A_unpartitioned_coupled_lat690_v8\\generated\\Case",
+          "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\A_unpartitioned_coupled_lat690_v8\\output",
+          "-dirdataout",
+          "data",
+          "-sv:binx,info",
+          "-svres",
+          "-toutx:0.01"
+        ]
+      },
+      "motion": {
+        "case": "A_unpartitioned_coupled_lat690_v8",
+        "status": "Measured native two-way SPH/Chrono result",
+        "physical_time_s": 8.000065087954692,
+        "max_abs_roll_deg": 176.53229786011104,
+        "max_abs_pitch_deg": 0.7917433015632724,
+        "max_tilt_deg": 176.53228346695133,
+        "final_tilt_deg": 0.014301227034188764,
+        "overturned": true,
+        "overturn_definition": "Body-up tilt >= 75 deg at 5 consecutive saved states (~0.2 s).",
+        "first_75deg_time_s": 3.850061301256885,
+        "first_side_lift_time_s": 2.350001381962517,
+        "max_center_horizontal_shift_m": 12.010640476568916,
+        "min_wheel_clearance_m": 0.0,
+        "max_rigid_fit_error_m": 0.0005917624070121157,
+        "pre_brake_max_tilt_deg": 0.0007871737458198397,
+        "native_force_check": {
+          "mass_kg": 9000.0,
+          "max_balance_residual_N": 0.0625,
+          "balance_tolerance_N": 8.485342
+        },
+        "run": {
+          "case": "A_unpartitioned_coupled_lat690_v8",
+          "status": "complete",
+          "returncode": 0,
+          "stop_reason": null,
+          "last_saved_time_s": 8.000065087954692,
+          "wall_s": 717.5064024999738,
+          "particle_losses": 0.0,
+          "dt_min_clamps": 0.0,
+          "min_dt_s": 1.90639124386549e-05,
+          "solver": "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+          "output": "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\A_unpartitioned_coupled_lat690_v8\\output",
+          "command": [
+            "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+            "-gpu:0",
+            "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\A_unpartitioned_coupled_lat690_v8\\generated\\Case",
+            "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\A_unpartitioned_coupled_lat690_v8\\output",
+            "-dirdataout",
+            "data",
+            "-sv:binx,info",
+            "-svres",
+            "-toutx:0.01"
+          ]
+        },
+        "interpretation": "Rigid fixed-wheel truck on an accelerating support platform, with frictional contact. No suspension, tire slip curve, steering linkage or road-vehicle calibration."
+      },
+      "fluid_qa": {
+        "case": "A_unpartitioned_coupled_lat690_v8",
+        "samples": 161,
+        "particle_count": 137812,
+        "max_abs_local_x_m": 3.0214054633980787,
+        "max_local_radius_m": 1.0819459644585987,
+        "outer_escape": false,
+        "unique_particles_crossing_sealed_transverse_plates": 0,
+        "unique_particles_crossing_longitudinal_plate": 0,
+        "density_range_kg_m3": [
+          948.7092895507812,
+          1044.1090087890625
+        ],
+        "max_frame_speed_m_s": 49.88896942138672,
+        "passed": true,
+        "note": "Particle-ID isolation checked at every saved state in the actual instantaneous body frame. This is boundary integrity, not spatial convergence."
+      },
+      "qualified": true
+    },
+    {
+      "case": "C_separate_compartments_coupled_lat690_v8",
+      "run": {
+        "case": "C_separate_compartments_coupled_lat690_v8",
+        "status": "complete",
+        "returncode": 0,
+        "stop_reason": null,
+        "last_saved_time_s": 8.000030464415211,
+        "wall_s": 703.3954475000501,
+        "particle_losses": 0.0,
+        "dt_min_clamps": 0.0,
+        "min_dt_s": 2.309366340454922e-05,
+        "solver": "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+        "output": "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\C_separate_compartments_coupled_lat690_v8\\output",
+        "command": [
+          "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+          "-gpu:0",
+          "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\C_separate_compartments_coupled_lat690_v8\\generated\\Case",
+          "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\C_separate_compartments_coupled_lat690_v8\\output",
+          "-dirdataout",
+          "data",
+          "-sv:binx,info",
+          "-svres",
+          "-toutx:0.01"
+        ]
+      },
+      "motion": {
+        "case": "C_separate_compartments_coupled_lat690_v8",
+        "status": "Measured native two-way SPH/Chrono result",
+        "physical_time_s": 8.000030464415211,
+        "max_abs_roll_deg": 175.28232288877405,
+        "max_abs_pitch_deg": 0.6855576869845034,
+        "max_tilt_deg": 175.28226397638474,
+        "final_tilt_deg": 92.10992146713247,
+        "overturned": true,
+        "overturn_definition": "Body-up tilt >= 75 deg at 5 consecutive saved states (~0.2 s).",
+        "first_75deg_time_s": 4.100007223987659,
+        "first_side_lift_time_s": 2.650026568035203,
+        "max_center_horizontal_shift_m": 9.943234562631073,
+        "min_wheel_clearance_m": 0.0,
+        "max_rigid_fit_error_m": 0.0005667808654492627,
+        "pre_brake_max_tilt_deg": 0.0007757791580424245,
+        "native_force_check": {
+          "mass_kg": 9000.0,
+          "max_balance_residual_N": 0.1181640625,
+          "balance_tolerance_N": 4.794503
+        },
+        "run": {
+          "case": "C_separate_compartments_coupled_lat690_v8",
+          "status": "complete",
+          "returncode": 0,
+          "stop_reason": null,
+          "last_saved_time_s": 8.000030464415211,
+          "wall_s": 703.3954475000501,
+          "particle_losses": 0.0,
+          "dt_min_clamps": 0.0,
+          "min_dt_s": 2.309366340454922e-05,
+          "solver": "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+          "output": "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\C_separate_compartments_coupled_lat690_v8\\output",
+          "command": [
+            "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+            "-gpu:0",
+            "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\C_separate_compartments_coupled_lat690_v8\\generated\\Case",
+            "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\C_separate_compartments_coupled_lat690_v8\\output",
+            "-dirdataout",
+            "data",
+            "-sv:binx,info",
+            "-svres",
+            "-toutx:0.01"
+          ]
+        },
+        "interpretation": "Rigid fixed-wheel truck on an accelerating support platform, with frictional contact. No suspension, tire slip curve, steering linkage or road-vehicle calibration."
+      },
+      "fluid_qa": {
+        "case": "C_separate_compartments_coupled_lat690_v8",
+        "samples": 161,
+        "particle_count": 137812,
+        "max_abs_local_x_m": 2.9957686561535652,
+        "max_local_radius_m": 1.0108588859395304,
+        "outer_escape": false,
+        "unique_particles_crossing_sealed_transverse_plates": 0,
+        "unique_particles_crossing_longitudinal_plate": 0,
+        "density_range_kg_m3": [
+          961.0091552734375,
+          1029.56640625
+        ],
+        "max_frame_speed_m_s": 38.44407653808594,
+        "passed": true,
+        "note": "Particle-ID isolation checked at every saved state in the actual instantaneous body frame. This is boundary integrity, not spatial convergence."
+      },
+      "qualified": true
+    },
+    {
+      "case": "B_perforated_baffles_coupled_lat690_v8",
+      "run": {
+        "case": "B_perforated_baffles_coupled_lat690_v8",
+        "status": "complete",
+        "returncode": 0,
+        "stop_reason": null,
+        "last_saved_time_s": 8.000031431676412,
+        "wall_s": 714.4861484998837,
+        "particle_losses": 0.0,
+        "dt_min_clamps": 0.0,
+        "min_dt_s": 1.925832082423812e-05,
+        "solver": "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+        "output": "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\B_perforated_baffles_coupled_lat690_v8\\output",
+        "command": [
+          "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+          "-gpu:0",
+          "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\B_perforated_baffles_coupled_lat690_v8\\generated\\Case",
+          "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\B_perforated_baffles_coupled_lat690_v8\\output",
+          "-dirdataout",
+          "data",
+          "-sv:binx,info",
+          "-svres",
+          "-toutx:0.01"
+        ]
+      },
+      "motion": {
+        "case": "B_perforated_baffles_coupled_lat690_v8",
+        "status": "Measured native two-way SPH/Chrono result",
+        "physical_time_s": 8.000031431676412,
+        "max_abs_roll_deg": 177.21580939094235,
+        "max_abs_pitch_deg": 0.7872572409692501,
+        "max_tilt_deg": 177.2155788846785,
+        "final_tilt_deg": 113.9872186361341,
+        "overturned": true,
+        "overturn_definition": "Body-up tilt >= 75 deg at 5 consecutive saved states (~0.2 s).",
+        "first_75deg_time_s": 3.900061413210277,
+        "first_side_lift_time_s": 2.400046554289483,
+        "max_center_horizontal_shift_m": 10.64425027885713,
+        "min_wheel_clearance_m": -8.881784197001252e-16,
+        "max_rigid_fit_error_m": 0.0005895309423147549,
+        "pre_brake_max_tilt_deg": 0.0008247550642890134,
+        "native_force_check": {
+          "mass_kg": 9000.0,
+          "max_balance_residual_N": 0.092529296875,
+          "balance_tolerance_N": 6.854722
+        },
+        "run": {
+          "case": "B_perforated_baffles_coupled_lat690_v8",
+          "status": "complete",
+          "returncode": 0,
+          "stop_reason": null,
+          "last_saved_time_s": 8.000031431676412,
+          "wall_s": 714.4861484998837,
+          "particle_losses": 0.0,
+          "dt_min_clamps": 0.0,
+          "min_dt_s": 1.925832082423812e-05,
+          "solver": "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+          "output": "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\B_perforated_baffles_coupled_lat690_v8\\output",
+          "command": [
+            "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+            "-gpu:0",
+            "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\B_perforated_baffles_coupled_lat690_v8\\generated\\Case",
+            "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\B_perforated_baffles_coupled_lat690_v8\\output",
+            "-dirdataout",
+            "data",
+            "-sv:binx,info",
+            "-svres",
+            "-toutx:0.01"
+          ]
+        },
+        "interpretation": "Rigid fixed-wheel truck on an accelerating support platform, with frictional contact. No suspension, tire slip curve, steering linkage or road-vehicle calibration."
+      },
+      "fluid_qa": {
+        "case": "B_perforated_baffles_coupled_lat690_v8",
+        "samples": 161,
+        "particle_count": 137812,
+        "max_abs_local_x_m": 2.997349088653844,
+        "max_local_radius_m": 1.0151566473103248,
+        "outer_escape": false,
+        "unique_particles_crossing_sealed_transverse_plates": 0,
+        "unique_particles_crossing_longitudinal_plate": 0,
+        "density_range_kg_m3": [
+          957.41845703125,
+          1051.8570556640625
+        ],
+        "max_frame_speed_m_s": 49.01881790161133,
+        "passed": true,
+        "note": "Particle-ID isolation checked at every saved state in the actual instantaneous body frame. This is boundary integrity, not spatial convergence."
+      },
+      "qualified": true
+    },
+    {
+      "case": "D_cross_baffles_coupled_lat690_v8",
+      "run": {
+        "case": "D_cross_baffles_coupled_lat690_v8",
+        "status": "complete",
+        "returncode": 0,
+        "stop_reason": null,
+        "last_saved_time_s": 8.00003391959673,
+        "wall_s": 728.4477774999104,
+        "particle_losses": 0.0,
+        "dt_min_clamps": 0.0,
+        "min_dt_s": 6.705216211029302e-05,
+        "solver": "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+        "output": "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\D_cross_baffles_coupled_lat690_v8\\output",
+        "command": [
+          "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+          "-gpu:0",
+          "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\D_cross_baffles_coupled_lat690_v8\\generated\\Case",
+          "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\D_cross_baffles_coupled_lat690_v8\\output",
+          "-dirdataout",
+          "data",
+          "-sv:binx,info",
+          "-svres",
+          "-toutx:0.01"
+        ]
+      },
+      "motion": {
+        "case": "D_cross_baffles_coupled_lat690_v8",
+        "status": "Measured native two-way SPH/Chrono result",
+        "physical_time_s": 8.00003391959673,
+        "max_abs_roll_deg": 4.1234968684739496e-05,
+        "max_abs_pitch_deg": 0.0005391434821944428,
+        "max_tilt_deg": 0.0005391409886266419,
+        "final_tilt_deg": 0.0,
+        "overturned": false,
+        "overturn_definition": "Body-up tilt >= 75 deg at 5 consecutive saved states (~0.2 s).",
+        "first_75deg_time_s": null,
+        "first_side_lift_time_s": null,
+        "max_center_horizontal_shift_m": 0.44595529586741495,
+        "min_wheel_clearance_m": -8.881784197001252e-16,
+        "max_rigid_fit_error_m": 2.587979609228587e-07,
+        "pre_brake_max_tilt_deg": 0.0005391409886266419,
+        "native_force_check": {
+          "mass_kg": 9000.0,
+          "max_balance_residual_N": 0.01629638671875,
+          "balance_tolerance_N": 0.3311776875
+        },
+        "run": {
+          "case": "D_cross_baffles_coupled_lat690_v8",
+          "status": "complete",
+          "returncode": 0,
+          "stop_reason": null,
+          "last_saved_time_s": 8.00003391959673,
+          "wall_s": 728.4477774999104,
+          "particle_losses": 0.0,
+          "dt_min_clamps": 0.0,
+          "min_dt_s": 6.705216211029302e-05,
+          "solver": "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+          "output": "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\D_cross_baffles_coupled_lat690_v8\\output",
+          "command": [
+            "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+            "-gpu:0",
+            "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\D_cross_baffles_coupled_lat690_v8\\generated\\Case",
+            "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\D_cross_baffles_coupled_lat690_v8\\output",
+            "-dirdataout",
+            "data",
+            "-sv:binx,info",
+            "-svres",
+            "-toutx:0.01"
+          ]
+        },
+        "interpretation": "Rigid fixed-wheel truck on an accelerating support platform, with frictional contact. No suspension, tire slip curve, steering linkage or road-vehicle calibration."
+      },
+      "fluid_qa": {
+        "case": "D_cross_baffles_coupled_lat690_v8",
+        "samples": 161,
+        "particle_count": 137812,
+        "max_abs_local_x_m": 2.994858003254982,
+        "max_local_radius_m": 1.0156779589660627,
+        "outer_escape": false,
+        "unique_particles_crossing_sealed_transverse_plates": 0,
+        "unique_particles_crossing_longitudinal_plate": 0,
+        "density_range_kg_m3": [
+          997.7125244140625,
+          1003.5367431640625
+        ],
+        "max_frame_speed_m_s": 6.719318866729736,
+        "passed": true,
+        "note": "Particle-ID isolation checked at every saved state in the actual instantaneous body frame. This is boundary integrity, not spatial convergence."
+      },
+      "qualified": true
+    }
+  ],
+  "policy": "Same input and numerical settings; no required outcome for improvements. Check boundary integrity before accepting."
+}

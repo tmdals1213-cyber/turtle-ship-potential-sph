@@ -1,0 +1,132 @@
+{
+  "cases": [
+    {
+      "case": "A_unpartitioned_coupled_lat690_v8",
+      "layout": "A_unpartitioned",
+      "label": "NO BAFFLES",
+      "first_side_lift_s": 2.350001381962517,
+      "first_75deg_s": 3.850061301256885,
+      "overturned": true,
+      "max_tilt_deg": 176.53228346695133,
+      "peak_total_fluid_force_kN": 124.43836773380895,
+      "peak_total_fluid_moment_kNm": 86.49424086045158,
+      "peak_side_force_kN": 73.76402052983885,
+      "peak_roll_moment_kNm": 60.04799614825382,
+      "local_particle_load_max_N": 2740.8789162684325,
+      "force_check_nrmse": 0.010793344023599502,
+      "moment_check_nrmse": 0.010277567524946477,
+      "wall_s": 717.5064024999738,
+      "particle_loss": 0.0
+    },
+    {
+      "case": "C_separate_compartments_coupled_lat690_v8",
+      "layout": "C_separate_compartments",
+      "label": "COMPARTMENTS",
+      "first_side_lift_s": 2.650026568035203,
+      "first_75deg_s": 4.100007223987659,
+      "overturned": true,
+      "max_tilt_deg": 175.28226397638474,
+      "peak_total_fluid_force_kN": 126.24787555474023,
+      "peak_total_fluid_moment_kNm": 91.37738806818635,
+      "peak_side_force_kN": 68.532515381743,
+      "peak_roll_moment_kNm": 60.69423820784924,
+      "local_particle_load_max_N": 2603.0212517909513,
+      "force_check_nrmse": 0.00483161362420524,
+      "moment_check_nrmse": 0.0027521738918409055,
+      "wall_s": 703.3954475000501,
+      "particle_loss": 0.0
+    },
+    {
+      "case": "B_perforated_baffles_coupled_lat690_v8",
+      "layout": "B_perforated_baffles",
+      "label": "PERFORATED",
+      "first_side_lift_s": 2.400046554289483,
+      "first_75deg_s": 3.900061413210277,
+      "overturned": true,
+      "max_tilt_deg": 177.2155788846785,
+      "peak_total_fluid_force_kN": 123.76596890098571,
+      "peak_total_fluid_moment_kNm": 77.97884323839524,
+      "peak_side_force_kN": 69.73142892141584,
+      "peak_roll_moment_kNm": 55.69193638114012,
+      "local_particle_load_max_N": 3815.543161117357,
+      "force_check_nrmse": 0.007644829836572103,
+      "moment_check_nrmse": 0.007638757283376679,
+      "wall_s": 714.4861484998837,
+      "particle_loss": 0.0
+    },
+    {
+      "case": "D_cross_baffles_coupled_lat690_v8",
+      "layout": "D_cross_baffles",
+      "label": "CROSS BAFFLES",
+      "first_side_lift_s": null,
+      "first_75deg_s": null,
+      "overturned": false,
+      "max_tilt_deg": 0.0005391409886266419,
+      "peak_total_fluid_force_kN": 114.45666584865566,
+      "peak_total_fluid_moment_kNm": 69.16150847887367,
+      "peak_side_force_kN": 63.96475828522746,
+      "peak_roll_moment_kNm": 40.282251112062106,
+      "local_particle_load_max_N": 551.1258669938679,
+      "force_check_nrmse": 0.006871540296996352,
+      "moment_check_nrmse": 0.009654023998799817,
+      "wall_s": 728.4477774999104,
+      "particle_loss": 0.0
+    }
+  ],
+  "input_verification": [
+    {
+      "case": "A_unpartitioned_coupled_lat690_v8",
+      "input_csv": "c858db489db8e08e1fb8e5c579bcbad53118f9d21146572871ee1bef677f25c5",
+      "floating": "e91133aeb7b95c19e202152ac21b2f08e3b6fd78ba5d272ba69a986a64a6a682",
+      "contact_mesh": "722df56bf60ee742773dbf7a0a0f7877d14749816a699c9ac46502ef70cedc3f",
+      "road_mesh": "0214f5b71702f0f76907a92fcaa1d99657f135cf54acb8bd2e5167481db3c2bc"
+    },
+    {
+      "case": "C_separate_compartments_coupled_lat690_v8",
+      "input_csv": "c858db489db8e08e1fb8e5c579bcbad53118f9d21146572871ee1bef677f25c5",
+      "floating": "e91133aeb7b95c19e202152ac21b2f08e3b6fd78ba5d272ba69a986a64a6a682",
+      "contact_mesh": "722df56bf60ee742773dbf7a0a0f7877d14749816a699c9ac46502ef70cedc3f",
+      "road_mesh": "0214f5b71702f0f76907a92fcaa1d99657f135cf54acb8bd2e5167481db3c2bc"
+    },
+    {
+      "case": "B_perforated_baffles_coupled_lat690_v8",
+      "input_csv": "c858db489db8e08e1fb8e5c579bcbad53118f9d21146572871ee1bef677f25c5",
+      "floating": "e91133aeb7b95c19e202152ac21b2f08e3b6fd78ba5d272ba69a986a64a6a682",
+      "contact_mesh": "722df56bf60ee742773dbf7a0a0f7877d14749816a699c9ac46502ef70cedc3f",
+      "road_mesh": "0214f5b71702f0f76907a92fcaa1d99657f135cf54acb8bd2e5167481db3c2bc"
+    },
+    {
+      "case": "D_cross_baffles_coupled_lat690_v8",
+      "input_csv": "c858db489db8e08e1fb8e5c579bcbad53118f9d21146572871ee1bef677f25c5",
+      "floating": "e91133aeb7b95c19e202152ac21b2f08e3b6fd78ba5d272ba69a986a64a6a682",
+      "contact_mesh": "722df56bf60ee742773dbf7a0a0f7877d14749816a699c9ac46502ef70cedc3f",
+      "road_mesh": "0214f5b71702f0f76907a92fcaa1d99657f135cf54acb8bd2e5167481db3c2bc"
+    }
+  ],
+  "identical_parameters": [
+    "fluid_mass_kg",
+    "dry_mass_kg",
+    "dry_inertia_kg_m2",
+    "dry_cg_m",
+    "contact_mu",
+    "dp_m",
+    "sound_speed_m_s",
+    "cfl_number",
+    "duration_s"
+  ],
+  "comparison_window_s": [
+    1.5,
+    3.5
+  ],
+  "load_filter": "Cubic Savitzky-Golay across nine 0.05s snapshots (0.4s span).",
+  "moment_reference": "Instantaneous dry-vehicle CG; roll component is body x. Loads include fluid pressure and viscosity; exclude dry-body weight and ground contact.",
+  "rollover_definition": "Body-up tilt >= 75 deg at 5 consecutive saved states (~0.2 s).",
+  "observation_duration_s": 8,
+  "limitations": [
+    "Generic rigid vehicle with fixed wheels, frictional road contact, no suspension, tire handling or structural damage.",
+    "Prescribed nonrotating support-frame acceleration; visual road speed is the prescribed input, not solved total sliding speed.",
+    "First spatial resolution: DP40mm; four-layer160mm baffle envelopes. Not a calibrated real-vehicle safety threshold.",
+    "Same dry mass/inertia across layouts. Added baffle mass not separately modeled; equal water mass produces slightly different initial levels/CGs.",
+    "Single liquid with atmospheric gas pressure. Post-roll impacts are illustrative, not validated local stress predictions."
+  ]
+}

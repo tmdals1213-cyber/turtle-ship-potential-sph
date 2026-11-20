@@ -24,6 +24,10 @@ study/results/*
 *.exe
 *.dll
 *.log
+tanker/sph/
+tanker/media/
+tanker/geometry/
+tanker/comparison_summary.*
 .env
 hosts.yml
 

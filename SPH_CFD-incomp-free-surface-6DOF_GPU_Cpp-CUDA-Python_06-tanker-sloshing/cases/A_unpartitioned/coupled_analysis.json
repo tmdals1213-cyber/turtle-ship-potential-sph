@@ -1,0 +1,47 @@
+{
+  "case": "A_unpartitioned_coupled_lat690_v8",
+  "status": "Measured native two-way SPH/Chrono result",
+  "physical_time_s": 8.000065087954692,
+  "max_abs_roll_deg": 176.53229786011104,
+  "max_abs_pitch_deg": 0.7917433015632724,
+  "max_tilt_deg": 176.53228346695133,
+  "final_tilt_deg": 0.014301227034188764,
+  "overturned": true,
+  "overturn_definition": "Body-up tilt >= 75 deg at 5 consecutive saved states (~0.2 s).",
+  "first_75deg_time_s": 3.850061301256885,
+  "first_side_lift_time_s": 2.350001381962517,
+  "max_center_horizontal_shift_m": 12.010640476568916,
+  "min_wheel_clearance_m": 0.0,
+  "max_rigid_fit_error_m": 0.0005917624070121157,
+  "pre_brake_max_tilt_deg": 0.0007871737458198397,
+  "native_force_check": {
+    "mass_kg": 9000.0,
+    "max_balance_residual_N": 0.0625,
+    "balance_tolerance_N": 8.485342
+  },
+  "run": {
+    "case": "A_unpartitioned_coupled_lat690_v8",
+    "status": "complete",
+    "returncode": 0,
+    "stop_reason": null,
+    "last_saved_time_s": 8.000065087954692,
+    "wall_s": 717.5064024999738,
+    "particle_losses": 0.0,
+    "dt_min_clamps": 0.0,
+    "min_dt_s": 1.90639124386549e-05,
+    "solver": "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+    "output": "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\A_unpartitioned_coupled_lat690_v8\\output",
+    "command": [
+      "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+      "-gpu:0",
+      "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\A_unpartitioned_coupled_lat690_v8\\generated\\Case",
+      "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\A_unpartitioned_coupled_lat690_v8\\output",
+      "-dirdataout",
+      "data",
+      "-sv:binx,info",
+      "-svres",
+      "-toutx:0.01"
+    ]
+  },
+  "interpretation": "Rigid fixed-wheel truck on an accelerating support platform, with frictional contact. No suspension, tire slip curve, steering linkage or road-vehicle calibration."
+}

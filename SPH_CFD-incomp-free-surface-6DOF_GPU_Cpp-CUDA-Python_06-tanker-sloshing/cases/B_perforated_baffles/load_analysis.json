@@ -1,0 +1,29 @@
+{
+  "case": "B_perforated_baffles_coupled_lat690_v8",
+  "groups": [
+    "Tank wall",
+    "Rear transverse baffle",
+    "Front transverse baffle",
+    "Longitudinal baffle"
+  ],
+  "group_counts": [
+    89232,
+    6176,
+    6176,
+    0
+  ],
+  "source": "Official ComputeForces v5.4.266.02, per-boundary-particle Force vector from saved BI4 states.",
+  "units": "Force N; moment N*m about instantaneous dry-vehicle CG. Body axes rotate with truck.",
+  "partition": "Joint cells at transverse/longitudinal intersections assigned to transverse plates; groups disjoint and sum exactly to whole tank.",
+  "filtering": "9 saved 0.05s states, cubic Savitzky-Golay; 0.4s window for displayed integrated loads. Local impact peaks are not validation targets.",
+  "local_scalar": "Force magnitude in N per boundary particle at DP=40mm. This is a local load visualization, not pressure or grid-independent stress.",
+  "native_force_comparison": {
+    "filtered_nrmse": 0.007644829836572103,
+    "max_filtered_absolute_error": 1551.6801331701245
+  },
+  "native_moment_comparison": {
+    "filtered_nrmse": 0.007638757283376679,
+    "max_filtered_absolute_error": 1083.4947747843107
+  },
+  "qualified_for_load_visualization": true
+}

@@ -1,0 +1,455 @@
+
+
+ <DUALSPHYSICS5> Copyright (c) 2025 by
+ Dr Jose M. Dominguez Alonso, Prof. Alejandro Crespo,
+ Dr Georgios Fourtakas, Prof. Benedict Rogers,
+ Dr Renato Vacondio, Dr Corrado Altomare,
+ Dr Angelo Tafuni, Dr Orlando Garcia Feal,
+ Dr Ivan Martinez Estevez, Dr Joseph O'Connor,
+ Dr Aaron English, Dr Francesco Ricci,
+ Prof. Moncho Gomez Gesteira, Prof. Peter Stansby
+
+ EPHYSLAB Environmental Physics Laboratory, Universidade de Vigo
+ School of Mechanical, Aerospace and Civil Engineering, University of Manchester
+
+ DualSPHysics is free software: you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public License
+ as published by the Free Software Foundation, either version 2.1 of
+ the License, or (at your option) any later version.
+
+ DualSPHysics is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with DualSPHysics. If not, see <http://www.gnu.org/licenses/>.
+
+ Free download source files and documentation from DualSPHysics website (http://dual.sphysics.org).
+ Full list of developers and contributors is available at https://dual.sphysics.org/developers
+ Properly cite the use of DualSPHysics (Dominguez et al., 2022) (https://dual.sphysics.org/references).
+
+
+DualSPHysics5 v5.4.355 (08-04-2025)
+====================================
+[CUDA Capable device(s)]
+  Detected 1 CUDA Capable device(s)
+  CUDA Driver Version / Runtime Version: 13.3 / 12.8
+ 
+Device 0: "NVIDIA GeForce RTX 5080"
+  CUDA Capability Major....: 12.0
+  Global memory............: 16303 MiB
+  CUDA Cores...............: 0 (84 Multiprocessors,   0 CUDA Cores/MP)
+  GPU Max Clock rate.......: 2730 MHz (2.73 GHz)
+  Memory Clock rate........: 15001 Mhz
+  Memory Bus Width.........: 256-bit
+  L2 Cache Size............: 65536 KiB
+  Constant memory..........: 64 KiB
+  Shared memory per block..: 48 KiB
+  Registers per block......: 65536
+  Maximum threads per MP...: 1536
+  Maximum threads per block: 1024
+  Concurrent copy and kernel execution....: Yes with 1 copy engine(s)
+  Run time limit on kernels...............: Yes
+  Integrated GPU sharing Host Memory......: No
+  Support host page-locked memory mapping.: Yes
+  Device has ECC support..................: Disabled
+  CUDA Device Driver Mode (TCC or WDDM)...: WDDM (Windows Display Driver Model)
+  Device supports Unified Addressing (UVA): Yes
+  Device PCI (Domain / Bus / location)....: 0 / 1 / 0
+  Device supports P2P and RDMA............: No
+ 
+[GPU Hardware]
+Device selected: 0 "NVIDIA GeForce RTX 5080"
+Compute capability: 12.0
+Memory global: 16302 MiB
+Memory shared: 49152 Bytes
+ 
+[Initialising JSphGpuSingle  20-11-2026 15:03:59]
+ProgramFile=".../work/tanker-chrono-bin/DualSPHysics5.4_chrono.exe"
+Available features: Project Chrono coupling, FlexStruc, mDBC no-slip, GPU execution, OpenMP execution.
+ExecutionDir=".../tanker_sloshing_study/sph/B_perforated_baffles_coupled_lat690_v8"
+XmlFile=".../B_perforated_baffles_coupled_lat690_v8/generated/Case.xml"
+OutputDir=".../sph/B_perforated_baffles_coupled_lat690_v8/output"
+OutputDataDir=".../B_perforated_baffles_coupled_lat690_v8/output/data"
+XML-App: GenCase v5.4.354.01 (07-04-2025)
+Threads by host for parallel execution in Chrono: 2
+**Basic case configuration is loaded
+**Special case configuration is loaded
+Loading initial state of particles...
+Loaded particles: 239,397
+MapRealPos(border)=(-5.50416,-1.10416,-2.34416)-(3.10416,1.10416,1.10416)
+MapRealPos(final)=(-30,-30,-3)-(30,30,8)
+**Initial state of particles is loaded
+PosCellCode="13_10_9 (8192,1024,512)"
+PosCellSize=0.166277  (1 x KernelSize)
+**3D-Simulation parameters:
+CaseName="Case"
+RunName="Case"
+SavePosDouble=False
+SvExtraParts=""
+SaveFtAce=True
+SvTimers=True
+Boundary="DBC"
+StepAlgorithm="Symplectic"
+Kernel="Wendland"
+  Wendland.awen=727.0129
+  Wendland.bwenh=-525908.9
+Viscosity="Artificial"
+  Visco=0.01
+  ViscoBoundFactor=1
+DensityDiffusion="Fourtakas et al 2019 (inner)"
+  DensityDiffusionValue=0.1
+Shifting="None"
+RigidAlgorithm="CHRONO"
+FloatingCount=1
+FtPause=0
+FtConstraints=False
+FtIgnoreRadius=False
+CaseNp=239,397
+CaseNbound=101,585
+CaseNfixed=1
+CaseNmoving=0
+CaseNfloat=101,584
+CaseNfluid=137,812
+PeriodicActive="None"
+Dp=0.04
+KernelH=0.083138  (CoefficientH=1.2; H/Dp=2.07846)
+KernelSize=0.1662769
+CteB=6914286
+Gamma=7
+RhopZero=1000
+Cs0=219.9999965909091
+CFLnumber=0.2
+DtIni=0.0003779019880333068
+DtMin=3.779019795865392e-06
+DtAllParticles=False
+MassFluid=0.064
+MassBound=0.064
+FtPause=0
+TimeMax=8
+TimePart=0.05
+TimePartExtra=0.01
+Gravity=(0,0,-9.81)
+RhopOut=True
+RhopOutMin=800
+RhopOutMax=1200
+WrnPartsOut=True
+MinFluidStop=0.999
+NpfMinimum=137,674
+CellMode="Full"
+ScellDiv=1
+MapCells=(361,361,67)  (8,731,507 cells)
+CellDomFixed=False
+DomCells=(361,361,67)  (8,731,507 cells)
+DomCellCode="1+11_11_9"
+ 
+BlockSize calculation mode: Fixed.
+  BsForcesBound=128 (48 regs)
+  BsForcesFluid=128 (56 regs)
+ 
+**CellDiv: Requested gpu memory for 251,494 particles (over-allocation: 1.05X): 3.9 MiB (1 times).
+**CellDiv: Requested GPU memory for 6,562,598 cells (over-allocation: 729.18X): 100.1 MiB (1 times).
+ 
+RunMode="Pos-Cell - Single-GPU"
+ 
+Particle summary:
+  Fixed....: 1  id:(0-0)   MKs:1 (10)
+  Moving...: 0
+  Floating.: 101,584  id:(1-101584)   MKs:1 (12)
+  Fluid....: 137,812  id:(101585-239396)   MKs:1 (1)
+
+Total particles: 239,397 (bound=101585 (fx=1 mv=0 ft=101584) fluid=137812)
+Total MK blocks: 3 (bound=2 (fx=1 mv=0 ft=1) fluid=1)
+ 
+Chrono Objects configuration:
+DSPHChronoLib v4.0.26 (06-03-2024)
+===================================
+  Chrono version.......: v4.0.0.12
+  DSPH coupled version.: v5.4.322
+  Data directory.......: [@LOCAL_WORKSPACE@\tanker_sloshing_study\sph\B_perforated_baffles_coupled_lat690_v8\output/chrono_objs/]
+  Solver...............: Barzilai-Borwein
+  Time Stepper.........: Euler Implicit Linearized
+  Collisions...........: True
+    Collision dp....: 0.05
+    Contact Method..: Non-Smooth Contacts (NSC)
+    Collision shapes: 1060
+  Execution mode....: Multi Core
+  OpenMP Threads....: 2
+  Bodies............: 2
+  Links.............: 0
+  Body_0000 "road" -  type: Fixed
+    MkBound......: 0
+    Kfric........: 0.8 
+    Restitution..: 0.02
+    ModelFile....: road_mkb0000.obj
+    ModelNormal..: Original
+  Body_0001 "truck" -  type: Floating
+    MkBound......: 2
+    Mass.........: 9000
+    Center.......: (0.8,0,-0.9)
+    Inertia......: (7290,43560,47610) (xx,yy,zz)
+    Inertia......: (0,0,0) (xy,yz,xz)
+    Kfric........: 0.8 
+    Restitution..: 0.02
+    ModelFile....: truck_mkb0002.obj
+    ModelNormal..: Original
+ 
+AccInput configuration:
+Input_0 (mkfluid:0)
+  Time interval.: 0 - MAX [s]
+  Global gravity: True
+  Acc center....: (0,0,0) [m]
+ 
+
+Initial allocated memory in CPU: 21,755,106 (20.75 MiB)  (9 particle arrays)
+Initial allocated memory in GPU: 137,241,528 (130.88 MiB)  (13 particle arrays)
+Part_0000        239,397 (100.0%) particles successfully stored
+
+[Initialising simulation (qi0yt885)  20-11-2026 15:03:59]
+PART   PartTime   TotalSteps   Steps    Particles    Cells        Time/Sec   Finish time        
+=====  =========  ===========  =======  ===========  ===========  =========  ===================
+**Updated allocated memory in CPU: 21,755,106 (20.75 MiB)  (9 particle arrays)
+**Updated allocated memory in GPU: 149,696,828 (142.76 MiB)  (17 particle arrays)
+00001   0.050039          659      660      239,397        9,000      75.52  20-11-2026 15:14:03
+00002   0.100013        1,321      662      239,397        9,000      78.62  20-11-2026 15:14:15
+00003   0.150006        1,983      662      239,397        9,000      78.89  20-11-2026 15:14:20
+00004   0.200006        2,645      662      239,397        9,000      78.68  20-11-2026 15:14:22
+00005   0.250013        3,307      662      239,397        9,000      78.31  20-11-2026 15:14:23
+00006   0.300025        3,969      662      239,397        9,000      78.66  20-11-2026 15:14:24
+00007   0.350033        4,631      662      239,397        9,000      78.55  20-11-2026 15:14:25
+00008   0.400039        5,293      662      239,397        9,000      79.28  20-11-2026 15:14:26
+00009   0.450043        5,955      662      239,397        9,000      79.96  20-11-2026 15:14:27
+00010   0.500044        6,617      662      239,397        9,000      79.52  20-11-2026 15:14:28
+00011   0.550042        7,279      662      239,397        9,000      79.23  20-11-2026 15:14:29
+00012   0.600033        7,941      662      239,397        9,000      78.72  20-11-2026 15:14:29
+00013   0.650021        8,603      662      239,397        9,000      79.41  20-11-2026 15:14:29
+00014   0.700012        9,265      662      239,397        9,000      79.35  20-11-2026 15:14:30
+00015   0.750005        9,927      662      239,397        9,000      78.41  20-11-2026 15:14:29
+00016   0.800003       10,589      662      239,397        9,000      79.54  20-11-2026 15:14:30
+00017   0.850073       11,252      663      239,397        9,000      79.21  20-11-2026 15:14:29
+00018   0.900069       11,914      662      239,397        9,000      78.90  20-11-2026 15:14:29
+00019   0.950068       12,576      662      239,397        9,000      78.59  20-11-2026 15:14:29
+00020   1.000069       13,238      662      239,397        9,000      79.27  20-11-2026 15:14:29
+00021   1.050073       13,900      662      239,397        9,000      79.38  20-11-2026 15:14:30
+00022   1.100002       14,561      661      239,397        9,000      77.70  20-11-2026 15:14:29
+00023   1.150007       15,223      662      239,397        9,000      77.71  20-11-2026 15:14:29
+00024   1.200012       15,885      662      239,397        9,000      77.89  20-11-2026 15:14:29
+00025   1.250017       16,547      662      239,397        9,000      78.19  20-11-2026 15:14:29
+00026   1.300024       17,209      662      239,397        9,000      79.08  20-11-2026 15:14:29
+00027   1.350035       17,871      662      239,397        9,000      78.14  20-11-2026 15:14:29
+00028   1.400047       18,533      662      239,397        9,000      79.01  20-11-2026 15:14:29
+00029   1.450061       19,195      662      239,397        9,000      79.16  20-11-2026 15:14:29
+00030   1.500074       19,857      662      239,397        9,000      78.94  20-11-2026 15:14:29
+00031   1.550012       20,518      661      239,397        9,000      79.23  20-11-2026 15:14:29
+00032   1.600024       21,180      662      239,397        9,000      78.20  20-11-2026 15:14:28
+00033   1.650015       21,842      662      239,397        9,000      78.30  20-11-2026 15:14:28
+00034   1.700032       22,505      663      239,397        9,000      78.26  20-11-2026 15:14:28
+00035   1.750030       23,169      664      239,397        9,000      78.73  20-11-2026 15:14:28
+00036   1.800055       23,835      666      239,397        9,000      79.82  20-11-2026 15:14:29
+00037   1.850047       24,505      670      239,397        9,000      80.58  20-11-2026 15:14:29
+00038   1.900005       25,178      673      239,397        9,000      80.88  20-11-2026 15:14:29
+00039   1.950073       25,859      681      239,397        9,000      82.13  20-11-2026 15:14:30
+00040   2.000016       26,541      682      239,397        9,000      82.55  20-11-2026 15:14:32
+00041   2.050014       27,230      689      239,397        9,000      83.68  20-11-2026 15:14:32
+00042   2.100022       27,942      712      239,397        9,000      88.87  20-11-2026 15:14:34
+00043   2.150053       28,654      712      239,397        9,000      89.30  20-11-2026 15:14:36
+00044   2.200035       29,359      705      239,397        9,000      86.22  20-11-2026 15:14:37
+00045   2.250007       30,066      707      239,397        9,000      88.11  20-11-2026 15:14:38
+00046   2.300062       30,768      702      239,397        8,400      88.22  20-11-2026 15:14:40
+00047   2.350031       31,460      692      239,397        8,400      87.02  20-11-2026 15:14:41
+00048   2.400047       32,148      688      239,397        8,400      87.06  20-11-2026 15:14:42
+00049   2.450014       32,842      694      239,397        8,400      90.28  20-11-2026 15:14:44
+00050   2.500010       33,528      686      239,397        8,400      87.43  20-11-2026 15:14:45
+00051   2.550021       34,215      687      239,397        8,400      85.60  20-11-2026 15:14:46
+00052   2.600026       34,895      680      239,397        8,400      85.21  20-11-2026 15:14:46
+00053   2.650025       35,603      708      239,397        8,960      87.71  20-11-2026 15:14:47
+00054   2.700032       36,318      715      239,397        9,600      88.88  20-11-2026 15:14:49
+00055   2.750043       37,040      722      239,397        8,960      92.50  20-11-2026 15:14:50
+00056   2.800042       37,743      703      239,397        8,960      89.18  20-11-2026 15:14:51
+00057   2.850013       38,447      704      239,397        8,400      87.95  20-11-2026 15:14:52
+00058   2.900008       39,157      710      239,397        9,000      87.87  20-11-2026 15:14:53
+00059   2.950010       39,867      710      239,397        8,400      87.64  20-11-2026 15:14:54
+00060   3.000033       40,605      738      239,397        8,400      90.89  20-11-2026 15:14:56
+00061   3.050003       41,325      720      239,397        9,000      91.34  20-11-2026 15:14:56
+00062   3.100046       42,026      701      239,397        8,400      89.63  20-11-2026 15:14:58
+00063   3.150043       42,732      706      239,397        8,960      88.95  20-11-2026 15:14:58
+00064   3.200001       43,428      696      239,397        9,600      86.98  20-11-2026 15:14:58
+00065   3.250023       44,124      696      239,397        8,960      86.89  20-11-2026 15:14:59
+00066   3.300069       44,815      691      239,397        8,960      86.24  20-11-2026 15:15:00
+00067   3.350049       45,500      685      239,397        9,600      85.30  20-11-2026 15:15:00
+00068   3.400036       46,185      685      239,397        8,400      85.15  20-11-2026 15:15:01
+00069   3.450016       46,866      681      239,397        9,000      84.40  20-11-2026 15:15:01
+00070   3.500028       47,543      677      239,397        9,600      85.22  20-11-2026 15:15:01
+00071   3.550057       48,222      679      239,397        9,600      86.05  20-11-2026 15:15:01
+00072   3.600065       48,899      677      239,397        9,600      86.24  20-11-2026 15:15:02
+00073   3.650038       49,577      678      239,397        9,000      86.26  20-11-2026 15:15:02
+00074   3.700000       50,256      679      239,397       10,240      84.83  20-11-2026 15:15:02
+00075   3.750036       50,946      690      239,397        9,000      86.29  20-11-2026 15:15:02
+00076   3.800007       51,642      696      239,397        9,360      86.09  20-11-2026 15:15:03
+00077   3.850009       52,347      705      239,397        8,775      87.41  20-11-2026 15:15:03
+00078   3.900061       53,071      724      239,397        9,360      90.15  20-11-2026 15:15:04
+00079   3.950042       53,779      708      239,397        9,600      93.04  20-11-2026 15:15:05
+00080   4.000014       54,476      697      239,397        9,360      94.68  20-11-2026 15:15:06
+00081   4.050005       55,842    1,366      239,397        9,984     171.08  20-11-2026 15:15:15
+00082   4.100004       57,268    1,426      239,397        9,984     175.62  20-11-2026 15:15:23
+00083   4.150032       58,175      907      239,397        9,984     112.95  20-11-2026 15:15:26
+00084   4.200013       58,981      806      239,397        9,984      97.60  20-11-2026 15:15:28
+00085   4.250009       59,755      774      239,397        9,984      93.70  20-11-2026 15:15:29
+00086   4.300032       60,525      770      239,397        9,984      92.27  20-11-2026 15:15:29
+00087   4.350059       61,284      759      239,397        9,360      92.47  20-11-2026 15:15:29
+00088   4.400025       62,110      826      239,397        9,984     102.89  20-11-2026 15:15:31
+00089   4.450040       62,921      811      239,397        9,984      95.09  20-11-2026 15:15:32
+00090   4.500017       63,661      740      239,397       10,240      83.83  20-11-2026 15:15:31
+00091   4.550008       64,399      738      239,397        9,600      85.34  20-11-2026 15:15:31
+00092   4.600005       65,132      733      239,397       10,240      86.28  20-11-2026 15:15:32
+00093   4.650052       65,879      747      239,397       10,240      88.93  20-11-2026 15:15:31
+00094   4.700004       66,623      744      239,397        9,984      92.30  20-11-2026 15:15:32
+00095   4.750066       67,365      742      239,397        9,984      91.67  20-11-2026 15:15:32
+00096   4.800049       68,113      748      239,397       10,240      88.13  20-11-2026 15:15:33
+00097   4.850025       69,113    1,000      239,397        9,600     124.89  20-11-2026 15:15:36
+00098   4.900011       70,802    1,689      239,397        8,775     207.70  20-11-2026 15:15:45
+00099   4.950011       72,166    1,364      239,397        9,984     167.95  20-11-2026 15:15:52
+00100   5.000050       73,013      847      239,397        9,600      99.87  20-11-2026 15:15:53
+00101   5.050005       73,829      816      239,397        9,984      96.36  20-11-2026 15:15:53
+00102   5.100003       74,614      785      239,397        9,600      93.97  20-11-2026 15:15:54
+00103   5.150023       75,386      772      239,397       10,200      88.57  20-11-2026 15:15:54
+00104   5.200037       76,143      757      239,397       10,608      86.48  20-11-2026 15:15:54
+00105   5.250031       76,879      736      239,397       10,200      83.64  20-11-2026 15:15:53
+00106   5.300020       77,615      736      239,397        9,360      87.57  20-11-2026 15:15:52
+00107   5.350040       78,348      733      239,397       10,240      84.06  20-11-2026 15:15:53
+00108   5.400037       79,105      757      239,397       10,880      84.66  20-11-2026 15:15:52
+00109   5.450004       79,882      777      239,397       10,200      89.51  20-11-2026 15:15:52
+00110   5.500042       80,704      822      239,397        9,600      98.06  20-11-2026 15:15:53
+00111   5.550033       81,509      805      239,397       10,608      93.11  20-11-2026 15:15:53
+00112   5.600006       82,269      760      239,397        9,984      89.59  20-11-2026 15:15:53
+00113   5.650037       83,018      749      239,397        9,360      87.88  20-11-2026 15:15:53
+00114   5.700043       83,735      717      239,397        9,945      86.83  20-11-2026 15:15:53
+00115   5.750056       84,504      769      239,397        9,600      90.23  20-11-2026 15:15:53
+00116   5.800005       85,243      739      239,397        9,600      86.14  20-11-2026 15:15:53
+00117   5.850028       85,968      725      239,397       10,240      87.15  20-11-2026 15:15:52
+00118   5.900028       86,706      738      239,397       10,240      88.09  20-11-2026 15:15:53
+00119   5.950034       87,455      749      239,397       10,240      93.54  20-11-2026 15:15:52
+00120   6.000014       88,185      730      239,397       10,240      90.75  20-11-2026 15:15:53
+00121   6.050035       88,903      718      239,397       10,240      89.42  20-11-2026 15:15:53
+00122   6.100023       89,612      709      239,397       10,240      88.15  20-11-2026 15:15:53
+00123   6.150058       90,312      700      239,397       10,240      85.03  20-11-2026 15:15:53
+00124   6.200047       91,011      699      239,397        9,600      85.35  20-11-2026 15:15:52
+00125   6.250028       91,707      696      239,397       10,200      85.42  20-11-2026 15:15:52
+00126   6.300007       92,407      700      239,397        9,360      85.19  20-11-2026 15:15:52
+00127   6.350063       93,111      704      239,397        9,360      85.41  20-11-2026 15:15:51
+00128   6.400048       93,817      706      239,397       10,608      85.35  20-11-2026 15:15:51
+00129   6.450055       94,521      704      239,397        9,360      85.99  20-11-2026 15:15:51
+00130   6.500004       95,220      699      239,397        9,945      83.16  20-11-2026 15:15:51
+00131   6.550025       95,910      690      239,397        9,984      83.50  20-11-2026 15:15:50
+00132   6.600039       96,599      689      239,397        9,945      84.14  20-11-2026 15:15:50
+00133   6.650067       97,298      699      239,397        9,360      84.94  20-11-2026 15:15:49
+00134   6.700036       98,002      704      239,397        9,984      88.77  20-11-2026 15:15:50
+00135   6.750066       98,700      698      239,397       10,608      88.10  20-11-2026 15:15:50
+00136   6.800025       99,389      689      239,397        9,984      88.67  20-11-2026 15:15:50
+00137   6.850032      100,083      694      239,397        9,984      90.05  20-11-2026 15:15:50
+00138   6.900048      100,885      802      239,397        9,984     101.09  20-11-2026 15:15:50
+00139   6.950047      101,739      854      239,397        9,984     107.04  20-11-2026 15:15:52
+00140   7.000015      102,552      813      239,397        9,984      96.55  20-11-2026 15:15:52
+00141   7.050040      103,348      796      239,397        9,984      94.81  20-11-2026 15:15:52
+00142   7.100002      104,127      779      239,397        9,984      95.90  20-11-2026 15:15:53
+00143   7.150038      104,926      799      239,397        9,984      97.60  20-11-2026 15:15:53
+00144   7.200025      105,694      768      239,397        9,984      91.84  20-11-2026 15:15:53
+00145   7.250057      106,428      734      239,397        9,984      88.16  20-11-2026 15:15:53
+00146   7.300034      107,164      736      239,397       10,608      88.25  20-11-2026 15:15:53
+00147   7.350042      107,876      712      239,397        9,984      86.37  20-11-2026 15:15:54
+00148   7.400068      108,597      721      239,397        9,984      88.68  20-11-2026 15:15:53
+00149   7.450004      109,309      712      239,397        9,984      88.54  20-11-2026 15:15:53
+00150   7.500038      110,012      703      239,397        9,984      87.76  20-11-2026 15:15:53
+00151   7.550038      110,715      703      239,397        9,984      84.82  20-11-2026 15:15:53
+00152   7.600023      111,420      705      239,397        9,984      84.87  20-11-2026 15:15:52
+00153   7.650030      112,121      701      239,397        9,984      85.17  20-11-2026 15:15:53
+00154   7.700038      112,831      710      239,397        9,984      86.44  20-11-2026 15:15:52
+00155   7.750045      113,563      732      239,397        9,984      89.21  20-11-2026 15:15:52
+00156   7.800033      114,277      714      239,397        9,984      88.16  20-11-2026 15:15:52
+00157   7.850064      114,989      712      239,397       10,608      87.33  20-11-2026 15:15:52
+00158   7.900039      115,720      731      239,397       10,608      92.22  20-11-2026 15:15:52
+00159   7.950058      116,477      757      239,397        9,984      94.75  20-11-2026 15:15:53
+00160   8.000031      117,227      750      239,397        9,984      90.79  20-11-2026 15:15:53
+
+[Simulation finished  20-11-2026 15:15:53]
+Particles of simulation (initial): 239,397
+DTs adjusted to DtMin............: 0
+Excluded particles...............: 0
+Total Runtime....................: 713.705200 sec.
+Simulation Runtime...............: 713.570007 sec.
+Runtime per physical second......: 89.195900 sec.
+Steps per second.................: 164.282410
+Steps of simulation..............: 117,227
+PART files.......................: 161
+Maximum number of particles......: 239,397
+Maximum number of cells..........: 10,880
+CPU Memory.......................: 21,755,106 (20.75 MiB)
+GPU Memory.......................: 149,696,828 (142.76 MiB)
+GPU Memory (for cells)...........: 105,001,608 (100.14 MiB)
+ 
+[GPU Timers]
+VA-Init..........................: 0.135188 sec.
+NL-Limits........................: 16.949485 sec.
+NL-PreSort.......................: 1.579095 sec.
+NL-RadixSort.....................: 124.077895 sec.
+NL-CellBegin.....................: 24.245784 sec.
+NL-SortData......................: 14.596275 sec.
+NL-OutCheck......................: 0 sec.
+CF-PreForces.....................: 30.184667 sec.
+CF-PreMDBC.......................: 0 sec.
+CF-Forces........................: 343.225926 sec.
+SU-Shifting......................: 0 sec.
+SU-ComputeStep...................: 11.349744 sec.
+SU-Floating......................: 85.701970 sec.
+SU-Motion........................: 0 sec.
+SU-Periodic......................: 0 sec.
+SU-ResizeNp......................: 0 sec.
+SU-DownData......................: 0.286202 sec.
+SU-SavePart......................: 0.898376 sec.
+SU-Chrono........................: 59.138377 sec.
+SU-Moorings......................: 0 sec.
+SU-InOut.........................: 0 sec.
+SU-Gauges........................: 0 sec.
+SU-FlexStruc.....................: 0 sec.
+ 
+[Output files]
+- CfgChrono_Scheme.vtk.........: Saves VTK file with scheme of Chrono objects and links between objects.
+- CfgInit_Domain.vtk...........: Saves the limits of the case and the simulation domain limits.
+- CfgInit_MapCells.vtk.........: Saves the cell division of the simulation domain.
+- ChronoBody_forces.csv........: Saves forces for each body.
+- ChronoExchange_mkbound_XX.csv: Saves information of data exchange between DualSPHysics and Chrono library for each body.
+- ChronoLink_forces.csv........: Saves forces for each link.
+- FloatingAce_mkbound_XX.csv...: Saves information of acceleration used to move the floating object.
+- Run.csv......................: One line CSV file with execution parameters and other simulation data.
+- Run.out......................: Log file of the simulation.
+- RunPARTs.csv.................: Saves extra information of simulated PARTs.
+- chrono_objs/XXXX_mkXXXX.obj..: Geometry files used for Chrono interaction.
+- data/PartFloatInfo.ibi4......: Main binary file with floating data during simulation.
+- data/PartFloatInfo2.ibi4.....: Extra binary file with floating data during simulation.
+- data/PartInfo.ibi4...........: Binary file with execution information for each instant (input for PartInfo program).
+- data/PartMotionRef.ibi4......: Main binary file with motion reference data of moving and floating objects during simulation.
+- data/PartMotionRef2.ibi4.....: Extra binary file with motion reference data of moving and floating objects during simulation.
+- data/PartOut_???.obi4........: Binary file with particles excluded during simulation (input for PartVtkOut program).
+- data/Part_????.bi4...........: Binary file with particle data in different instants.
+- data/Part_Head.ibi4..........: Binary file with basic information of simulation data.
+ 
+[References]
+- Official solver reference DualSPHysics v5.0: J.M. Dominguez, G. Fourtakas,
+    C. Altomare, R.B. Canelas, A. Tafuni, O. Garcia-Feal, I. Martinez-Estevez,
+    A. Mokos, R. Vacondio, A.J.C. Crespo, B.D. Rogers, P.K. Stansby, M. Gomez-Gesteira.
+    2022. DualSPHysics: from fluid dynamics to multiphysics problems.
+    Computational Particle Mechanics, 9:867-895. doi: https://doi.org/10.1007/s40571-021-00404-2
+
+- Optimised CPU multi-core and GPU implementation (Dominguez et al., 2013  https://doi.org/10.1016/j.cpc.2012.10.015)
+- Dynamic boundary conditions (Crespo et al., 2007  https://doi.org/10.3970/cmc.2007.005.173)
+- Density diffusion Term: Fourtakas (Fourtakas et al., 2019  https://doi.org/10.1016/j.compfluid.2019.06.009)
+- Viscosity: Artificial (Monaghan, 1992  https://doi.org/10.1146/annurev.aa.30.090192.002551)
+- Kernel: Quintic Wendland (Wendland, 1995  https://doi.org/10.1007/BF02123482)
+- Time integration scheme: Symplectic (Leimkhuler, 1996  https://doi.org/10.1007/978-3-319-16375-8_1)
+- Floating objects (Canelas et al., 2015  https://doi.org/10.1002/fld.4031)
+- New coupling with Project Chrono (Martinez-Estevez et al., 2023  https://doi.org/10.1016/j.cpc.2022.108581)
+- External imposed forces (Longshaw and Rogers, 2015  https://doi.org/10.1016/j.advengsoft.2015.01.008)
+
+Finished execution (code=0).
+

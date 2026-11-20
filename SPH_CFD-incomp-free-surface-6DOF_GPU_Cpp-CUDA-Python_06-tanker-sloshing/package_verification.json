@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-20",
+  "CFD_rerun": false,
+  "portable_solver_rebuilt": false,
+  "checks": {
+    "parsed_and_imported_modules": [
+      "analyze_coupled.py",
+      "extract_surface_loads.py",
+      "make_summary.py",
+      "mdbc_tanker.py",
+      "prepare_braking.py",
+      "prepare_coupled_vehicle.py",
+      "prepare_reference.py",
+      "read_native_float.py",
+      "render_braking_results.py",
+      "render_coupled_results.py",
+      "render_final_edition.py",
+      "render_intro_motion.py",
+      "render_load_comparison.py",
+      "render_minimal_intro.py",
+      "run_braking.py",
+      "run_coupled.py",
+      "run_reference.py",
+      "tanker_paths.py"
+    ],
+    "regenerated_inputs": [
+      {
+        "case": "A_unpartitioned",
+        "setup_physics_parameters_match": true,
+        "metadata_only_differences": [
+          "plate_note"
+        ],
+        "audit_exact_match": true,
+        "acceleration_csv_exact_match": true,
+        "xml_semantic_match_after_path_and_numeric_format_normalization": true,
+        "fluid_particles": 137812
+      },
+      {
+        "case": "B_perforated_baffles",
+        "setup_physics_parameters_match": true,
+        "metadata_only_differences": [],
+        "audit_exact_match": true,
+        "acceleration_csv_exact_match": true,
+        "xml_semantic_match_after_path_and_numeric_format_normalization": true,
+        "fluid_particles": 137812
+      },
+      {
+        "case": "C_separate_compartments",
+        "setup_physics_parameters_match": true,
+        "metadata_only_differences": [],
+        "audit_exact_match": true,
+        "acceleration_csv_exact_match": true,
+        "xml_semantic_match_after_path_and_numeric_format_normalization": true,
+        "fluid_particles": 137812
+      },
+      {
+        "case": "D_cross_baffles",
+        "setup_physics_parameters_match": true,
+        "metadata_only_differences": [],
+        "audit_exact_match": true,
+        "acceleration_csv_exact_match": true,
+        "xml_semantic_match_after_path_and_numeric_format_normalization": true,
+        "fluid_particles": 137812
+      }
+    ],
+    "media": [
+      {
+        "file": "media/tanker_sloshing_final_portrait.mp4",
+        "bytes": 5617051,
+        "sha256": "f48ae8be6176c28cd0200ab4f0400cf970b88245a90601571b43f1fe0c789473",
+        "matches_approved_local_video": true
+      },
+      {
+        "file": "media/tanker_sloshing_final_landscape.mp4",
+        "bytes": 7271844,
+        "sha256": "325e88e2fe5cc8ae4596baf67c220a54a836167ce564728975d5b549a183d3dc",
+        "matches_approved_local_video": true
+      }
+    ]
+  }
+}

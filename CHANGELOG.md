@@ -1,5 +1,13 @@
 # Modification history
 
+## 2026-11-20 — four-layout tanker sloshing and final dual-format films
+
+- Added case 06: identical water/dry mass, inertia, contact and combined brake/lateral input; four completed 8 s native SPH/Chrono runs. Cross baffles stayed upright while the other three rolled in the declared rigid-vehicle model.
+- Added procedural geometry, portable external tool paths, a Chrono-enabled build recipe, preservation/continuation guards, rigid-pose and boundary-integrity checks, per-baffle load extraction and native-load comparison. Numerical kernels were not edited.
+- Included compact reference XML templates, input signals, motion/load histories, audit records, assumptions and source notices. Excluded full particle fields, generated geometry, render caches, environments and binaries.
+- Added final 36.5 s portrait and 36 s landscape films: full-rollover 2x opening, short particle-count/equation schematic, synchronized comparisons, jet boundary-load contours and continuously updated total force/moment arrows. No keyframed rollover in these films.
+- Packaged the next-example research shortlist separately; new industrial CFD implementation has not been started by this publication step.
+
 ## 2026-11-20 — Gunnerus focused-wave case and modelling notes
 
 - Added completed case 05: 16 model seconds, 9,985,001 particles, 0.05 m spacing, free six-DOF vessel with assumed world-fixed 30 N CG force. Added its independent 2-D incident-wave check and measured wave gauges.

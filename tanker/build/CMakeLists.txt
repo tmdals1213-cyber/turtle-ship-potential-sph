@@ -1,0 +1,68 @@
+# Source lists adapted from DualSPHysics ef3721a; retain upstream LGPL/GPL per-file notices. Numerical source is external.
+cmake_minimum_required(VERSION 3.24)
+project(TankerSPHChrono LANGUAGES CXX CUDA)
+set(DSPH_SOURCE "" CACHE PATH "Path to upstream src/source")
+if(NOT EXISTS "${DSPH_SOURCE}/JSph.cpp")
+ message(FATAL_ERROR "Set DSPH_SOURCE to the pinned upstream src/source directory")
+endif()
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CUDA_STANDARD 14)
+set(CMAKE_MSVC_RUNTIME_LIBRARY MultiThreaded)
+set(CMAKE_CUDA_RUNTIME_LIBRARY Static)
+set(OBJXML JXml.cpp tinystr.cpp tinyxml.cpp tinyxmlerror.cpp tinyxmlparser.cpp)
+set(OBJSPHMOTION JMotion.cpp JMotionData.cpp JMotionList.cpp JMotionMov.cpp JMotionObj.cpp JMotionPos.cpp JDsMotion.cpp)
+set(OBCOMMON Functions.cpp FunGeo3d.cpp FunSphKernelsCfg.cpp JAppInfo.cpp JBinaryData.cpp JCfgRunBase.cpp JDataArrays.cpp JException.cpp JLinearValue.cpp JLog2.cpp JObject.cpp JOutputCsv.cpp JRadixSort.cpp JRangeFilter.cpp JReadDatafile.cpp JSaveCsv2.cpp JSpVtkData.cpp JSpVtkShape.cpp JTimeControl.cpp JTrianglesMesh.cpp randomc.cpp)
+set(OBCOMMONDSPH JDsphConfig.cpp JDsPips.cpp JPartDataBi4.cpp JPartDataHead.cpp JDsPartFloatSave.cpp JDsPartMotionSave.cpp JPartFloatInfoBi4.cpp JPartMotRefBi4Save.cpp JPartOutBi4Save.cpp JCaseCtes.cpp JCaseEParms.cpp JCaseParts.cpp JCaseProperties.cpp)
+set(OBSPH JArraysCpu.cpp JCellDivCpu.cpp JDebugSphCpu.cpp JSphCfgRun.cpp JComputeMotionRef.cpp JDsDcell.cpp JDsDamping.cpp JDsExtraData.cpp JDsGaugeItem.cpp JDsGaugeSystem.cpp JDsPartsOut.cpp JDsSaveDt.cpp JSphShifting.cpp JSphShiftingAdv.cpp JSph.cpp JDsAccInput.cpp JSphCpu.cpp JSphCpu_mdbc.cpp JSphCpu_preloop.cpp JDsInitialize.cpp JSphMk.cpp JDsOutputParts.cpp JDsPartsInit.cpp JDsFixedDt.cpp JDsViscoInput.cpp JDsOutputTime.cpp JDsTimers.cpp JWaveSpectrumGpu.cpp main.cpp)
+set(OBSPHSINGLE JCellDivCpuSingle.cpp JPartsLoad4.cpp JSphCpuSingle.cpp)
+
+# GPU Objects
+set(OBCOMMONGPU FunctionsCuda.cpp JObjectGpu.cpp)
+set(OBSPHGPU JArraysGpu.cpp JDebugSphGpu.cpp JCellDivGpu.cpp JSphGpu.cpp JDsGpuInfo.cpp)
+set(OBSPHSINGLEGPU JCellDivGpuSingle.cpp JSphGpuSingle.cpp)
+set(OBCUDA JCellDivGpu_ker.cu JCellDivGpuSingle_ker.cu JDsPips_ker.cu JDsGauge_ker.cu JReduSum_ker.cu JSphShifting_ker.cu JDsAccInput_ker.cu JSphGpu_ker.cu JSphGpuSimple_ker.cu JWaveOrder2_ker.cu)
+set(OBVRESGPU JSphGpuSingle_VRes.cpp)
+set(OBWAVERZGPU JMLPistonsGpu.cpp JRelaxZonesGpu.cpp)
+set(OBINOUTGPU JSphGpuSingle_InOut.cpp)
+
+# Other Objects
+set(OBWAVERZCUDA JRelaxZone_ker.cu)
+set(OBCHRONO JChronoGeoObj.cpp JChronoObjects.cpp)
+set(OBMOORDYNPLUS JDsMooredFloatings.cpp JDsFtForcePoints.cpp)
+set(OBINOUT JSphCpu_InOut.cpp JSphCpuSingle_InOut.cpp JSphInOut.cpp JSphInOutZone.cpp JSphInOutGridData.cpp JSphInOutPoints.cpp JSphInOutVel.cpp JSphInOutVelAwas.cpp JSphInOutZsurf.cpp JSimpleNeigs.cpp)
+set(OBMESH JMeshData.cpp JMeshTDatas.cpp JMeshTDatasLoad.cpp JMeshTDatasSave.cpp JMeshTDatasDsVel.cpp JMeshTDatasXml.cpp)
+set(OBVRES JSphVRes.cpp JSphVResZone.cpp JSphCpuSingle_VRes.cpp JSphCpu_VRes.cpp JCaseVRes.cpp JVResDataLimits.cpp JDsVresData.cpp JBoxDef.cpp)
+set(OBFLEXSTRUC JSphFlexStruc.cpp)
+
+#------------------------------------------------------------------
+
+list(TRANSFORM OBJXML PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBJSPHMOTION PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBCOMMON PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBCOMMONDSPH PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBSPH PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBSPHSINGLE PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBCOMMONGPU PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBSPHGPU PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBSPHSINGLEGPU PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBCUDA PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBWAVERZCUDA PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBCHRONO PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBMOORDYNPLUS PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBINOUT PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBINOUTGPU PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBVRESGPU PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBWAVERZGPU PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBMESH PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBVRES PREPEND "${DSPH_SOURCE}/")
+list(TRANSFORM OBFLEXSTRUC PREPEND "${DSPH_SOURCE}/")
+add_executable(DualSPHysics5.4_chrono ${OBJXML} ${OBJSPHMOTION} ${OBCOMMON} ${OBCOMMONDSPH} ${OBSPH} ${OBSPHSINGLE} ${OBCOMMONGPU} ${OBSPHGPU} ${OBSPHSINGLEGPU} ${OBCUDA} ${OBWAVERZCUDA} ${OBCHRONO} ${OBMOORDYNPLUS} ${OBINOUT} ${OBINOUTGPU} ${OBVRESGPU} ${OBWAVERZGPU} ${OBMESH} ${OBVRES} ${OBFLEXSTRUC})
+target_include_directories(DualSPHysics5.4_chrono PRIVATE "${DSPH_SOURCE}" ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES})
+target_compile_definitions(DualSPHysics5.4_chrono PRIVATE _WITHMR _WITHGPU
+ DISABLE_MOORDYNPLUS DISABLE_WAVEGEN _CRT_SECURE_NO_WARNINGS
+ CUB_IGNORE_DEPRECATED_CPP_DIALECT THRUST_IGNORE_DEPRECATED_CPP_DIALECT)
+target_compile_options(DualSPHysics5.4_chrono PRIVATE
+ $<$<COMPILE_LANGUAGE:CXX>:/openmp> $<$<COMPILE_LANGUAGE:CXX>:/bigobj>
+ $<$<COMPILE_LANGUAGE:CUDA>:-Xcompiler=/openmp,/bigobj> $<$<COMPILE_LANGUAGE:CUDA>:--use_fast_math>)
+target_link_libraries(DualSPHysics5.4_chrono PRIVATE "${DSPH_SOURCE}/../lib/vs2022/dsphchrono.lib")
+set_target_properties(DualSPHysics5.4_chrono PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")

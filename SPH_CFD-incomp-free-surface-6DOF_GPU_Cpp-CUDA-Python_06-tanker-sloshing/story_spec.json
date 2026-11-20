@@ -1,0 +1,77 @@
+{
+  "latest_user_sequence": [
+    "Physical situation, improved layouts and actual geometry",
+    "SPH and rigid-body method schematic",
+    "One case replay",
+    "Four-case simultaneous replay",
+    "Four-case boundary forces/moments and vehicle loading",
+    "Quantitative comparison and conclusion"
+  ],
+  "language": "English, minimal keywords",
+  "format": "1080x1920 portrait and1920x1080 landscape; independently composed",
+  "road_motion": "Retain new road markings/posts, integrated input-speed cue and brake lights",
+  "force_method": "Official ComputeForces per-boundary-particle Force; grouped by immutable initial particle IDs. Sum checked against native body forces/moments. Do not label N/particle as pressure.",
+  "force_verification": {
+    "A_unpartitioned": {
+      "force_nrmse": 0.010793344023599502,
+      "moment_nrmse": 0.010277567524946477
+    },
+    "C_separate_compartments": {
+      "force_nrmse": 0.00483161362420524,
+      "moment_nrmse": 0.0027521738918409055
+    },
+    "B_perforated_baffles": {
+      "force_nrmse": 0.007644829836572103,
+      "moment_nrmse": 0.007638757283376679
+    },
+    "D_cross_baffles": {
+      "force_nrmse": 0.006871540296996352,
+      "moment_nrmse": 0.009654023998799817
+    }
+  },
+  "force_source": "computeforces_source.json",
+  "new_scripts": [
+    "extract_surface_loads.py",
+    "render_load_comparison.py"
+  ],
+  "remaining": [],
+  "status": "complete",
+  "completed_video": "media/tanker_sloshing_final_portrait.mp4",
+  "palette": "Jet, common logarithmic0-5000N boundary-particle load scale; zero included, no observed clipping.",
+  "resultant_visual": "Cyan total fluid force and orange total fluid moment about dryCG; vector-magnitude numbers, continuous30fps arrows. White individual-baffle force vectors.",
+  "intro_approved_by_user": true,
+  "intro_seconds": 4,
+  "intro_physical_range_s": [
+    0,
+    8
+  ],
+  "method_seconds": 2.5,
+  "method_equations": "Symmetric SPH pressure-gradient momentum equation with viscosity/gravity/reference-frame terms; rigid linear and angular momentum balances.",
+  "displayed_particle_count": 137812,
+  "text_policy": "Case labels, time, values, units and color scaling only; no repeated GPU/SPH/first-resolution captions.",
+  "final_edit_script": "render_final_edition.py",
+  "final_outputs": {
+    "portrait": {
+      "video": "media/tanker_sloshing_final_portrait.mp4",
+      "seconds": 36.5,
+      "resolution": [
+        1080,
+        1920
+      ],
+      "sha256": "f48ae8be6176c28cd0200ab4f0400cf970b88245a90601571b43f1fe0c789473",
+      "bytes": 5617051,
+      "decode_verified": true
+    },
+    "landscape": {
+      "video": "media/tanker_sloshing_final_landscape.mp4",
+      "seconds": 36.0,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sha256": "325e88e2fe5cc8ae4596baf67c220a54a836167ce564728975d5b549a183d3dc",
+      "bytes": 7271844,
+      "decode_verified": true
+    }
+  }
+}

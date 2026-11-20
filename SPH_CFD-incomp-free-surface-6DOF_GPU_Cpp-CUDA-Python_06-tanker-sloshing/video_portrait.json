@@ -1,0 +1,72 @@
+{
+  "video": "tanker_sloshing_final_portrait.mp4",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "seconds": 36.5,
+  "sections": [
+    {
+      "name": "intro",
+      "file": "tanker_final_portrait_intro.mp4",
+      "seconds": 4.0,
+      "start_s": 0.0,
+      "end_s": 4.0
+    },
+    {
+      "name": "geometry",
+      "file": "tanker_final_portrait_geometry.mp4",
+      "seconds": 3.0,
+      "start_s": 4.0,
+      "end_s": 7.0
+    },
+    {
+      "name": "method",
+      "file": "tanker_final_portrait_method.mp4",
+      "seconds": 2.5,
+      "start_s": 7.0,
+      "end_s": 9.5
+    },
+    {
+      "name": "baseline",
+      "file": "tanker_final_portrait_baseline.mp4",
+      "seconds": 6.0,
+      "start_s": 9.5,
+      "end_s": 15.5
+    },
+    {
+      "name": "comparison",
+      "file": "tanker_final_portrait_comparison.mp4",
+      "seconds": 8.0,
+      "start_s": 15.5,
+      "end_s": 23.5
+    },
+    {
+      "name": "loads",
+      "file": "tanker_final_portrait_loads.mp4",
+      "seconds": 8.0,
+      "start_s": 23.5,
+      "end_s": 31.5
+    },
+    {
+      "name": "conclusion",
+      "file": "tanker_final_portrait_conclusion.mp4",
+      "seconds": 5.0,
+      "start_s": 31.5,
+      "end_s": 36.5
+    }
+  ],
+  "input_data": "Qualified v8 data, unchanged. ../comparison_summary.json",
+  "pacing": "Intro entire0-8s at2x; single replay0-8s in6s; comparison and loads0-8s in8s.",
+  "method": "137812 real fluid particles;6000 displayed initial fluid points and1600 wall points. Fluid symmetric pressure-gradient equation plus viscosity, gravity, reference-frame acceleration. Rigid linear/angular momentum balances.",
+  "formula_source": "work/DualSPHysics-source/src/source/JSphGpu_ker.cu:pressure term nearline594. Rigid-body sums include water/contact/gravity/frame forces; torque equation in body axes.",
+  "visual_changes": "Removed method banners, repeated setup descriptions and caveat text; kept case labels, physical time, units, contour scaling and comparison window.",
+  "load_reference": "Moment about dry-vehicleCG;0.4s filtered resultants. Per-boundary-particleN is not pressure. Common log10(1+load)0-5000N jet.",
+  "limitations": [
+    "Generic rigid vehicle with fixed wheels, frictional road contact, no suspension, tire handling or structural damage.",
+    "Prescribed nonrotating support-frame acceleration; visual road speed is the prescribed input, not solved total sliding speed.",
+    "First spatial resolution: DP40mm; four-layer160mm baffle envelopes. Not a calibrated real-vehicle safety threshold.",
+    "Same dry mass/inertia across layouts. Added baffle mass not separately modeled; equal water mass produces slightly different initial levels/CGs.",
+    "Single liquid with atmospheric gas pressure. Post-roll impacts are illustrative, not validated local stress predictions."
+  ],
+  "verification": "Full encoded video decoded without error."
+}

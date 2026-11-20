@@ -1,0 +1,17 @@
+{
+  "case": "A_unpartitioned_coupled_lat690_v8",
+  "samples": 161,
+  "particle_count": 137812,
+  "max_abs_local_x_m": 3.0214054633980787,
+  "max_local_radius_m": 1.0819459644585987,
+  "outer_escape": false,
+  "unique_particles_crossing_sealed_transverse_plates": 0,
+  "unique_particles_crossing_longitudinal_plate": 0,
+  "density_range_kg_m3": [
+    948.7092895507812,
+    1044.1090087890625
+  ],
+  "max_frame_speed_m_s": 49.88896942138672,
+  "passed": true,
+  "note": "Particle-ID isolation checked at every saved state in the actual instantaneous body frame. This is boundary integrity, not spatial convergence."
+}

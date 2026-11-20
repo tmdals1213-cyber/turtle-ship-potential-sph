@@ -1,0 +1,67 @@
+{
+  "case": "A_unpartitioned_coupled_lat690_v8",
+  "layout": "A_unpartitioned",
+  "dp_m": 0.04,
+  "fluid_particles": 137812,
+  "fluid_mass_kg": 8819.968,
+  "wall_particles": 89232,
+  "plate_particles": 0,
+  "duration_s": 8.0,
+  "output_interval_s": 0.05,
+  "tank_length_m": 6.0,
+  "tank_inner_radius_m": 1.0,
+  "nominal_fill_fraction": 0.5,
+  "actual_nominal_volume_fraction": 0.46791383503744605,
+  "initial_fill_top_z_m": -0.039999999999999994,
+  "boundary": "DBC for floating boundaries; compartment isolation must be checked",
+  "plate_note": "Voxelized physical plate thickness is 80 mm on this lattice, not a realistic sheet-metal thickness. Openings are resolved. Thin-wall force accuracy is not claimed.",
+  "brake": {
+    "initial_speed_m_s": 13.88888888888889,
+    "peak_deceleration_m_s2": 3.9240000000000004,
+    "brake_start_s": 1.5,
+    "brake_stop_s": 5.439472193906445,
+    "ramp_s": 0.4
+  },
+  "frame": "Nonrotating accelerating support frame; rigid tank pose is solved relative to the support surface.",
+  "fluid_initial_cg_m": [
+    4.566212312785804e-16,
+    6.529105020385399e-15,
+    -0.45558238760041636
+  ],
+  "solver_source": "Unmodified existing DualSPHysics 5.4 GPU binary",
+  "limitations": [
+    "Single liquid with atmospheric gas pressure; no air compression or cavitation.",
+    "First spatial resolution; boundary checks do not establish resolution convergence.",
+    "Rigid fixed wheels with frictional contact, no calibrated tires or suspension.",
+    "Same dry mass and inertia in all designs; additional baffle structural mass not separately represented."
+  ],
+  "coupled": true,
+  "lateral_g": 0.69,
+  "lateral_profile": {
+    "start_s": 1.5,
+    "ramp_s": 0.6,
+    "release_start_s": 4.4,
+    "end_s": 5.0
+  },
+  "sound_speed_m_s": 220.0,
+  "cfl_number": 0.2,
+  "dry_mass_kg": 9000.0,
+  "dry_cg_m": [
+    0.8,
+    0,
+    -0.9
+  ],
+  "dry_inertia_kg_m2": [
+    7290.000000000001,
+    43560.00000000001,
+    47609.99999999999
+  ],
+  "contact_mu": 0.8,
+  "road_z_m": -2.1,
+  "contact_model": "Chrono NSC with six fixed wheel cylinders, chassis/cab/tank contact meshes",
+  "support_frame": "Non-rotating accelerating support-platform surrogate. Effective tire forces arise from friction/contact; no wheel spin, steering geometry or suspension.",
+  "coupling": "Native two-way SPH to Chrono: fluid forces alter rigid-body pose; moving tank boundaries feed back on the fluid.",
+  "input_resultant_peak_g": 0.7975587752636165,
+  "rollover_policy": "Report actual motion under declared assumptions. No keyframed body motion, no required outcome.",
+  "vehicle_parameters_status": "Hypothetical generic vehicle; not calibrated production vehicle data."
+}

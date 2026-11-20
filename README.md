@@ -1,4 +1,10 @@
-# Ships in waves: potential flow and GPU SPH
+# Free-surface examples: ships in waves and tanker sloshing
+
+**New: tanker braking, sloshing and rollover.** Four matched-mass layouts with native two-way SPH/Chrono coupling. [Case 06](SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_06-tanker-sloshing) · [Portrait, 36.5 s](media/tanker_sloshing_final_portrait.mp4) · [Landscape, 36 s](media/tanker_sloshing_final_landscape.mp4) · [Reproduce](docs/TANKER_REPRODUCE.md).
+
+[Next industrial examples](docs/NEXT_INDUSTRIAL_EXAMPLES.md): battery propagation, drone wakes, underfill, lubrication and marine flooding. Research proposals, not completed simulations.
+
+<a href="media/tanker_sloshing_final_landscape.mp4"><img src="media/tanker_comparison.png" width="720" alt="Four tanker layouts under identical braking and lateral acceleration" /></a>
 
 **Can we predict a turtle ship's motion in waves?** A compact demonstration using Capytaine and DualSPHysics, with a computed bow-impact intro and a 35-second portrait film.
 
@@ -17,6 +23,7 @@
 | [03 Focused wave](SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_03-focused-wave) | DualSPHysics / RTX 5080 | Initially at rest; focused wave group; free 6-DOF | 2,885,421 particles; 10.0 model s in 1,552.27 s |
 | [04 Empty flume](SPH_CFD-incomp-free-surface_GPU_Cpp-CUDA-Python_04-empty-flume) | 2-D SPH commissioning / GPU | Focused-wave generation without the ship | 12.0 model s; zero excluded particles |
 | [05 Gunnerus](SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave) | DualSPHysics / RTX 5080 | Focused waves, sealed hull/deckhouse, free 6-DOF, assumed 30 N CG force | 9,985,001 particles; 16.0 model s in 10,292 s; separate 2-D wave check |
+| [06 Tanker](SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_06-tanker-sloshing) | DualSPHysics + Chrono / RTX 5080 | Four layouts; 0.40g brake + 0.69g lateral support-frame input; rigid vehicle/contact | 137,812 fluid particles per case; four 8 s runs in 703–728 s each |
 
 The turtle SPH cases use 40 mm initial particle spacing, **1:10 scale**, 154.4 kg rigid-body mass and no propulsion. Gunnerus uses 50 mm spacing, 1:10 scale, an assumed/derived 398.9 kg loading condition and a world-fixed external CG force; it has no actuator disk or propeller wake. Coordinates, times, wave parameters and motion histories are model-scale unless explicitly marked otherwise.
 
@@ -27,6 +34,7 @@ Folder names follow `method_physics_resource_language_case`. `CFD-incomp` descri
 - Case definitions, piston input signals, physical assumptions and compact motion/audit results.
 - Python geometry preparation, BEM calculation, SPH launch, analysis and film-rendering scripts in [study](study).
 - Gunnerus setup, launch and postprocessing in [gunnerus](gunnerus), with [reproduction instructions](docs/GUNNERUS_REPRODUCE.md). Its selected MIT-derived contact meshes and notice are included; the original visual GLB is obtained separately.
+- Tanker procedural geometry, setup, native coupling, grouped loads and final film workflow in [tanker](tanker), with [model notes](docs/TANKER_MODEL_NOTES.md). No external tanker CAD is required. Its Chrono-enabled build is distinct from the older ship build.
 - Final MP4s, two rendered stills, source credits and [modification history](CHANGELOG.md).
 - [Reproduction instructions](docs/REPRODUCE.md) and [agent handoff](docs/AGENT_HANDOFF.md).
 

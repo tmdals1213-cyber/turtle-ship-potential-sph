@@ -1,0 +1,24 @@
+{
+  "case": "A_unpartitioned_coupled_lat690_v8",
+  "status": "complete",
+  "returncode": 0,
+  "stop_reason": null,
+  "last_saved_time_s": 8.000065087954692,
+  "wall_s": 717.5064024999738,
+  "particle_losses": 0.0,
+  "dt_min_clamps": 0.0,
+  "min_dt_s": 1.90639124386549e-05,
+  "solver": "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+  "output": "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\A_unpartitioned_coupled_lat690_v8\\output",
+  "command": [
+    "@LOCAL_WORKSPACE@\\work\\tanker-chrono-bin\\DualSPHysics5.4_chrono.exe",
+    "-gpu:0",
+    "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\A_unpartitioned_coupled_lat690_v8\\generated\\Case",
+    "@LOCAL_WORKSPACE@\\tanker_sloshing_study\\sph\\A_unpartitioned_coupled_lat690_v8\\output",
+    "-dirdataout",
+    "data",
+    "-sv:binx,info",
+    "-svres",
+    "-toutx:0.01"
+  ]
+}

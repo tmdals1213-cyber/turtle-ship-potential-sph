@@ -1,0 +1,219 @@
+{
+  "project": "Road tanker braking and internal partition comparison",
+  "date": "2026-11-20",
+  "status": "four_case_simulations_loads_and_portrait_story_complete",
+  "user_direction": "Baseline -> one or two principle-demonstrating improvements -> a current commercial-style arrangement. Render actual SPH liquid inside a translucent tanker on a truck following a consistent prescribed road/braking trajectory; keep the fluid problem simple.",
+  "audience_question": "The truck stops. What happens to the liquid inside?",
+  "initial_objective": "Show how internal layout changes liquid motion and the timing/distribution of loads during and after an identical braking input.",
+  "cases": [
+    {
+      "id": "A_unpartitioned",
+      "video_label": "NO BAFFLES",
+      "description": "One continuous liquid space with no internal plate."
+    },
+    {
+      "id": "C_separate_compartments",
+      "video_label": "SEPARATE COMPARTMENTS",
+      "description": "Two liquid-tight transverse bulkheads create three independent liquid compartments. Each gas space is assumed vented to atmospheric pressure; this is not a compressed-gas sealed-vessel model."
+    },
+    {
+      "id": "B_perforated_baffles",
+      "video_label": "PERFORATED BAFFLES",
+      "description": "Two transverse plates at x=-1,+1m, each with four480mm-diameter resolved openings."
+    },
+    {
+      "id": "D_cross_baffles",
+      "video_label": "CROSS BAFFLES",
+      "description": "Perforated transverse plates plus a longitudinal baffle in the same outer tank. A simplified arrangement inspired by current commercial water-truck designs; exact proprietary geometry has not been obtained.",
+      "commercial_basis": "https://gfworldwide.com/water-solutions/",
+      "role": "Current commercial-style design; not a claim of newest invention or universally best performance."
+    }
+  ],
+  "fair_comparison": {
+    "fixed": [
+      "Outer tank envelope",
+      "Water mass 8819.968 kg",
+      "Dry vehicle mass 9000 kg, CG and inertia",
+      "Prescribed support-frame acceleration",
+      "Gravity, contact friction and numerical settings"
+    ],
+    "nominal_initial_fill_fraction": 0.5,
+    "fill_policy": "Adjust the initial level for solid displacement so total liquid mass matches. For the compartmented case use balanced loading, with the same intended fill fraction across its compartments. Record generated particle masses and actual fill levels.",
+    "effect_direction": "Do not assume baffles minimize every peak. Compare actual total and local loads; added plates can transfer loads to other locations or times.",
+    "structural_mass": "Same hypothetical dry mass and inertia for all layouts; added baffle mass is not separately represented.",
+    "commercial_model_note": "Keep the outer tank envelope and CG placement fixed. Do not combine a lower commercial tank profile with extra baffles in one comparison and attribute all differences to baffles."
+  },
+  "provisional_scenario": {
+    "geometry": "Cylindrical tank:6m length,1m inner radius. Two transverse plates at x=-1,+1m; perforated holes radius0.24m at y=+-0.42m,z=+-0.40m. D adds continuous longitudinal plate.",
+    "liquid": "Water at approximately ambient conditions for the initial comparison, not fuel or LNG.",
+    "initial_speed_km_h_for_display": 50,
+    "peak_braking_deceleration_over_g": 0.4,
+    "acceleration_profile": "Smooth onset and release; integrate the prescribed tank acceleration to a consistent speed curve ending at zero. No step jump in acceleration solely to manufacture an impact.",
+    "observation": "Include time after braking ends to show residual surge and load reversals.",
+    "status": "Executed v8 setup; all four8s runs qualified.",
+    "peak_lateral_acceleration_over_g": 0.69,
+    "lateral_profile_s": {
+      "start": 1.5,
+      "rise": 0.6,
+      "release": 4.4,
+      "end": 5
+    }
+  },
+  "numerical_approach": {
+    "candidate_solver": "Unmodified DualSPHysics5.4 numerical source, separate GPU/Chrono-enabled build.",
+    "frame": "Nonrotating accelerating support frame. Equal inertial acceleration applied to liquid and dry body. Native SPH/Chrono transfers fluid loads and freely solved body motion in both directions.",
+    "local_capability_checked": "work/DualSPHysics-source/doc/xml_format/_FmtXML_AccInput.xml provides time-dependent linear acceleration; retain gravity explicitly via globalgravity configuration.",
+    "initial_relative_velocity": "Zero after initial hydrostatic settling; displayed road speed is not injected as liquid velocity relative to the stationary tank.",
+    "free_surface": "Single liquid with atmospheric-pressure gas space; air compression, entrainment and ventilation dynamics are not resolved.",
+    "motion_scope": "Rigid body with six fixed wheel contact meshes and unilateral frictional road contact. No suspension, steering geometry, tire force curve or ABS. This is a support-platform surrogate, not a calibrated road-vehicle prediction.",
+    "resolution": "DP 40 mm; first resolution. 160 mm internal plates for moving-body compartment qualification. Same water particle count.",
+    "force_extraction": "Official ComputeForces boundary-particle vectors partitioned by initial particle IDs; whole-tank force/moment sums verified against native fluid-on-body records. Common0.4s smoothing for integrated loads."
+  },
+  "metrics": [
+    "Wheel lift and sustained75deg tilt onset",
+    "Total fluid force and moment about dry-vehicle CG",
+    "Per-boundary-particle load distribution inN (not pressure)",
+    "Separated wall/transverse/longitudinal baffle loads",
+    "Peak body-roll moment in common1.5-3.5s window",
+    "Particle conservation and compartment isolation"
+  ],
+  "presentation": {
+    "primary_format": "Portrait, short English labels; composition can later be adapted to landscape.",
+    "sequence": [
+      "Physical situation",
+      "Four actual layout geometries",
+      "SPH and rigid-body coupling schematic",
+      "One computed baseline",
+      "Four synchronized computed cases",
+      "Boundary load contours and total force/moment arrows/numbers",
+      "Quantitative comparison and conclusion"
+    ],
+    "truck_role": "Truck rigid pose is solved by nativeSPH/Chrono. Road cues and INPUT SPEED are prescribed forward-reference speed, not solved total sliding velocity.",
+    "visuals": [
+      "Translucent tank and real SPH liquid surface",
+      "Scrolling road cues from prescribed input speed",
+      "Jet local boundary-load contours with common logarithmic0-5000N scale",
+      "Total force and moment vectors plus magnitudes,30fps",
+      "Four-case synchronized2x2 layout"
+    ],
+    "interpretation": "Full liquid momentum must still be removed during stopping. Baffles change load distribution and transient response; do not claim they remove the necessary braking impulse.",
+    "final_edit": "Full rollover intro at2x. Particle count and fluid/rigid equations2.5s. Remove repeated implementation/caveat prose. Independent portrait/landscape compositions."
+  },
+  "future_extensions": [
+    "Spatial/time resolution sensitivity",
+    "Vehicle suspension/tire calibration before real-vehicle safety claims",
+    "Fill fraction and input-maneuver sweep"
+  ],
+  "sources": [
+    {
+      "url": "https://www.dmv.ca.gov/portal/uploads/2020/06/comlhdbk.pdf",
+      "use": "Section 8.2 distinguishes liquid-tight bulkheads, perforated baffles and unbaffled tanks; longitudinal and lateral surge are different. Used for definitions, not a legal compliance claim."
+    },
+    {
+      "url": "https://doi.org/10.1205/095758202320439137",
+      "title": "The Effect of Baffle Design on Longitudinal Liquid Movement in Road Tankers: An Experimental Investigation",
+      "use": "Experimental evidence that baffle arrangement influences braking-induced surge. Does not establish a universal best geometry or validate the proposed setup."
+    },
+    {
+      "url": "https://github.com/DualSPHysics/DualSPHysics/wiki/7.-Testcases",
+      "use": "Sloshing examples driven by prescribed external acceleration or tank motion."
+    },
+    {
+      "url": "https://www.spheric-sph.org/tests/test-10",
+      "use": "Potential initial sloshing/pressure validation case; distinct from this tanker-braking problem."
+    },
+    {
+      "url": "https://www.mdpi.com/2079-3197/14/1/7",
+      "use": "Industrial road-tanker SPH/FEA context; its full vehicle/structure coupling and validation are not implemented here."
+    },
+    {
+      "url": "https://gfworldwide.com/water-solutions/",
+      "use": "Manufacturer page updated 2026-09-25 specifies transverse plus longitudinal baffles. The proposed model is a simplified design family, not manufacturer CAD."
+    }
+  ],
+  "execution_status": {
+    "geometry_generated": true,
+    "solver_setup_generated": true,
+    "solver_started": true,
+    "solver_complete": true,
+    "all_four_boundary_checks_passed": true,
+    "particle_losses": 0,
+    "comparison_summary": "comparison_summary.json",
+    "video": "media/tanker_sloshing_final_portrait.mp4",
+    "video_seconds": 36.5,
+    "input_and_rigid_body_hashes_equal": true,
+    "previous_video": "media/tanker_sloshing_complete_portrait.mp4",
+    "final_outputs": {
+      "portrait": {
+        "video": "media/tanker_sloshing_final_portrait.mp4",
+        "seconds": 36.5,
+        "resolution": [
+          1080,
+          1920
+        ],
+        "sha256": "f48ae8be6176c28cd0200ab4f0400cf970b88245a90601571b43f1fe0c789473",
+        "bytes": 5617051,
+        "decode_verified": true
+      },
+      "landscape": {
+        "video": "media/tanker_sloshing_final_landscape.mp4",
+        "seconds": 36.0,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "sha256": "325e88e2fe5cc8ae4596baf67c220a54a836167ce564728975d5b549a183d3dc",
+        "bytes": 7271844,
+        "decode_verified": true
+      }
+    }
+  },
+  "revision": 4,
+  "comparison_order": [
+    "A_unpartitioned",
+    "C_separate_compartments",
+    "B_perforated_baffles",
+    "D_cross_baffles"
+  ],
+  "maneuvers": [
+    {
+      "id": "combined_brake_and_lateral_input",
+      "status": "completed for all four cases",
+      "brake_g": 0.4,
+      "lateral_g": 0.69,
+      "initial_reference_speed_km_h": 50,
+      "physical_duration_s": 8
+    }
+  ],
+  "commercial_technology_review": "commercial_technology_review.json",
+  "visualization_specification": "visualization_spec.json",
+  "current_objective": "Find a baseline rollover input, then apply the identical input to all four internal layouts.",
+  "current_vehicle": {
+    "dry_mass_kg": 9000,
+    "dry_cg_height_above_road_m": 1.2,
+    "dry_inertia_kg_m2": [
+      7290,
+      43560,
+      47610
+    ],
+    "contact_friction": 0.8,
+    "road_z_in_tank_reference_m": -2.1,
+    "validation_status": "Hypothetical generic rigid vehicle, not identified manufacturer data"
+  },
+  "preliminary_checks": {
+    "fixed_dbc_pilots": "Completed, but thin sealed partitions leaked; comparison rejected.",
+    "fixed_mdbc2_sealed_test": "6 s complete, zero particle ID compartment crossings.",
+    "moving_mdbc2_baseline": "Failed before forcing; cannot transfer fixed-wall qualification to floating walls.",
+    "moving_dbc_baseline": "v8 complete with zero losses. All four boundary-integrity checks passed."
+  },
+  "results": {
+    "A_C_B": "Rollover; first75deg times3.85,4.10,3.90s",
+    "D": "No wheel lift or rollover within8s",
+    "D_roll_moment_reduction_percent": 32.9165772449619,
+    "load_comparison_window_s": [
+      1.5,
+      3.5
+    ],
+    "not_a_vehicle_safety_rating": true
+  }
+}
