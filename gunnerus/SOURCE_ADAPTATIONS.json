@@ -1,0 +1,111 @@
+{
+  "basis": "Copied from the completed local Gunnerus workflow on 2026-11-20. No numerical solver source is bundled or modified.",
+  "files": {
+    "prepare_gunnerus.py": {
+      "source_sha256": "6f3f80dba33b14530f586ddc783280258517e55cd095ebea24ac5b1a43e7f83c",
+      "packaged_sha256": "f5a5e89d2e69388da7e60e095c73a383dc880ed3ef5ba1a5094e57d628d0573a",
+      "changes": [
+        "Moved unchanged generic XML helpers out of unrelated KCS module."
+      ]
+    },
+    "prepare_gunnerus_waves.py": {
+      "source_sha256": "8c0f352f01832e5414a5893952cc6be51c841a631b435c1c8001019b889fa17b",
+      "packaged_sha256": "8c0f352f01832e5414a5893952cc6be51c841a631b435c1c8001019b889fa17b",
+      "changes": []
+    },
+    "prepare_gunnerus_focus.py": {
+      "source_sha256": "0f00bca02e09482aa7e81e294bb9eee6e6f822d05c3b5260c4e7d186f6a9a3c6",
+      "packaged_sha256": "0f00bca02e09482aa7e81e294bb9eee6e6f822d05c3b5260c4e7d186f6a9a3c6",
+      "changes": []
+    },
+    "prepare_gunnerus_impact_geometry.py": {
+      "source_sha256": "4ddb1d7dfb13e83055825e0923213c80deee1664ed92e5864379be3d48caeaf2",
+      "packaged_sha256": "4ddb1d7dfb13e83055825e0923213c80deee1664ed92e5864379be3d48caeaf2",
+      "changes": []
+    },
+    "place_gunnerus_contact.py": {
+      "source_sha256": "f5c1344c58628f12894b2e4a03ca8d14345be415599e6b4ee8d0ec55ac6afd78",
+      "packaged_sha256": "f5c1344c58628f12894b2e4a03ca8d14345be415599e6b4ee8d0ec55ac6afd78",
+      "changes": []
+    },
+    "run_sph.py": {
+      "source_sha256": "addfc53a99ba941c34445623c1ec5e5e30a6c887318dccb7a22fa15a20f6d064",
+      "packaged_sha256": "42443ee0ec4aee9da4823fd42fd61b3b06e339a691aa3ba43a31bfb2d10ea2f1",
+      "changes": [
+        "External tools selected through DUALSPHYSICS_BIN.",
+        "Refuse overwriting an existing output directory."
+      ]
+    },
+    "check_gunnerus_input.py": {
+      "source_sha256": "0cada7358690e9cf55d78c80d3ab77716af1dc211d423d837b519c96eee71274",
+      "packaged_sha256": "0cada7358690e9cf55d78c80d3ab77716af1dc211d423d837b519c96eee71274",
+      "changes": []
+    },
+    "check_gunnerus_focus_wave.py": {
+      "source_sha256": "23e34a2c6bbb76b90e913f8bfa664c61d156e6d2d2ccf934bfa4a9c7a32a69e7",
+      "packaged_sha256": "23e34a2c6bbb76b90e913f8bfa664c61d156e6d2d2ccf934bfa4a9c7a32a69e7",
+      "changes": []
+    },
+    "read_native_float.py": {
+      "source_sha256": "fcc4a794f3d1f11faf218496d470ba3d77ac2cf3a30b5ddc35c4a37a055b3532",
+      "packaged_sha256": "fcc4a794f3d1f11faf218496d470ba3d77ac2cf3a30b5ddc35c4a37a055b3532",
+      "changes": []
+    },
+    "sph_segments.py": {
+      "source_sha256": "1851fa6f23ff8917908dff3f65dc0c4f878be40360a0b989ced62230bbcb557b",
+      "packaged_sha256": "1851fa6f23ff8917908dff3f65dc0c4f878be40360a0b989ced62230bbcb557b",
+      "changes": []
+    },
+    "analyze_propulsion.py": {
+      "source_sha256": "62701f522936ccc1a91fa478164e78c439194a94670062f47c9ff6b3f794833f",
+      "packaged_sha256": "62701f522936ccc1a91fa478164e78c439194a94670062f47c9ff6b3f794833f",
+      "changes": []
+    },
+    "report_gunnerus_startup.py": {
+      "source_sha256": "e3538dca39f6e8ce70b5a772b7d96b4b61658bf446140a285914c08cfb5f80a8",
+      "packaged_sha256": "e3538dca39f6e8ce70b5a772b7d96b4b61658bf446140a285914c08cfb5f80a8",
+      "changes": []
+    },
+    "report_gunnerus_waves.py": {
+      "source_sha256": "92838a3244524ffbc58db4b7ae22b5107f2ec9a82b48ea5bd1ac7461bf0a488a",
+      "packaged_sha256": "92838a3244524ffbc58db4b7ae22b5107f2ec9a82b48ea5bd1ac7461bf0a488a",
+      "changes": []
+    },
+    "prepare_gunnerus_surface_pressure.py": {
+      "source_sha256": "4df5632fa634a096075b8335b299996bcb264f2a6fc349e15fe3119c2f63c941",
+      "packaged_sha256": "cfa132978460692d93efba0c9c952ca175f9f8a2376cbf89815ab4feb7ea1394",
+      "changes": [
+        "External MeasureTool selected through DUALSPHYSICS_BIN."
+      ]
+    },
+    "render_gunnerus_comparison.py": {
+      "source_sha256": "673d9bcea32234d89e222c5d1c361613ebc95f69b0c14ef0472746768675a251",
+      "packaged_sha256": "249d4540b94d1217a40537ba5d7da314f58b2b1b8890bfb578f38618ec4aebe7",
+      "changes": [
+        "Optional SHIP_FONT_DIR override; original Windows fonts remain the default."
+      ]
+    },
+    "render_gunnerus_focus_story.py": {
+      "source_sha256": "c07556e8a08d0f4bb13ee2c16032a4d948bcb8d3c826b90b5ee76ed5aa3323ea",
+      "packaged_sha256": "c07556e8a08d0f4bb13ee2c16032a4d948bcb8d3c826b90b5ee76ed5aa3323ea",
+      "changes": []
+    },
+    "add_method_comparison.py": {
+      "source_sha256": "99a5cba429c57ada1d1b87a300873eabe2f39db0910acdbc99f2e530d0783f8d",
+      "packaged_sha256": "32ea72a9dc88390fd72da027db06bb5dc9f911511d42de3e1452ec044b10255a",
+      "changes": [
+        "Optional SHIP_FONT_DIR override; original Windows fonts remain the default."
+      ]
+    },
+    "render_gunnerus_landscape.py": {
+      "source_sha256": "32c9636de5727800741ec39962bfc4dddf1102ac029420ebfa331bde1df5e1a4",
+      "packaged_sha256": "32c9636de5727800741ec39962bfc4dddf1102ac029420ebfa331bde1df5e1a4",
+      "changes": []
+    },
+    "finish_gunnerus_focus.py": {
+      "source_sha256": "50942a768cf2697aaec509a6e46702fb837f633902daaf1f0ce4a96abbd38ed0",
+      "packaged_sha256": "50942a768cf2697aaec509a6e46702fb837f633902daaf1f0ce4a96abbd38ed0",
+      "changes": []
+    }
+  }
+}

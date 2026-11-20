@@ -1,0 +1,12 @@
+{
+  "case": "gunnerus_focus_empty_A115_D300_050_16s",
+  "total_particles": 46449,
+  "fluid_particles": 43140,
+  "hull_particles": 0,
+  "moving_particles": 600,
+  "fixed_particles": 2709,
+  "top_water_particle_z_m": -0.02500000037252903,
+  "moving_particles_below_floor_top": 0,
+  "fixed_floor_particles_under_piston": 39,
+  "passed": true
+}

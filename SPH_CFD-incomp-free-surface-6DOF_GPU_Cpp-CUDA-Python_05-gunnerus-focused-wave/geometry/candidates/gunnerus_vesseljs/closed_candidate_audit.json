@@ -1,0 +1,10 @@
+{
+  "source": "hull_component_0.stl",
+  "method": "Fill boundary loops on main connected hull; windows/openings sealed for a watertight demonstration hull",
+  "faces": 6200,
+  "open_edges": 0,
+  "volume_m3": 1330.684423103959,
+  "limitations": [
+    "No flooding or open hatches. Must inspect surface and hydrostatics before solver use."
+  ]
+}

@@ -18,5 +18,14 @@
     "folder": "SPH_CFD-incomp-free-surface_GPU_Cpp-CUDA-Python_04-empty-flume",
     "method": "WCSPH 2-D commissioning",
     "original_case": "focus_empty_A065_near_40"
+  },
+  "gunnerus_focused": {
+    "folder": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave",
+    "method": "WCSPH",
+    "original_case": "gunnerus_focus_A115_x5.5_D300_050_16s",
+    "commissioning_case": "gunnerus_focus_empty_A115_D300_050_16s",
+    "workflow": "gunnerus",
+    "status": "completed_16_model_seconds",
+    "notes": "Assumed world-fixed 30 N CG force; no actuator disk, RANS coupling or VRes."
   }
 }

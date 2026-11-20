@@ -1,0 +1,23 @@
+{
+  "case": "gunnerus_focus_A115_x5.5_D300_050_16s",
+  "frames": [
+    40,
+    160
+  ],
+  "mesh_cells": 6704,
+  "offset_outward_m": 0.025,
+  "source": "DualSPHysics MeasureTool, fluid particles only, pressure interpolation with kernel correction",
+  "point_motion": "Original segment: native trackmk:12. Resumed segments: explicit world points from rigid fit to actual hull particle IDs.",
+  "min_kernel_sum": 0.5,
+  "unsupported": "NaN, displayed gray; insufficient water support is not a measured zero pressure.",
+  "units": "Model-scale gauge pressure, kPa",
+  "pressure_range_kPa": [
+    -15.885550498962402,
+    21.9906063079834
+  ],
+  "limitations": [
+    "Pressure sampled half a particle spacing outside each contact-face center; not wall traction.",
+    "0.1 s snapshots do not resolve peak slam pressure. No pressure-derived force integration.",
+    "Native solver integrated fluid forces and moments are displayed separately."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "model": "Gunnerus visual-hull demonstration",
+  "scale_ratio": 10.0,
+  "rho_kg_m3": 1025.0,
+  "source_sha256": "bf735c378a8e028d33deea7ca57d56b4edcf94fdaa07cf05adc324a9ac8f94bb",
+  "hull_file": "@GUNNERUS_ROOT@\\geometry\\gunnerus\\hull.stl",
+  "normals_file": "@GUNNERUS_ROOT@\\geometry\\gunnerus\\hull_normals.vtk",
+  "closed_watertight": true,
+  "solver_triangles": 6200,
+  "mass_kg": 398.8998907431335,
+  "full_scale_equivalent_mass_t": 398.8998907431335,
+  "mass_basis": "Derived from closed visual-hull displacement at the declared 2.7 m draft; not measured vessel mass.",
+  "Lpp_m": 3.3899999999999997,
+  "beam_reference_m": 0.96,
+  "draft_reference_m": 0.27,
+  "center_of_mass_m": [
+    -0.15028559639351693,
+    6.197453312904331e-08,
+    0.12999999999999998
+  ],
+  "center_of_buoyancy_m": [
+    -0.15028559639351693,
+    6.197453312904331e-08,
+    -0.08697062590937234
+  ],
+  "inertia_kg_m2": [
+    45.13898349575418,
+    286.5123396505727,
+    286.5123396505727
+  ],
+  "assumed_full_scale_KG_m": 4.0,
+  "GM_roll_m": 0.22093297318101193,
+  "waterplane_area_m2": 2.690010265660114,
+  "displacement_m3": 0.3891706251152522,
+  "closed_volume_m3": 1.3306844231040873,
+  "bounds_m": [
+    [
+      -1.8204051971435549,
+      -0.4805834770202637,
+      -0.27
+    ],
+    [
+      1.826389503479004,
+      0.4805326938629151,
+      0.5416020679473877
+    ]
+  ],
+  "visual_to_model": {
+    "axes": "x=-glTF.z, y=-glTF.x, z=glTF.y",
+    "scale": 0.1,
+    "vertical_shift_before_scale_m": 0.6194355964660643
+  },
+  "limitations": [
+    "Approximate visual hull, not production CAD; windows/openings sealed and flooding excluded.",
+    "LCG aligned with geometric buoyancy centre for initial zero trim; KG and radii of gyration are declared assumptions.",
+    "Propellers, rudders, bow thruster and above-hull superstructure do not act on the fluid in these startup cases.",
+    "Froude model scale does not also preserve full-scale Reynolds number.",
+    "The deck/bulwark drainage geometry still needs separate qualification before a green-water load claim."
+  ]
+}

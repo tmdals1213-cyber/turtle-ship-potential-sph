@@ -1,0 +1,71 @@
+{
+  "status": "prepared_not_run",
+  "case": "gunnerus_focus_empty_A115_D300_050_16s",
+  "kind": "focused_empty",
+  "dp_m": 0.05,
+  "duration_s": 16.0,
+  "scale_ratio": 10.0,
+  "dimension": 2,
+  "physical_model": null,
+  "domain_bounds_m": [
+    -18.0,
+    18.0,
+    0.0,
+    0.0,
+    -3.0,
+    3.0
+  ],
+  "water_depth_m": 3.0,
+  "intrinsic_period_s": 2.6,
+  "wave_direction": "negative world x",
+  "wave_input": "First-order crest-focused JONSWAP/NewWave piston; measured SPH height and breaking are commissioning outputs.",
+  "piston_displacement_range_m": [
+    -0.5687232708169145,
+    0.5861790910199786
+  ],
+  "initial_velocity_m_s": [
+    0,
+    0,
+    0
+  ],
+  "all_six_dofs_free": false,
+  "propulsion": {
+    "mode": "none",
+    "plateau_force_N": [
+      0,
+      0,
+      0
+    ],
+    "acts_on_fluid": false,
+    "body_following": false,
+    "resolved_propeller": false,
+    "basis": "Assumed diagnostic force, not a calibrated propulsion operating point"
+  },
+  "output": {
+    "particles_interval_s": 0.1,
+    "native_force_motion_extra_interval_s": 0.005
+  },
+  "gpu_wall_limit_s": null,
+  "limitations": [
+    "Coarse pilot; not validated resistance, propulsion efficiency or impact pressure.",
+    "Finite tank with downstream damping; later reflections and finite depth remain part of this setup.",
+    "Matched force and initial speed do not maintain equal speeds, so differences are not equal-speed added resistance.",
+    "Assumed thrust does not add propeller momentum to the water; no actuator disk is present.",
+    "16-second transient with a focused wave packet; no extra downward body force is prescribed."
+  ],
+  "target_linear_crest_amplitude_m": 1.15,
+  "focus_x_m": 7.5,
+  "focus_time_s": 12.0,
+  "piston_x_m": 18.0,
+  "frequency_band_hz": [
+    0.24,
+    0.85
+  ],
+  "piston_max_speed_m_s": 1.4786267904896802,
+  "initial_station_x_m": 0,
+  "focus_basis": "Initial station aligned with the breaking-front region measured in the empty tank; actual ship motion remains free.",
+  "interpretation": "Linear target crest above still water is not crest-to-trough wave height or significant wave height.",
+  "sound_speed_m_s": 80,
+  "water_only": true,
+  "scalar_output_interval_s": 0.005
+}

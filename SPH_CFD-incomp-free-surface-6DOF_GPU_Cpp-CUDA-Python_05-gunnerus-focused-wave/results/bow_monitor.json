@@ -1,0 +1,10 @@
+{
+  "point_initial_m": [
+    7.146389484405518,
+    0.0,
+    0.4516019821166992
+  ],
+  "definition": "World-z kinematic acceleration of a fixed foredeck point, divided by g; not accelerometer specific force.",
+  "formula": "a_point = a_CG + alpha cross r + omega cross (omega cross r)",
+  "source": "Native rigid-body facelin, faceang and fomega; saved particle-pose rotation."
+}

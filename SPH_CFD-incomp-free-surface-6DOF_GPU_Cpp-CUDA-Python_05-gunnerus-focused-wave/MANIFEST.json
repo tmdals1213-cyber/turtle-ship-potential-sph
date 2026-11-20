@@ -1,0 +1,341 @@
+{
+  "case": "gunnerus_focus_A115_x5.5_D300_050_16s",
+  "date": "2026-11-20",
+  "files": [
+    {
+      "path": "docs/GUNNERUS_REPRODUCE.md",
+      "bytes": 6674,
+      "sha256": "e8dbef9808df2dafd134c5ecf538b3e6fa08b972aea0c1b412005145d1fbadb1"
+    },
+    {
+      "path": "docs/MARINE_MODEL_NOTES.md",
+      "bytes": 10529,
+      "sha256": "136856960f5869a32f14ab160afd771b36cd8d445baa6e288b50bfab5b4cc2ba"
+    },
+    {
+      "path": "gunnerus/add_method_comparison.py",
+      "bytes": 7566,
+      "sha256": "32ea72a9dc88390fd72da027db06bb5dc9f911511d42de3e1452ec044b10255a"
+    },
+    {
+      "path": "gunnerus/analyze_propulsion.py",
+      "bytes": 3846,
+      "sha256": "62701f522936ccc1a91fa478164e78c439194a94670062f47c9ff6b3f794833f"
+    },
+    {
+      "path": "gunnerus/check_gunnerus_focus_wave.py",
+      "bytes": 4215,
+      "sha256": "23e34a2c6bbb76b90e913f8bfa664c61d156e6d2d2ccf934bfa4a9c7a32a69e7"
+    },
+    {
+      "path": "gunnerus/check_gunnerus_input.py",
+      "bytes": 2691,
+      "sha256": "0cada7358690e9cf55d78c80d3ab77716af1dc211d423d837b519c96eee71274"
+    },
+    {
+      "path": "gunnerus/finish_gunnerus_focus.py",
+      "bytes": 3051,
+      "sha256": "50942a768cf2697aaec509a6e46702fb837f633902daaf1f0ce4a96abbd38ed0"
+    },
+    {
+      "path": "gunnerus/place_gunnerus_contact.py",
+      "bytes": 1636,
+      "sha256": "f5c1344c58628f12894b2e4a03ca8d14345be415599e6b4ee8d0ec55ac6afd78"
+    },
+    {
+      "path": "gunnerus/prepare_gunnerus.py",
+      "bytes": 8643,
+      "sha256": "f5a5e89d2e69388da7e60e095c73a383dc880ed3ef5ba1a5094e57d628d0573a"
+    },
+    {
+      "path": "gunnerus/prepare_gunnerus_focus.py",
+      "bytes": 4746,
+      "sha256": "0f00bca02e09482aa7e81e294bb9eee6e6f822d05c3b5260c4e7d186f6a9a3c6"
+    },
+    {
+      "path": "gunnerus/prepare_gunnerus_impact_geometry.py",
+      "bytes": 4491,
+      "sha256": "4ddb1d7dfb13e83055825e0923213c80deee1664ed92e5864379be3d48caeaf2"
+    },
+    {
+      "path": "gunnerus/prepare_gunnerus_surface_pressure.py",
+      "bytes": 5631,
+      "sha256": "cfa132978460692d93efba0c9c952ca175f9f8a2376cbf89815ab4feb7ea1394"
+    },
+    {
+      "path": "gunnerus/prepare_gunnerus_waves.py",
+      "bytes": 7713,
+      "sha256": "8c0f352f01832e5414a5893952cc6be51c841a631b435c1c8001019b889fa17b"
+    },
+    {
+      "path": "gunnerus/prepare_reference.py",
+      "bytes": 1993,
+      "sha256": "488f778c7fecaa8146706b911df03717f1d812d606d7a13997c0c66cac448945"
+    },
+    {
+      "path": "gunnerus/read_native_float.py",
+      "bytes": 5097,
+      "sha256": "fcc4a794f3d1f11faf218496d470ba3d77ac2cf3a30b5ddc35c4a37a055b3532"
+    },
+    {
+      "path": "gunnerus/README.md",
+      "bytes": 2139,
+      "sha256": "3d738b3375e5dd9928de8b6e354b3eb3aa1427b86ede367cbaad2b84e9a60c40"
+    },
+    {
+      "path": "gunnerus/render_gunnerus_comparison.py",
+      "bytes": 14879,
+      "sha256": "249d4540b94d1217a40537ba5d7da314f58b2b1b8890bfb578f38618ec4aebe7"
+    },
+    {
+      "path": "gunnerus/render_gunnerus_focus_story.py",
+      "bytes": 14755,
+      "sha256": "c07556e8a08d0f4bb13ee2c16032a4d948bcb8d3c826b90b5ee76ed5aa3323ea"
+    },
+    {
+      "path": "gunnerus/render_gunnerus_landscape.py",
+      "bytes": 9313,
+      "sha256": "32c9636de5727800741ec39962bfc4dddf1102ac029420ebfa331bde1df5e1a4"
+    },
+    {
+      "path": "gunnerus/report_gunnerus_startup.py",
+      "bytes": 5696,
+      "sha256": "e3538dca39f6e8ce70b5a772b7d96b4b61658bf446140a285914c08cfb5f80a8"
+    },
+    {
+      "path": "gunnerus/report_gunnerus_waves.py",
+      "bytes": 6543,
+      "sha256": "92838a3244524ffbc58db4b7ae22b5107f2ec9a82b48ea5bd1ac7461bf0a488a"
+    },
+    {
+      "path": "gunnerus/run_sph.py",
+      "bytes": 6028,
+      "sha256": "42443ee0ec4aee9da4823fd42fd61b3b06e339a691aa3ba43a31bfb2d10ea2f1"
+    },
+    {
+      "path": "gunnerus/SOURCE_ADAPTATIONS.json",
+      "bytes": 5284,
+      "sha256": "4253454fe5c8253d4ec69c5fc506180df56c1dd9f1f6114bf64d4103e8a3a4ab"
+    },
+    {
+      "path": "gunnerus/sph_segments.py",
+      "bytes": 2731,
+      "sha256": "1851fa6f23ff8917908dff3f65dc0c4f878be40360a0b989ced62230bbcb557b"
+    },
+    {
+      "path": "gunnerus/xml_helpers.py",
+      "bytes": 418,
+      "sha256": "d5853582f73cf8034c596f762436bda5cc6b962c1a165ca8ce6d099126d13478"
+    },
+    {
+      "path": "media/gunnerus_landscape_final_contact_sheet.png",
+      "bytes": 586863,
+      "sha256": "164980a12f0a02ec7cc8ab7f8d6428b18092cddce698f4cf75e54d216ee298cc"
+    },
+    {
+      "path": "media/gunnerus_method_comparison.png",
+      "bytes": 85360,
+      "sha256": "35cb07bfdf537ed34f822b30b322ba934e87439d877d9dce57efe0db2136b70d"
+    },
+    {
+      "path": "media/gunnerus_stronger_waves_methods_landscape.json",
+      "bytes": 2488,
+      "sha256": "dbef40204638d0c4bf60b641af8dead062beb5df03a3b090476c251b1c10f6ce"
+    },
+    {
+      "path": "media/gunnerus_stronger_waves_methods_landscape.mp4",
+      "bytes": 12994159,
+      "sha256": "a5f839b49f0dad53cfdf54512941ffb33f9d3cbd36a7234a829d6afe413bf0e8"
+    },
+    {
+      "path": "media/gunnerus_stronger_waves_methods_portrait.json",
+      "bytes": 2447,
+      "sha256": "e9b4273c01514bbfc852401fa905b62ce96e5ba5a4556d14eb0fa8f5f7a2d197"
+    },
+    {
+      "path": "media/gunnerus_stronger_waves_methods_portrait.mp4",
+      "bytes": 12296665,
+      "sha256": "7687dbac2373e0271dc9f22080bf0e1c15c574988ddc72aa2980562699e3d0cd"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/empty_flume/results/encounter_selection.json",
+      "bytes": 466,
+      "sha256": "9863fd52a7b8adc311c6b2ffc4504bb875a8d84a840d6387d28e6fe295f531a0"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/empty_flume/results/GaugesSWL_x12p0.csv",
+      "bytes": 62915,
+      "sha256": "9d2931ce2af6bcacb9aeda3e1bdb7f782b1b4c9c2d3321a83a5ee44ba2a47363"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/empty_flume/results/GaugesSWL_x14p0.csv",
+      "bytes": 62712,
+      "sha256": "987218c7f8ab2caa06e88ac6764ecb576aa1e2b9728b4200abebee858e7f9462"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/empty_flume/results/initial_audit.json",
+      "bytes": 340,
+      "sha256": "68b9599ac8e3b443473e1c2ab57a635987cc36ef751f32b2c553c900bdfeaf11"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/empty_flume/results/wave_report.json",
+      "bytes": 3805,
+      "sha256": "8641b95f61ac39daf16437234645db3b9372ca9a8212c209c0145f6460f475b0"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/empty_flume/setup/Case_Def.xml",
+      "bytes": 5799,
+      "sha256": "4320cfb1515ec27642b1dae2af1286012931cdb8bdc4c664e2ef73124210447b"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/empty_flume/setup/piston_motion.dat",
+      "bytes": 179123,
+      "sha256": "b25e71c006f572db76449e4f9727cff61d06c3abaaca99eca3a31d9bdc06d377"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/empty_flume/setup/setup.json",
+      "bytes": 2214,
+      "sha256": "de3a616a2eb86fab9fdc04eb68ef3e1aadb50c4b2d090b6f72c961fceaf54f29"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/geometry/candidates/gunnerus_vesseljs/closed_candidate_audit.json",
+      "bytes": 343,
+      "sha256": "87017d68207e657c34a4d0f990125a58a8ee7105687d3663abcecdf2edf707a4"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/geometry/candidates/gunnerus_vesseljs/hull_closed_candidate.stl",
+      "bytes": 310084,
+      "sha256": "bf735c378a8e028d33deea7ca57d56b4edcf94fdaa07cf05adc324a9ac8f94bb"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/geometry/candidates/gunnerus_vesseljs/LICENSE.upstream.md",
+      "bytes": 1064,
+      "sha256": "8d7c18e2484db6bee6869f7aceae23017023df4ea5a85d6b6e6939281f4f0148"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/geometry/gunnerus/hull.stl",
+      "bytes": 310084,
+      "sha256": "31540ad32921f77a0add2e520f44d0dbc382d6b57ee818d681f34b97dacfd9f7"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/geometry/gunnerus/hull_normals.vtk",
+      "bytes": 245241,
+      "sha256": "7708f3fd9b2bacc0fd631d7c19062501a824339fe9238037ebc2d9625dce684d"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/geometry/gunnerus/physical_model.json",
+      "bytes": 2067,
+      "sha256": "9d1c8072dff0c4ad2794eb338f13b6049cf9c918ceaae0c50b61f3ffc825dfc6"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/geometry/gunnerus_impact/hull.stl",
+      "bytes": 335784,
+      "sha256": "6869b1e66a768ecb8d5667bd2441e04bf7b92628f4213da082ec8951b6e1ce9f"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/geometry/gunnerus_impact/hull_normals.vtk",
+      "bytes": 266774,
+      "sha256": "25ed00e8f67b6f3efa46a277901381444acb450c6557f6c2c20ff9f2eb35e617"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/geometry/gunnerus_impact/physical_model.json",
+      "bytes": 2990,
+      "sha256": "61c53b1bc67b354b7b47be0d2b02b358d120cad78e8e2670c0d7da0e7d1ba452"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/geometry/gunnerus_impact_x5.5/hull.stl",
+      "bytes": 335784,
+      "sha256": "989ecf670d4b004006a94a10c392e75ba2ae41972e621ecab5d9eea2497205b6"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/geometry/gunnerus_impact_x5.5/hull_normals.vtk",
+      "bytes": 263940,
+      "sha256": "2d65cc65db1b1304d0651f2f58cc1c915ce9c0b9a0401e55ccbf69916fd2e434"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/geometry/gunnerus_impact_x5.5/physical_model.json",
+      "bytes": 3080,
+      "sha256": "5e16ecb4a3d7433ad9fa1c5c77b2275a03fd1fb501dc4646fac6dd1f25d42a7b"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/PUBLICATION_CHECK.json",
+      "bytes": 1314,
+      "sha256": "05993bb5183d32440925751be3b06765b3891b1767a6afd216367a9414725a0a"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/README.md",
+      "bytes": 4454,
+      "sha256": "07e458efd94704a5d214b23a634ad99b87020a1c406d12a95cf130b9d8dbe25e"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/results/bow_monitor.json",
+      "bytes": 379,
+      "sha256": "042b8d17a2f770a37c113e5311eec3dce27c493fa756a13c526e8a0a9274aff6"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/results/fluid_side_pressure_summary.json",
+      "bytes": 943,
+      "sha256": "e50e4ec55758f031d88954044fd9f75affbd81a0d2692d857a051d7b7fca4dc4"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/results/force_history.csv",
+      "bytes": 12574,
+      "sha256": "be14cee5358a09b68bd3c393ee8c188fec07378033a7f169e727b05a8b52c2ba"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/results/gunnerus_stronger_attitude_check.json",
+      "bytes": 539,
+      "sha256": "4febc7e0b0b9f5b2cf2137201f4a9ec015f8b67614f5cf6ae20756ea9bb6a088"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/results/gunnerus_stronger_clip_metrics.json",
+      "bytes": 1143,
+      "sha256": "021c0789e881d750c6d763650c04037acea49f44fa7f54b92df1872725b5e6bc"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/results/gunnerus_stronger_resolution_summary.json",
+      "bytes": 1870,
+      "sha256": "aa301ae92e3dcf309cce25a71c395f400efd82881bd62bb15cba8df71d7eaa46"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/results/initial_audit.json",
+      "bytes": 512,
+      "sha256": "af8a44f4ff5bbf15b90858bb3d43237a6072c9de0ea5d2e04136e16a80fad586"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/results/monitors.json",
+      "bytes": 1710,
+      "sha256": "56542e1263f8f6d7e92df772813f304e95d9e048fc508d0732539c483d627f8d"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/results/motion_and_loads.csv",
+      "bytes": 510519,
+      "sha256": "a458838ec0fb70c090f2468745244a1b7f63f436924aaf561b4eddd48ba7e0be"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/results/startup_summary.json",
+      "bytes": 1818,
+      "sha256": "37d2565eb76d6e162ba6f831f22586b2f8c5f43d1f7f097bbad99bc8c5f1645b"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/results/wave_pilot_summary.json",
+      "bytes": 3926,
+      "sha256": "4bf36164b58d60cab5c5e661ffe5edf1293faacb350ec77721040af32c139d26"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/setup/Case_Def.xml",
+      "bytes": 7563,
+      "sha256": "20baea63b49de486104901b411ae5eef71ea640a56613db08865850c4dd0ad52"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/setup/piston_motion.dat",
+      "bytes": 179123,
+      "sha256": "b25e71c006f572db76449e4f9727cff61d06c3abaaca99eca3a31d9bdc06d377"
+    },
+    {
+      "path": "SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/setup/setup.json",
+      "bytes": 6554,
+      "sha256": "8ff6c6116f5883f440fa8585a068c32dc88eeaf6f72f7944d4a05d0e8e49fd65"
+    }
+  ]
+}

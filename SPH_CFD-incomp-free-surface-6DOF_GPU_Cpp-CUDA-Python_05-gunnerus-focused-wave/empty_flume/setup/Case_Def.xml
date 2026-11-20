@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='utf-8'?>
+<case>
+  <casedef>
+    <constantsdef>
+      <gravity x="0" y="0" z="-9.81" />
+      <rhop0 value="1025.0" />
+      <rhopgradient value="2" />
+      <hswl value="3.0" auto="false" />
+      <gamma value="7" />
+      <speedsystem value="4" auto="false" />
+      <coefsound value="20" />
+      <speedsound value="80" auto="false" />
+      <coefh value="1.2" />
+      <cflnumber value="0.2" />
+    </constantsdef>
+    <mkconfig boundcount="240" fluidcount="9" />
+    <geometry>
+      <definition dp="0.05">
+        <pointmin x="-18.25" y="0" z="-3.275" />
+        <pointmax x="19.0" y="0" z="3.05" />
+      </definition>
+      <commands>
+        <mainlist>
+          <setshapemode>dp | bound</setshapemode>
+          <setdrawmode mode="full" />
+          <setmkfluid mk="0" />
+          <drawbox>
+            <boxfill>solid</boxfill>
+            <point x="-18.0" y="0.0" z="-3.0" />
+            <size x="36.0" y="0.0" z="2.975" />
+          </drawbox>
+          <setmkbound mk="1" />
+          <drawbox>
+            <boxfill>solid</boxfill>
+            <point x="18.0" y="0.0" z="-3.15" />
+            <size x="0.2" y="0.0" z="6.15" />
+          </drawbox>
+          <setmkbound mk="0" />
+          <drawbox>
+            <boxfill>solid</boxfill>
+            <point x="-18.15" y="0.0" z="-3.15" />
+            <size x="37.15" y="0.0" z="0.15000000000000002" />
+          </drawbox>
+          <drawbox>
+            <boxfill>solid</boxfill>
+            <point x="-18.15" y="0.0" z="-3.0" />
+            <size x="0.15000000000000002" y="0.0" z="6.0" />
+          </drawbox>
+        </mainlist>
+      </commands>
+    </geometry>
+    <motion>
+      <objreal ref="1">
+        <begin mov="1" start="0" />
+        <mvrectfile id="1" duration="17.0">
+          <file name="piston_motion.dat" fields="2" fieldtime="0" fieldx="1" />
+        </mvrectfile>
+      </objreal>
+    </motion>
+  </casedef>
+  <execution>
+    <special>
+      <gauges>
+        <default>
+          <computedt value="0.01" />
+          <output value="true" />
+          <outputdt value="0.01" />
+        </default>
+        <swl name="x16p0">
+          <pointdp coefdp="0.25" />
+          <point0 x="16.0" y="0" z="-1.0" />
+          <point2 x="16.0" y="0" z="2.0" />
+        </swl>
+        <swl name="x14p0">
+          <pointdp coefdp="0.25" />
+          <point0 x="14.0" y="0" z="-1.0" />
+          <point2 x="14.0" y="0" z="2.0" />
+        </swl>
+        <swl name="x12p0">
+          <pointdp coefdp="0.25" />
+          <point0 x="12.0" y="0" z="-1.0" />
+          <point2 x="12.0" y="0" z="2.0" />
+        </swl>
+        <swl name="x10p0">
+          <pointdp coefdp="0.25" />
+          <point0 x="10.0" y="0" z="-1.0" />
+          <point2 x="10.0" y="0" z="2.0" />
+        </swl>
+        <swl name="x9p0">
+          <pointdp coefdp="0.25" />
+          <point0 x="9.0" y="0" z="-1.0" />
+          <point2 x="9.0" y="0" z="2.0" />
+        </swl>
+        <swl name="x8p0">
+          <pointdp coefdp="0.25" />
+          <point0 x="8.0" y="0" z="-1.0" />
+          <point2 x="8.0" y="0" z="2.0" />
+        </swl>
+        <swl name="x7p5">
+          <pointdp coefdp="0.25" />
+          <point0 x="7.5" y="0" z="-1.0" />
+          <point2 x="7.5" y="0" z="2.0" />
+        </swl>
+        <swl name="x7p0">
+          <pointdp coefdp="0.25" />
+          <point0 x="7.0" y="0" z="-1.0" />
+          <point2 x="7.0" y="0" z="2.0" />
+        </swl>
+        <swl name="x6p0">
+          <pointdp coefdp="0.25" />
+          <point0 x="6.0" y="0" z="-1.0" />
+          <point2 x="6.0" y="0" z="2.0" />
+        </swl>
+        <swl name="x5p0">
+          <pointdp coefdp="0.25" />
+          <point0 x="5.0" y="0" z="-1.0" />
+          <point2 x="5.0" y="0" z="2.0" />
+        </swl>
+        <swl name="x4p0">
+          <pointdp coefdp="0.25" />
+          <point0 x="4.0" y="0" z="-1.0" />
+          <point2 x="4.0" y="0" z="2.0" />
+        </swl>
+        <swl name="x2p0">
+          <pointdp coefdp="0.25" />
+          <point0 x="2.0" y="0" z="-1.0" />
+          <point2 x="2.0" y="0" z="2.0" />
+        </swl>
+        <swl name="x0p0">
+          <pointdp coefdp="0.25" />
+          <point0 x="0.0" y="0" z="-1.0" />
+          <point2 x="0.0" y="0" z="2.0" />
+        </swl>
+      </gauges>
+      <damping>
+        <dampingzone>
+          <limitmin x="-11" y="0" z="0" />
+          <limitmax x="-18" y="0" z="0" />
+          <overlimit value="0.2" />
+          <redumax value="10" />
+          <factorxyz x="1" y="1" z="1" />
+        </dampingzone>
+      </damping>
+    </special>
+    <parameters>
+      <parameter key="Boundary" value="1" />
+      <parameter key="SlipMode" value="1" />
+      <parameter key="NoPenetration" value="0" />
+      <parameter key="StepAlgorithm" value="2" />
+      <parameter key="Kernel" value="2" />
+      <parameter key="ViscoTreatment" value="1" />
+      <parameter key="Visco" value="0.01" />
+      <parameter key="DensityDT" value="2" />
+      <parameter key="DensityDTvalue" value="0.1" />
+      <parameter key="Shifting" value="0" />
+      <parameter key="RigidAlgorithm" value="0" />
+      <parameter key="FtPause" value="0" />
+      <parameter key="FtSaveAce" value="1" />
+      <parameter key="TimeMax" value="16.0" />
+      <parameter key="TimeOut" value="0.1" />
+      <parameter key="TimeOutExtra" value=".005" />
+      <parameter key="CoefDtMin" value="0.01" />
+      <parameter key="DtIni" value="0" />
+      <parameter key="DtMin" value="0" />
+      <parameter key="RhopOutMin" value="700" />
+      <parameter key="RhopOutMax" value="1300" />
+      <parameter key="MinFluidStop" value="0.99" />
+      <simulationdomain>
+        <posmin x="-18.25" y="0" z="-3.275" />
+        <posmax x="19.0" y="0" z="3.05" />
+      </simulationdomain>
+    </parameters>
+  </execution>
+</case>

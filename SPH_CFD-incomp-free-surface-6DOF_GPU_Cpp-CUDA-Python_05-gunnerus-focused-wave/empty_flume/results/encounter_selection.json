@@ -1,0 +1,24 @@
+[
+  {
+    "x_m": 12.0,
+    "crest_m": 0.889868,
+    "peak_time_s": 7.890172,
+    "cycle_height_m": 1.364094,
+    "cycle_times_s": [
+      7.720102,
+      10.250108
+    ],
+    "calm_based_initial_station_m": 5.448404750643272
+  },
+  {
+    "x_m": 14.0,
+    "crest_m": 0.939473,
+    "peak_time_s": 7.430174,
+    "cycle_height_m": 1.4728599999999998,
+    "cycle_times_s": [
+      7.190148,
+      9.720011
+    ],
+    "calm_based_initial_station_m": 7.64292804623492
+  }
+]

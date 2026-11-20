@@ -1,0 +1,44 @@
+{
+  "source": "@GUNNERUS_ROOT@\\sph\\gunnerus_focus_A115_x5.5_D300_050_16s\\output\\data\\PartFloatInfo2.ibi4",
+  "samples": 3201,
+  "mass_kg": 398.8999938964844,
+  "saved_interval_s": 0.005,
+  "time_range_s": [
+    0.0,
+    16.000046339889646
+  ],
+  "max_force_balance_residual_N": 0.0005325317379174521,
+  "frame": "world",
+  "moments_reference": "instantaneous CG",
+  "initial_placeholder_skipped": false,
+  "initial_file_time_s": 0.0,
+  "note": "Native fluid moments are read directly, not inferred using a scalar inertia.",
+  "sources": [
+    {
+      "source": "@GUNNERUS_ROOT@\\sph\\gunnerus_focus_A115_x5.5_D300_050_16s\\output\\data\\PartFloatInfo2.ibi4",
+      "samples": 3201,
+      "mass_kg": 398.8999938964844,
+      "saved_interval_s": 0.005,
+      "time_range_s": [
+        0.0,
+        16.000046339889646
+      ],
+      "max_force_balance_residual_N": 0.0005325317379174521,
+      "frame": "world",
+      "moments_reference": "instantaneous CG",
+      "initial_placeholder_skipped": false,
+      "initial_file_time_s": 0.0,
+      "note": "Native fluid moments are read directly, not inferred using a scalar inertia."
+    }
+  ],
+  "restart_policy": "Retain original checkpoint values; discard duplicate resumed initial placeholder; join at actual physical timestamps.",
+  "orientation_source": "Rigid fit to actual hull particles at 0.1 s; SLERP to native load timestamps at the recorded cadence.",
+  "units": "Model units: m, s, N, N m, degrees",
+  "positive_pitch": "Right-handed +y; positive pitch lowers the bow for x-forward/z-up.",
+  "not_included": [
+    "Calibrated propeller operating point",
+    "Actuator-disk wake",
+    "Validated slam pressure",
+    "Structural bending moment"
+  ]
+}

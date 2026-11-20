@@ -1,5 +1,13 @@
 # Handoff to another local agent
 
+## Latest addition: Gunnerus, 2026-11-20
+
+Case 05 and both 26-second films are complete. Read `docs/GUNNERUS_REPRODUCE.md` for its separate `gunnerus/` workflow and `docs/MARINE_MODEL_NOTES.md` for physics/limits. It uses upstream DualSPHysics with uniform 0.05 m spacing and a declared 30 N world-fixed CG force. No actuator disk, VRes, RANS coupling or capsize validation is implemented. The selected MIT-derived Gunnerus contact geometry can be distributed with its notice; the older turtle assets remain private.
+
+`gunnerus/prepare_reference.py` installs reference inputs into ignored working folders without launching a solver. Full particle fields are absent, so compact motion CSV and videos alone cannot regenerate a fluid replay. Preserve top-level reference inputs/results; do not claim that the full simulation was rerun during packaging. The user's approval checkpoint still applies to substantial new implementation/debugging; publication and documentation in this update were explicitly requested.
+
+## Original turtle demonstration
+
 Start with README, `cases.json`, `docs/REPRODUCE.md`, `docs/RESULTS.md` and THIRD_PARTY_NOTICES. The accepted deliverable is the 35 s portrait film under root `media/`. Its first 3 s use a separate focused-wave run; the remainder presents potential flow then free-coasting SPH. English captions are intentionally short.
 
 The public package contains Python orchestration, exact reference case inputs and compact results. DualSPHysics C++/CUDA and Capytaine are external dependencies, pinned/documented in THIRD_PARTY_NOTICES. Numerical solver kernels were not modified. BEM and SPH were not coupled.
@@ -16,6 +24,6 @@ The public package contains Python orchestration, exact reference case inputs an
 
 ## Pending work / approval boundary
 
-The accepted turtle demonstration is complete. Candidate follow-on work is a more industrial ship propulsion/resistance example, then possibly thermal/phase-change SPH. Neither is represented here as a completed simulation. Research and light result organization may continue; ask the user before substantial code changes, prolonged debugging or other high-usage implementation work, as requested on 2026-11-18. Describe the concrete scope and expected effort first. Do not launch a new expensive GPU study merely because a repository was cloned.
+The accepted turtle and Gunnerus wave demonstrations are complete. Calibrated ship propulsion/resistance, local refinement and thermal/phase-change SPH remain possible follow-on work, not completed capabilities of this package. Research and light result organization may continue; ask the user before substantial code changes, prolonged debugging or other high-usage implementation work, as requested on 2026-11-18. Describe the concrete scope and expected effort first. Do not launch a new expensive GPU study merely because a repository was cloned.
 
 Do not tune a result to look favorable. Preserve the coarse hydrostatic bias, finite-tank reflections and late isolated velocity observation in the record. Before claiming quantitative resistance, green-water loads or historical survivability, new verification/validation work would be required.

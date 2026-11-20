@@ -1,0 +1,37 @@
+{
+  "case": "gunnerus_focus_A115_x5.5_D300_050_16s",
+  "particles": {
+    "total_particles": 9985001,
+    "fluid_particles": 8581760,
+    "hull_particles": 13638,
+    "moving_particles": 119400,
+    "fixed_particles": 1270203
+  },
+  "model_duration_s": 16.00004633988965,
+  "dt_min_ms": 0.07887760730525166,
+  "dt_max_ms": 0.2551221136867401,
+  "mean_dt_ms": 0.21993190845209143,
+  "snapshot_interval_model_s": 0.1,
+  "native_monitor_interval_model_s": 0.005,
+  "dp_model_m": 0.05,
+  "dp_full_equivalent_m": 0.5,
+  "beam_intervals": 19.2,
+  "draft_intervals": 5.4,
+  "smoothing_h_model_m": 0.103923,
+  "sound_speed_model_m_s": 80,
+  "CFL": 0.2,
+  "viscosity_model": "Artificial viscosity alpha 0.01; not a validated wall-resolved resistance setup",
+  "propulsion": "Assumed world-fixed 30 N model force at CG, no resolved propeller or actuator disk",
+  "convergence": "No systematic space/time convergence study of this completed strong-wave case.",
+  "interval_steps_sum": 72751,
+  "steps_reported_by_native_solver": 72750,
+  "variable_resolution": {
+    "available_in_local_version": true,
+    "gpu_implementation": "work/DualSPHysics-source/src/source/JSphGpuSingle_VRes.cpp",
+    "tracking_config": "work/DualSPHysics-source/doc/xml_format/_FmtXML__VRes.xml",
+    "time_step_policy": "JSphVResDriver.h SynchTimeStep uses the minimum predicted dt of all zones; no local subcycling in this driver.",
+    "used_in_completed_case": false,
+    "suggested_followup": "Retain 0.05 m far-field initially and test a body-tracking 0.025 m refinement region; compare incident waves, forces and motions. Not run or validated.",
+    "notes": "VRes uses coupled subdomains and buffer reconstruction. It should not be described as simply inserting a few denser particles. Existing single-resolution particle-ID renderer needs adaptation to changing IDs and particle volumes."
+  }
+}

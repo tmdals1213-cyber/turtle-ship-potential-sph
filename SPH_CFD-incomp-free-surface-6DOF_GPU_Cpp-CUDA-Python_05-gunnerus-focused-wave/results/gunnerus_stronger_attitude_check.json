@@ -1,0 +1,11 @@
+{
+  "case": "gunnerus_focus_A115_x5.5_D300_050_16s",
+  "roll_max_deg": 13.261124598913502,
+  "yaw_min_deg": -0.11008404900959205,
+  "yaw_max_deg": 24.982902669665396,
+  "max_tilt_from_upright_deg": 23.29824175048556,
+  "any_body_up_below_horizontal": false,
+  "duration_model_s": 16.000046339889646,
+  "roll_min_deg": -7.91561635819486,
+  "note": "No capsize in the completed interval. Unrestricted rigid-body rotations do not establish validated large-angle capsize dynamics; sealed contact envelopes exclude flooding and cargo shifts."
+}

@@ -1,0 +1,42 @@
+{
+  "case": "gunnerus_focus_A115_x5.5_D300_050_16s",
+  "status": "startup_complete_not_equilibrium_or_resistance_validation",
+  "model_duration_s": 16.00004633988965,
+  "wall_s": 10291.966136999894,
+  "total_particles": 9985001,
+  "particle_losses": 0,
+  "dt_min_clamp_events": 0,
+  "min_dt_s": 7.887760730525166e-05,
+  "peak_solver_gpu_mib": 1879.831894,
+  "final_heave_m": 0.28406469268202517,
+  "final_surge_m": -5.91562858044447,
+  "final_pitch_deg": -10.396331002339245,
+  "final_interval_mean_surge_speed_m_s": -1.1911270511826766,
+  "last_fluid_force_N": [
+    -680.3097380831193,
+    70.60567956142536,
+    3632.468966383265
+  ],
+  "last_applied_force_N": [
+    30.0,
+    0.0,
+    0.0
+  ],
+  "sampled_density_range_kg_m3": [
+    910.1228637695312,
+    1144.1121826171875
+  ],
+  "sampled_fields_finite": true,
+  "limitations": [
+    "Approximate sealed hull and convex deckhouse envelopes, not production CAD or internal flooding.",
+    "Masts, rails, cranes and propulsion appendages remain visual-only.",
+    "Drainage/freeing ports and local panel flexibility are not resolved; deck water and impact loads are qualitative diagnostics.",
+    "Mass, KG and radii of gyration remain declared assumptions from the prior pilot.",
+    "Froude scale does not preserve full-scale Reynolds number.",
+    "Coarse pilot; not validated resistance, propulsion efficiency or impact pressure.",
+    "Finite tank with downstream damping; later reflections and finite depth remain part of this setup.",
+    "Matched force and initial speed do not maintain equal speeds, so differences are not equal-speed added resistance.",
+    "Assumed thrust does not add propeller momentum to the water; no actuator disk is present.",
+    "16-second transient with a focused wave packet; no extra downward body force is prescribed."
+  ]
+}

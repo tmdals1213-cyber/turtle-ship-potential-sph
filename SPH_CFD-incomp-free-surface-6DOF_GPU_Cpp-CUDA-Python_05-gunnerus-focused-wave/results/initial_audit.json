@@ -1,0 +1,16 @@
+{
+  "case": "gunnerus_focus_A115_x5.5_D300_050_16s",
+  "total_particles": 9985001,
+  "fluid_particles": 8581760,
+  "hull_particles": 13638,
+  "moving_particles": 119400,
+  "fixed_particles": 1270203,
+  "top_water_particle_z_m": -0.02500000037252903,
+  "moving_particles_below_floor_top": 0,
+  "fixed_floor_particles_under_piston": 8073,
+  "deep_interior_fluid_particles": 0,
+  "native_mass_kg": 398.9,
+  "mass_serialization_relative_error": 2.7389545354573275e-07,
+  "all_six_dofs_free": true,
+  "passed": true
+}

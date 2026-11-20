@@ -1,0 +1,99 @@
+{
+  "case": "gunnerus_focus_A115_x5.5_D300_050_16s",
+  "status": "startup_complete_not_equilibrium_or_resistance_validation",
+  "model_duration_s": 16.00004633988965,
+  "wall_s": 10291.966136999894,
+  "total_particles": 9985001,
+  "particle_losses": 0,
+  "dt_min_clamp_events": 0,
+  "min_dt_s": 7.887760730525166e-05,
+  "peak_solver_gpu_mib": 1879.831894,
+  "final_heave_m": 0.28406469268202517,
+  "final_surge_m": -5.91562858044447,
+  "final_pitch_deg": -10.396331002339245,
+  "final_interval_mean_surge_speed_m_s": -1.1911270511826766,
+  "last_fluid_force_N": [
+    -680.3097380831193,
+    70.60567956142536,
+    3632.468966383265
+  ],
+  "last_applied_force_N": [
+    30.0,
+    0.0,
+    0.0
+  ],
+  "sampled_density_range_kg_m3": [
+    910.1228637695312,
+    1144.1121826171875
+  ],
+  "sampled_fields_finite": true,
+  "limitations": [
+    "Approximate sealed hull and convex deckhouse envelopes, not production CAD or internal flooding.",
+    "Masts, rails, cranes and propulsion appendages remain visual-only.",
+    "Drainage/freeing ports and local panel flexibility are not resolved; deck water and impact loads are qualitative diagnostics.",
+    "Mass, KG and radii of gyration remain declared assumptions from the prior pilot.",
+    "Froude scale does not preserve full-scale Reynolds number.",
+    "Coarse pilot; not validated resistance, propulsion efficiency or impact pressure.",
+    "Finite tank with downstream damping; later reflections and finite depth remain part of this setup.",
+    "Matched force and initial speed do not maintain equal speeds, so differences are not equal-speed added resistance.",
+    "Assumed thrust does not add propeller momentum to the water; no actuator disk is present.",
+    "16-second transient with a focused wave packet; no extra downward body force is prescribed."
+  ],
+  "native_monitor": {
+    "source": "@GUNNERUS_ROOT@\\sph\\gunnerus_focus_A115_x5.5_D300_050_16s\\output\\data\\PartFloatInfo2.ibi4",
+    "samples": 3201,
+    "mass_kg": 398.8999938964844,
+    "saved_interval_s": 0.005,
+    "time_range_s": [
+      0.0,
+      16.000046339889646
+    ],
+    "max_force_balance_residual_N": 0.0005325317379174521,
+    "frame": "world",
+    "moments_reference": "instantaneous CG",
+    "initial_placeholder_skipped": false,
+    "initial_file_time_s": 0.0,
+    "note": "Native fluid moments are read directly, not inferred using a scalar inertia.",
+    "sources": [
+      {
+        "source": "@GUNNERUS_ROOT@\\sph\\gunnerus_focus_A115_x5.5_D300_050_16s\\output\\data\\PartFloatInfo2.ibi4",
+        "samples": 3201,
+        "mass_kg": 398.8999938964844,
+        "saved_interval_s": 0.005,
+        "time_range_s": [
+          0.0,
+          16.000046339889646
+        ],
+        "max_force_balance_residual_N": 0.0005325317379174521,
+        "frame": "world",
+        "moments_reference": "instantaneous CG",
+        "initial_placeholder_skipped": false,
+        "initial_file_time_s": 0.0,
+        "note": "Native fluid moments are read directly, not inferred using a scalar inertia."
+      }
+    ],
+    "restart_policy": "Retain original checkpoint values; discard duplicate resumed initial placeholder; join at actual physical timestamps.",
+    "orientation_source": "Rigid fit to actual hull particles at 0.1 s; SLERP to native load timestamps at the recorded cadence.",
+    "units": "Model units: m, s, N, N m, degrees",
+    "positive_pitch": "Right-handed +y; positive pitch lowers the bow for x-forward/z-up.",
+    "not_included": [
+      "Calibrated propeller operating point",
+      "Actuator-disk wake",
+      "Validated slam pressure",
+      "Structural bending moment"
+    ]
+  },
+  "final_native_speed_body_m_s": -0.9934550569269787,
+  "heave_range_m": [
+    -0.35500558976751373,
+    0.5530229490750812
+  ],
+  "pitch_range_deg": [
+    -22.42862102778755,
+    16.754427479595165
+  ],
+  "body_pitch_moment_range_Nm": [
+    -2742.3750068623217,
+    1967.757716718982
+  ]
+}

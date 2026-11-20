@@ -26,3 +26,13 @@ study/results/*
 *.log
 .env
 hosts.yml
+
+# Gunnerus working outputs; only selected MIT-derived reference inputs are public.
+gunnerus/sph/
+gunnerus/geometry/
+gunnerus/media/
+gunnerus/results/
+gunnerus/render_cache/
+*.glb
+!SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/geometry/**/*.stl
+!SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/geometry/**/*.vtk

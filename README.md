@@ -1,6 +1,8 @@
-# Turtle ship in waves: potential flow and GPU SPH
+# Ships in waves: potential flow and GPU SPH
 
 **Can we predict a turtle ship's motion in waves?** A compact demonstration using Capytaine and DualSPHysics, with a computed bow-impact intro and a 35-second portrait film.
+
+**New: Gunnerus in focused head waves.** A completed 16 s, 9.99-million-particle GPU example with free six-DOF motion and assumed thrust. [Case and results](SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave) · [Portrait film](media/gunnerus_stronger_waves_methods_portrait.mp4) · [Landscape film](media/gunnerus_stronger_waves_methods_landscape.mp4) · [Model, scaling and resolution notes](docs/MARINE_MODEL_NOTES.md).
 
 [Watch / download the final film](media/turtle_ship_story_v7_focused_portrait.mp4) · [3-second impact intro](media/turtle_focused_intro.mp4) · [Video description and model credit](media/turtle_ship_story_v7_focused_portrait_description.txt)
 
@@ -14,8 +16,9 @@
 | [02 Coasting](SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_02-coasting) | DualSPHysics / RTX 5080 | Initial +x speed 0.5 m/s, then fully free 6-DOF; opposing regular waves | 943,816 particles; 16.0 model s in 688.30 s |
 | [03 Focused wave](SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_03-focused-wave) | DualSPHysics / RTX 5080 | Initially at rest; focused wave group; free 6-DOF | 2,885,421 particles; 10.0 model s in 1,552.27 s |
 | [04 Empty flume](SPH_CFD-incomp-free-surface_GPU_Cpp-CUDA-Python_04-empty-flume) | 2-D SPH commissioning / GPU | Focused-wave generation without the ship | 12.0 model s; zero excluded particles |
+| [05 Gunnerus](SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave) | DualSPHysics / RTX 5080 | Focused waves, sealed hull/deckhouse, free 6-DOF, assumed 30 N CG force | 9,985,001 particles; 16.0 model s in 10,292 s; separate 2-D wave check |
 
-All SPH examples use 40 mm initial particle spacing. Ship results use a **1:10 model**, 154.4 kg rigid-body mass, and a simplified closed hull. Coordinates, times, wave parameters and motion histories are model-scale unless explicitly marked otherwise. No propulsion is applied.
+The turtle SPH cases use 40 mm initial particle spacing, **1:10 scale**, 154.4 kg rigid-body mass and no propulsion. Gunnerus uses 50 mm spacing, 1:10 scale, an assumed/derived 398.9 kg loading condition and a world-fixed external CG force; it has no actuator disk or propeller wake. Coordinates, times, wave parameters and motion histories are model-scale unless explicitly marked otherwise.
 
 Folder names follow `method_physics_resource_language_case`. `CFD-incomp` describes the intended water-flow problem; DualSPHysics uses **weakly compressible SPH** to approximate it. The GPU solver is upstream C++/CUDA; case generation, analysis and rendering are Python. This project does not use VOF, IBM, air-flow simulation, CHT or phase change.
 
@@ -23,10 +26,13 @@ Folder names follow `method_physics_resource_language_case`. `CFD-incomp` descri
 
 - Case definitions, piston input signals, physical assumptions and compact motion/audit results.
 - Python geometry preparation, BEM calculation, SPH launch, analysis and film-rendering scripts in [study](study).
+- Gunnerus setup, launch and postprocessing in [gunnerus](gunnerus), with [reproduction instructions](docs/GUNNERUS_REPRODUCE.md). Its selected MIT-derived contact meshes and notice are included; the original visual GLB is obtained separately.
 - Final MP4s, two rendered stills, source credits and [modification history](CHANGELOG.md).
 - [Reproduction instructions](docs/REPRODUCE.md) and [agent handoff](docs/AGENT_HANDOFF.md).
 
-Raw particle fields, generated boundary meshes, render caches, environments and solver binaries are excluded. **The turtle source model and every derived geometry file are also excluded:** the creator allows rendered use but prohibits redistribution of the model files. Obtain your own copy from the [creator's page](https://wifewell.tistory.com/entry/거북선-3D파일FBXOBJ-및-블렌더-무료-나눔). A fresh clone can prepare the empty-flume case without that asset; reproducing the turtle calculations and rendering requires it and a local solver installation.
+Raw particle fields, generated boundary-particle datasets, render caches, environments and solver binaries are excluded. **The turtle source model and every derived geometry file are also excluded:** the creator allows rendered use but prohibits redistribution of the model files. Obtain your own copy from the [creator's page](https://wifewell.tistory.com/entry/거북선-3D파일FBXOBJ-및-블렌더-무료-나눔). A fresh clone can prepare the empty-flume case without that asset; reproducing the turtle calculations and rendering requires it and a local solver installation.
+
+No numerical solver kernels were changed for the Gunnerus example. The new material is the case setup, geometry/loading assumptions, orchestration and visualization. **Setup files alone are enough only when the matching geometry, external solver and workflow are already available.** This package also preserves those workflow scripts, dependency/source references and compact results; it does not duplicate DualSPHysics binaries or full particle fields.
 
 ## Reading the results
 

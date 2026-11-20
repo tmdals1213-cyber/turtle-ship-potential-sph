@@ -1,0 +1,79 @@
+{
+  "case": "gunnerus_focus_A115_x5.5_D300_050_16s",
+  "frames": 780,
+  "fps": 30,
+  "video_seconds": 26,
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "segments": [
+    {
+      "kind": "domain setup",
+      "video_s": [
+        0,
+        2
+      ]
+    },
+    {
+      "kind": "conceptual method comparison",
+      "video_s": [
+        2,
+        6
+      ]
+    },
+    {
+      "kind": "SPH schematic",
+      "video_s": [
+        6,
+        8
+      ]
+    },
+    {
+      "kind": "actual simulation replay",
+      "video_s": [
+        8,
+        26
+      ],
+      "model_time_s": [
+        4,
+        16
+      ]
+    }
+  ],
+  "metrics": [
+    "net vertical force",
+    "body pitch moment",
+    "pitch",
+    "foredeck vertical kinematic acceleration",
+    "speed",
+    "heave"
+  ],
+  "layout": "Large close perspective view; small world side/front orthographic views with fluid-side pressure; synchronized native load/motion histories.",
+  "pressure": {
+    "source": "@GUNNERUS_ROOT@\\sph\\gunnerus_focus_A115_x5.5_D300_050_16s\\surface_pressure\\pressure_0040_0160.json",
+    "color_limits_kPa": [
+      -4.0,
+      8.0
+    ],
+    "color_range": "Fixed throughout the clip; 0.5 and 99.5 percentiles rounded outward. Values beyond limits saturate.",
+    "temporal_interpolation": "Linear only when both samples have water support; otherwise nearest snapshot, gray if unsupported."
+  },
+  "dilute_water_parcels": true,
+  "surface_level": 0.38,
+  "rendering": "Matched actual particle IDs with temporal interpolation; rigid pose SLERP; no invented wave or extra downward force.",
+  "limitations": [
+    "Assumed CG thrust, not actuator disk.",
+    "Sealed simplified deckhouse; no flooding, air entrapment or structural failure model."
+  ],
+  "source_video": "gunnerus_stronger_waves_story_portrait.mp4",
+  "comparison_note": "Illustrative discretizations, not three CFD results. IBM can be combined with FVM. No solver ranking or runtime comparison is implied.",
+  "sources": [
+    "https://www.openfoam.com/documentation/user-guide/a-reference/a.1-standard-solvers",
+    "https://engineering.jhu.edu/fsag/wp-content/uploads/2014/06/jcp-vol174.pdf",
+    "https://github.com/DualSPHysics/DualSPHysics/wiki/3.-SPH-formulation"
+  ],
+  "decoded_frames": 780,
+  "sha256": "7687dbac2373e0271dc9f22080bf0e1c15c574988ddc72aa2980562699e3d0cd",
+  "final_visual_review": "passed: comparison slide and seven encoded samples including all scene boundaries inspected"
+}

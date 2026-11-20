@@ -1,3 +1,7 @@
 * text=auto eol=lf
 *.png binary
 *.mp4 binary
+# Preserve exact reference input/result bytes covered by the Gunnerus manifest.
+SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+SPH_CFD-incomp-free-surface-6DOF_GPU_Cpp-CUDA-Python_05-gunnerus-focused-wave/geometry/**/*.vtk binary
+*.stl binary

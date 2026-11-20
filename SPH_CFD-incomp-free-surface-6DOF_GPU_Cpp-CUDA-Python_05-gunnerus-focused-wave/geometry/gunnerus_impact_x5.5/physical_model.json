@@ -1,0 +1,96 @@
+{
+  "model": "Gunnerus sealed main hull plus simplified deckhouse contact envelopes",
+  "scale_ratio": 10.0,
+  "rho_kg_m3": 1025.0,
+  "source_sha256": "bf735c378a8e028d33deea7ca57d56b4edcf94fdaa07cf05adc324a9ac8f94bb",
+  "hull_file": "@GUNNERUS_ROOT@\\geometry\\gunnerus_impact_x5.5\\hull.stl",
+  "normals_file": "@GUNNERUS_ROOT@\\geometry\\gunnerus_impact_x5.5\\hull_normals.vtk",
+  "closed_watertight": true,
+  "solver_triangles": 6714,
+  "mass_kg": 398.8998907431335,
+  "full_scale_equivalent_mass_t": 398.8998907431335,
+  "mass_basis": "Derived from closed visual-hull displacement at the declared 2.7 m draft; not measured vessel mass.",
+  "Lpp_m": 3.3899999999999997,
+  "beam_reference_m": 0.96,
+  "draft_reference_m": 0.27,
+  "center_of_mass_m": [
+    5.349714403606483,
+    6.197453312904331e-08,
+    0.12999999999999998
+  ],
+  "center_of_buoyancy_m": [
+    5.349714403606483,
+    6.197453312904331e-08,
+    -0.08697062590937234
+  ],
+  "inertia_kg_m2": [
+    45.13898349575418,
+    286.5123396505727,
+    286.5123396505727
+  ],
+  "assumed_full_scale_KG_m": 4.0,
+  "GM_roll_m": 0.22093297318101193,
+  "waterplane_area_m2": 2.690010265660114,
+  "displacement_m3": 0.3891706251152522,
+  "closed_volume_m3": 1.688058310611189,
+  "bounds_m": [
+    [
+      3.6795947551727295,
+      -0.4805834889411926,
+      -0.27000001072883606
+    ],
+    [
+      7.32638955116272,
+      0.480532705783844,
+      0.9635219573974609
+    ]
+  ],
+  "visual_to_model": {
+    "axes": "x=-glTF.z, y=-glTF.x, z=glTF.y",
+    "scale": 0.1,
+    "vertical_shift_before_scale_m": 0.6194355964660643,
+    "translation_model_m": [
+      5.5,
+      0.0,
+      0.0
+    ]
+  },
+  "limitations": [
+    "Approximate sealed hull and convex deckhouse envelopes, not production CAD or internal flooding.",
+    "Masts, rails, cranes and propulsion appendages remain visual-only.",
+    "Drainage/freeing ports and local panel flexibility are not resolved; deck water and impact loads are qualitative diagnostics.",
+    "Mass, KG and radii of gyration remain declared assumptions from the prior pilot.",
+    "Froude scale does not preserve full-scale Reynolds number."
+  ],
+  "contact_geometry": "Manifold union of existing main hull and two convex envelopes fitted to MIT visual deckhouse vertices.",
+  "contact_envelope_bounds_m": [
+    [
+      [
+        5.120749165322199,
+        -0.36967949867248534,
+        0.3497609715906263
+      ],
+      [
+        6.781210678316476,
+        0.36981881691133783,
+        0.6916021424778445
+      ]
+    ],
+    [
+      [
+        5.140337063576593,
+        -0.3697697639465332,
+        0.6600333291538699
+      ],
+      [
+        5.964615799691095,
+        0.36921348571777346,
+        0.9635219651707156
+      ]
+    ]
+  ],
+  "submerged_volume_relative_change": 2.8527924942944936e-16,
+  "previous_main_hull_sha256": "31540ad32921f77a0add2e520f44d0dbc382d6b57ee818d681f34b97dacfd9f7",
+  "mass_geometry_policy": "Mass, CG and inertia are the unchanged assumed loading condition; adding upper contact geometry does not add a second structural mass.",
+  "initial_station_x_m": 5.5
+}

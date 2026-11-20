@@ -1,0 +1,163 @@
+{
+  "status": "complete",
+  "case": "gunnerus_focus_empty_A115_D300_050_16s",
+  "particle_losses": 0,
+  "dt_clamp_events": 0,
+  "nominal_focus_station": {
+    "x_m": 7.5,
+    "crest_m": 0.594123,
+    "crest_time_s": 11.53014,
+    "zero_upcrossing_wave_height_m": 0.9505779999999999,
+    "cycle_window_s": [
+      11.340188,
+      13.950083
+    ],
+    "adjacent_crest_to_trough_heights_m": [
+      0.9746379999999999,
+      0.043081999999999954
+    ],
+    "adjacent_trough_times_s": [
+      10.660157,
+      11.560009
+    ]
+  },
+  "near_encounter_stations": [
+    {
+      "x_m": 10.0,
+      "crest_m": 0.902228,
+      "crest_time_s": 10.930107,
+      "zero_upcrossing_wave_height_m": 1.298681,
+      "cycle_window_s": [
+        10.680174,
+        13.34007
+      ],
+      "adjacent_crest_to_trough_heights_m": [
+        1.378029,
+        0.04071200000000008
+      ],
+      "adjacent_trough_times_s": [
+        9.980132,
+        10.960149
+      ]
+    },
+    {
+      "x_m": 6.0,
+      "crest_m": 0.868623,
+      "crest_time_s": 11.780079,
+      "zero_upcrossing_wave_height_m": 1.220402,
+      "cycle_window_s": [
+        11.550153,
+        14.310041
+      ],
+      "adjacent_crest_to_trough_heights_m": [
+        1.310736,
+        0.41958100000000004
+      ],
+      "adjacent_trough_times_s": [
+        10.840138,
+        12.010189
+      ]
+    },
+    {
+      "x_m": 7.0,
+      "crest_m": 0.567197,
+      "crest_time_s": 8.780166,
+      "zero_upcrossing_wave_height_m": 0.972617,
+      "cycle_window_s": [
+        8.680155,
+        11.420045
+      ],
+      "adjacent_crest_to_trough_heights_m": [
+        0.35988599999999993,
+        0.07978799999999997
+      ],
+      "adjacent_trough_times_s": [
+        8.760131,
+        8.81005
+      ]
+    },
+    {
+      "x_m": 7.5,
+      "crest_m": 0.594123,
+      "crest_time_s": 11.53014,
+      "zero_upcrossing_wave_height_m": 0.9505779999999999,
+      "cycle_window_s": [
+        11.340188,
+        13.950083
+      ],
+      "adjacent_crest_to_trough_heights_m": [
+        0.9746379999999999,
+        0.043081999999999954
+      ],
+      "adjacent_trough_times_s": [
+        10.660157,
+        11.560009
+      ]
+    },
+    {
+      "x_m": 8.0,
+      "crest_m": 0.681488,
+      "crest_time_s": 11.420045,
+      "zero_upcrossing_wave_height_m": 1.038227,
+      "cycle_window_s": [
+        11.220118,
+        13.810172
+      ],
+      "adjacent_crest_to_trough_heights_m": [
+        0.473033,
+        0.03564400000000001
+      ],
+      "adjacent_trough_times_s": [
+        11.360124,
+        11.470077
+      ]
+    },
+    {
+      "x_m": 9.0,
+      "crest_m": 0.850194,
+      "crest_time_s": 11.200179,
+      "zero_upcrossing_wave_height_m": 1.225525,
+      "cycle_window_s": [
+        10.930107,
+        13.57012
+      ],
+      "adjacent_crest_to_trough_heights_m": [
+        1.276067,
+        1.225525
+      ],
+      "adjacent_trough_times_s": [
+        10.140049,
+        12.640113
+      ]
+    }
+  ],
+  "sampled_flow": [
+    {
+      "time_s": 11.00000902841322,
+      "max_speed_m_s": 5.864880561828613,
+      "density_range_kg_m3": [
+        1023.0518798828125,
+        1033.633544921875
+      ]
+    },
+    {
+      "time_s": 11.50007248445438,
+      "max_speed_m_s": 5.700847625732422,
+      "density_range_kg_m3": [
+        1022.1196899414062,
+        1032.65234375
+      ]
+    },
+    {
+      "time_s": 12.00010596569175,
+      "max_speed_m_s": 5.465909957885742,
+      "density_range_kg_m3": [
+        1024.3660888671875,
+        1033.2806396484375
+      ]
+    }
+  ],
+  "definition": "Crest height is above still water. Wave height uses adjacent measured troughs, not global extrema or significant wave height.",
+  "interpretation": "Empty tank only. Actual breaking, deck water and downward vessel force require the ship calculation.",
+  "commissioning_passed": true
+}

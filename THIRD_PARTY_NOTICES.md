@@ -37,3 +37,15 @@ The public images/videos are rendered outputs, not a downloadable mesh license. 
 - [Green water loads on prismatic obstacles, Journal of Fluid Mechanics](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/green-water-loads-on-prismatic-obstacles/DF5D3EB421E38AEF11D70DFD967BEC12): context for focused-wave/green-water studies. That paper's validation is not validation of this turtle hull.
 
 Other libraries are installed separately via the requirements files and retain their respective licenses. Fonts, FFmpeg, Blender and CUDA are not bundled.
+
+## Gunnerus visual model and derived contact geometry
+
+- Source visual model: [vessel.js / Gunnerus.glb](https://github.com/shiplab/vesseljs/blob/dev/examples/3D_models/GLTF/Gunnerus.glb), visual model by IHB NTNU, NTNU Shiplab; added by Felipe Ferrari in 2020.
+- Original source license: [MIT, Copyright (c) 2017 shiplab](https://github.com/shiplab/vesseljs/blob/dev/LICENSE.md). The exact notice is included with case 05 geometry as `geometry/candidates/gunnerus_vesseljs/LICENSE.upstream.md` and applies to the derived reference meshes too.
+- Original GLB SHA-256: `50af42c962c27be109b5f8f24171c801c525e63173feb4d53d1ffbae9a57cf3c`; Git blob `0557a1e975646586b588ce0c3374ceee72a7dae8`. Original GLB is not bundled.
+- [Upstream provenance](https://github.com/shiplab/gunnerus/blob/main/derived/README.md) distinguishes this older approximate vessel.js visual/teaching model from the newer C-JOB engineering geometry with separate terms. The latter was not incorporated here.
+- Geometry modifications: selected main hull; sealed openings; rotated axes and 1:10 scaling; two convex deckhouse envelopes joined with the hull; positioned at the declared tank station; exported contact STL and normals. Small closed reference meshes are included to reproduce the actual inputs. They are not production CAD or a new authoritative vessel model.
+- Mass is derived from the visual hull at an assumed draft. KG and radii of gyration are declared assumptions, not measured loading data. Reference dimensions are linked through [NTNU's vessel page](https://www.ntnu.edu/gunnerus/).
+- Videos retain the IHB NTNU / vessel.js / MIT credit. Rendering changes camera, lighting, material roughness and water representation; no authorship of the upstream model is claimed.
+
+The repository's GPL code license does not replace the MIT notice for this asset. The Gunnerus permission is independent of, and does not relax, the turtle model's redistribution restriction.
